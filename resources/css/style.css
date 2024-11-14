@@ -16,6 +16,12 @@ body {
 .bg_navbar2 {
     background-color: #52796f;
 }
+
+.sottoNavbar {
+    padding-top: 67px;
+}
+
+
 /* Footer */
 .bg_footer1 {
     background-color: #52796f;
@@ -61,4 +67,8 @@ body {
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s ease;
+}
+
+.dropdown-menu{
+    width: 400px;
 }
