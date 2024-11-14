@@ -15,18 +15,15 @@ body {
 }
 .bg_navbar2 {
     background-color: #52796f;
-}
-
-.sottoNavbar {
     padding-top: 67px;
 }
 
 /* Footer */
 .bg_footer1 {
-    background-color: #52796f;
+    background-color: #253137;
 }
 .bg_footer2 {
-    background-color: #354f52;
+    background-color: #2f3e46;
 }
 /* Cards */
 .bg_card {
@@ -75,3 +72,17 @@ body {
 .dropdown-menu {
     width: 400px;
 }
+<<<<<<< HEAD
+=======
+.dropdownLanguage{
+    width: 150px !important;
+    left: 0px !important;
+}
+.dropdown-menu[data-bs-popper] {
+    left: -250px;
+}
+.dropdownUserLoggato{
+    width: 200px !important;
+    left: -5px !important;
+}
+>>>>>>> 390a5b06eeca15476ae893b1d8059f268857a65a

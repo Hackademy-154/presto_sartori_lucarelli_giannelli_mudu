@@ -7,14 +7,14 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse bg-success d-flex justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex">
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex">
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        It/En/Esp
+                        IT/EN/ESP
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu dropdownLanguage">
                         <li><a class="dropdown-item" href="#">Italiano</a></li>
                         <li><a class="dropdown-item" href="#">English</a></li>
                         <li><a class="dropdown-item" href="#">Espaniol</a></li>
@@ -47,7 +47,7 @@
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Ciao, {{ Auth::user()->name }}!
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu dropdownUserLoggato">
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf
                             <button class="dropdown-item"" type=" submit">Logout</button>
@@ -64,8 +64,8 @@
                     @endguest
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="bi bi-cart"></i></a>
+                <li class="nav-item mx-3">
+                    <a class="nav-link p-0 " href="#"><i class="bi bi-cart fs-4 p-0"></i></a>
                 </li>
 
             </ul>
@@ -74,7 +74,7 @@
     </div>
 
 </nav>
-<div class="container-fluid sottoNavbar " >
+<div class="container-fluid bg_navbar2 " >
     <div class="row">
         <div class="col-12 d-flex justify-content-center align-items-center">
             @foreach($categories as $category)
