@@ -27,3 +27,8 @@ body {
 .bg_card {
     background-color: #84a98c;
 }
+
+/* dropdown menu */
+.dropdown-menu {
+    width: 400px;
+}
