@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col">
                 <!-- creare articolo con livewire -->
-                 <livewire:create-article-form>
+                <livewire:create-article-form>
             </div>
         </div>
     </div>

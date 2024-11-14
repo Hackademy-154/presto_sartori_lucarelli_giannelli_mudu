@@ -13,13 +13,14 @@ class CreateArticleForm extends Component
     #[Validate('required|min:10')] public $description;
     #[Validate('required|numeric')] public $price;
     #[Validate('required')] public $category;
+    public $article;
 
     public function messages() 
     {
         return [
-            'required' => 'Inserire :attribute',
-            'min' => ':attribute troppo corto',
-            'numeric' => 'Il :attribute deve essere un numero',
+            "*.required" => 'Inserire :attribute',
+            "*.min" => ':attribute troppo corto',
+            "*.numeric" => 'Il :attribute deve essere un numero',
             'category.required' => 'Seleziona una categoria',
         ];
     }
