@@ -8,4 +8,8 @@
             </div>
         </div>
     </div>
+
+    <div>
+        <a href="" class="btn btn-primary">Aggiungi articolo</a>
+    </div>
 </x-layout>
