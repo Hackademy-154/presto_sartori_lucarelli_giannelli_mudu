@@ -4,27 +4,27 @@
         <section class="mb-4">
             <!-- Facebook -->
             <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
-                    class="fab fa-facebook-f"></i></a>
+                    class="fab bi-facebook-f"></i></a>
 
             <!-- Twitter -->
             <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
-                    class="fab fa-twitter"></i></a>
+                    class="fab bi-twitter"></i></a>
 
             <!-- Google -->
             <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
-                    class="fab fa-google"></i></a>
+                    class="fab bi-google"></i></a>
 
             <!-- Instagram -->
             <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
-                    class="fab fa-instagram"></i></a>
+                    class="fab bi-instagram"></i></a>
 
             <!-- Linkedin -->
             <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
-                    class="fab fa-linkedin-in"></i></a>
+                    class="fab bi-linkedin"></i></a>
 
             <!-- Github -->
             <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
-                    class="fab fa-github"></i></a>
+                    class="fab bi-github"></i></a>
         </section>
 
         <!-- Section: Form -->
