@@ -1,7 +1,7 @@
 <nav class="navbar position-fixed navbar-expand-lg bg_navbar1 navbar-dark w-100 d-flex flex-column">
     <div class="container-fluid">
 
-        <a class="navbar-brand" href="#">PRESTO.IT</a>
+        <a class="navbar-brand" href="{{route('homepage')}}">PRESTO.IT</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
