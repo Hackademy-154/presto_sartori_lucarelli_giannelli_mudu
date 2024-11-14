@@ -12,6 +12,7 @@ body {
 /* Navbar */
 .bg_navbar1 {
     background-color: #354f52;
+    z-index: 3;
 }
 .bg_navbar2 {
     background-color: #52796f;
@@ -84,3 +85,17 @@ body {
 }
 
 
+.cardExepmle{
+    height: 350px;
+    width: 300px;
+    background-color: #84A98C;
+}
+.immagine{
+    height: 200px;
+    width: 280px;
+    background-color: rgb(237, 237, 237);
+}
+
+.accordion-body{
+    background-color: orangered !important;
+}
