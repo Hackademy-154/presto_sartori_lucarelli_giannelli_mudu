@@ -1,0 +1,29 @@
+* {
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: white;
+}
+
+body {
+    background-color: #cad2c5;
+}
+/* Navbar */
+.bg_navbar1 {
+    background-color: #354f52;
+}
+.bg_navbar2 {
+    background-color: #52796f;
+}
+/* Footer */
+.bg_footer1 {
+    background-color: #52796f;
+}
+.bg_footer2 {
+    background-color: #354f52;
+}
+/* Cards */
+.bg_card {
+    background-color: #84a98c;
+}
