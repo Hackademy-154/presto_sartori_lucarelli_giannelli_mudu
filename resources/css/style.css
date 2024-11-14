@@ -21,7 +21,6 @@ body {
     padding-top: 67px;
 }
 
-
 /* Footer */
 .bg_footer1 {
     background-color: #52796f;
@@ -55,6 +54,10 @@ body {
 }
 .registerFrom > form > div > input {
     width: 219px;
+    color: black;
+}
+.loginFrom > form > div > input {
+    color: black;
 }
 /* Buttons */
 .buttonCustom {
@@ -69,6 +72,6 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.dropdown-menu{
+.dropdown-menu {
     width: 400px;
 }
