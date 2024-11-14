@@ -82,21 +82,3 @@ body {
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
-<<<<<<< HEAD
-=======
-
-.dropdown-menu {
-    width: 400px;
-}
-.dropdownLanguage{
-    width: 150px !important;
-    left: 0px !important;
-}
-.dropdown-menu[data-bs-popper] {
-    left: -250px;
-}
-.dropdownUserLoggato{
-    width: 200px !important;
-    left: -5px !important;
-}
->>>>>>> 0b8b3aad209e267761f7d52fc99f0eafb1946c89
