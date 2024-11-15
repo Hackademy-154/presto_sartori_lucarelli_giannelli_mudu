@@ -72,7 +72,12 @@
     <div class="row">
         <div class="col-12 d-flex justify-content-center align-items-center">
             @foreach ($categories as $category)
+<<<<<<< HEAD
                 <a class="text-white mx-3 pb-2 text-decoration-none text-uppercase" href="">{{ $category->name }}
+=======
+                <a class="text-white mx-3 pb-2 text-decoration-none text-uppercase"
+                    href="{{ route('article.byCategory', compact('category')) }}">{{ $category->name }}
+>>>>>>> e684c2cded1f636c0dabae309624f39caaf4a997
                 </a>
             @endforeach
         </div>

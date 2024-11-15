@@ -12,7 +12,7 @@ class ArticleController extends Controller
     public static function middleware()
     {
         return [
-            new Middleware('auth', except: ['index', 'show'])
+            new Middleware('auth', only: ['create'])
         ];
     }
     /**
@@ -20,7 +20,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
+        return view('article.index', ['articles' => Article::orderBy('created_at', 'desc')->get()]);
     }
 
     /**
@@ -44,7 +44,7 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        //
+        return view ('article.show', compact('article'));
     }
 
     /**
