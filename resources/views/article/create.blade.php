@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1>
+                <h1 class="text-center text-dark fw-bold m-5">
                     Inserire articolo
                 </h1>
             </div>

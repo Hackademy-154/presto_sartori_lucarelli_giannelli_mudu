@@ -1,12 +1,13 @@
-* {
-    font-family: "Nunito", serif;
+*{
+    font-family: "DM Sans", serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    color: white;
-}
+  }
 
-body {
+
+
+  body {
     background-color: #eaeaea;
     /* background-color: #cad2c5; */
 }
