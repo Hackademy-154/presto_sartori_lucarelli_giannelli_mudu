@@ -1,13 +1,12 @@
-*{
+* {
     font-family: "DM Sans", serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-  }
+    color: white;
+}
 
-
-
-  body {
+body {
     background-color: #eaeaea;
     /* background-color: #cad2c5; */
 }
@@ -71,13 +70,20 @@
 }
 .cardRight {
     background-color: #253137;
-    width: 350px;
+    width: 300px;
     margin-left: 12px;
     padding-left: 15px;
+    padding-right: 15px;
     z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    display: none !important;
 }
 .cardRight.active {
-    display: flex;
+    display: flex !important;
+    opacity: 1;
+    visibility: visible;
 }
 .buttonCard {
     border-radius: 20px;

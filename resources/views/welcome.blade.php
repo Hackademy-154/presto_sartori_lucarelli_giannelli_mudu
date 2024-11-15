@@ -48,15 +48,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 d-flex cardRight d-none" id="cardRight">
+                    <div class="col-6 d-flex cardRight " id="cardRight">
                         <div class="row align-items-center justify-content-center align-content-center">
                             <div class="col-12 d-flex  text-start mb-3">
                                 <h5 class="fw-bold mt-2">{{ $article->title }}</h5>
                             </div>
                             <div class="col-12 d-flex text-start mb-2">
-                                {{ $article->price }} €
+                                <h5 class="fw-bold">{{ $article->price }} €</h5>
                             </div>
-                            <div class="col-12 d-flex mt-2">
+                            <div class="col-12 d-flex text-start mt-2">
                                 <h5 class="fw-bold">{{ $article->description }}</h5>
                             </div>
                             <div class="col-12  d-flex justify-content-center align-items-end mt-4 ">
