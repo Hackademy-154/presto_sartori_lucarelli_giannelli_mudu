@@ -4,27 +4,27 @@
         <section class="mb-4">
             <!-- Facebook -->
             <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
-                    class="fab bi-facebook-f"></i></a>
+                    class="text-white fab bi-facebook-f"></i></a>
 
             <!-- Twitter -->
             <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
-                    class="fab bi-twitter"></i></a>
+                    class="text-white fab bi-twitter"></i></a>
 
             <!-- Google -->
             <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
-                    class="fab bi-google"></i></a>
+                    class="text-white fab bi-google"></i></a>
 
             <!-- Instagram -->
             <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
-                    class="fab bi-instagram"></i></a>
+                    class="text-white fab bi-instagram"></i></a>
 
             <!-- Linkedin -->
             <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
-                    class="fab bi-linkedin"></i></a>
+                    class="text-white fab bi-linkedin"></i></a>
 
             <!-- Github -->
             <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
-                    class="fab bi-github"></i></a>
+                    class="text-white fab bi-github"></i></a>
         </section>
 
         <!-- Section: Form -->
@@ -68,34 +68,16 @@
 
                     <ul class="list-unstyled mb-0">
                         <li>
-                            <a class="text-body" href="#!">Link 1</a>
+                            <a class="text-white" href="#!">Link 1</a>
                         </li>
                         <li>
-                            <a class="text-body" href="#!">Link 2</a>
+                            <a class="text-white" href="#!">Link 2</a>
                         </li>
                         <li>
-                            <a class="text-body" href="#!">Link 3</a>
+                            <a class="text-white" href="#!">Link 3</a>
                         </li>
                         <li>
-                            <a class="text-body" href="#!">Link 4</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Links</h5>
-
-                    <ul class="list-unstyled mb-0">
-                        <li>
-                            <a class="text-body" href="#!">Link 1</a>
-                        </li>
-                        <li>
-                            <a class="text-body" href="#!">Link 2</a>
-                        </li>
-                        <li>
-                            <a class="text-body" href="#!">Link 3</a>
-                        </li>
-                        <li>
-                            <a class="text-body" href="#!">Link 4</a>
+                            <a class="text-white" href="#!">Link 4</a>
                         </li>
                     </ul>
                 </div>
@@ -104,16 +86,16 @@
 
                     <ul class="list-unstyled mb-0">
                         <li>
-                            <a class="text-body" href="#!">Link 1</a>
+                            <a class="text-white" href="#!">Link 1</a>
                         </li>
                         <li>
-                            <a class="text-body" href="#!">Link 2</a>
+                            <a class="text-white" href="#!">Link 2</a>
                         </li>
                         <li>
-                            <a class="text-body" href="#!">Link 3</a>
+                            <a class="text-white" href="#!">Link 3</a>
                         </li>
                         <li>
-                            <a class="text-body" href="#!">Link 4</a>
+                            <a class="text-white" href="#!">Link 4</a>
                         </li>
                     </ul>
                 </div>
@@ -122,16 +104,34 @@
 
                     <ul class="list-unstyled mb-0">
                         <li>
-                            <a class="text-body" href="#!">Link 1</a>
+                            <a class="text-white" href="#!">Link 1</a>
                         </li>
                         <li>
-                            <a class="text-body" href="#!">Link 2</a>
+                            <a class="text-white" href="#!">Link 2</a>
                         </li>
                         <li>
-                            <a class="text-body" href="#!">Link 3</a>
+                            <a class="text-white" href="#!">Link 3</a>
                         </li>
                         <li>
-                            <a class="text-body" href="#!">Link 4</a>
+                            <a class="text-white" href="#!">Link 4</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a class="text-white" href="#!">Link 1</a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="#!">Link 2</a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="#!">Link 3</a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="#!">Link 4</a>
                         </li>
                     </ul>
                 </div>

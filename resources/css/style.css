@@ -51,9 +51,11 @@ body {
 /* Footer */
 .bg_footer1 {
     background-color: #253137;
+    color: white;
 }
 .bg_footer2 {
     background-color: #2f3e46;
+    color: white;
 }
 .footerPadding {
     margin-top: 120px !important;
@@ -62,6 +64,12 @@ body {
 .bg_card {
     background-color: #84a98c;
 }
+<<<<<<< HEAD
+
+
+
+/* .buttonCard {
+=======
 .cardLeft {
     width: 260px;
     aspect-ratio: 0.6;
@@ -95,6 +103,7 @@ body {
     visibility: visible;
 }
 .buttonCard {
+>>>>>>> bbcd2f39211c5fa62fe4630d522f2e697b63d5c0
     border-radius: 20px;
     background-color: #8b0000;
     color: #ffffff;
@@ -104,13 +113,8 @@ body {
     font-weight: 700;
     filter: drop-shadow(0 0 0.35rem rgba(54, 54, 54, 0.76));
     cursor: pointer;
-}
-.cardLeft:hover + .cardRight {
-    display: flex !important;
-}
-.blur {
-    backdrop-filter: blur(4px);
-}
+} */
+
 
 /* Login & Register */
 .loginFrom {
@@ -171,3 +175,98 @@ body {
 .accordion-body {
     background-color: orangered !important;
 }
+
+
+
+/* style delle welcomeCard */
+.wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+.card {
+    width: 280px;
+    height: 360px;
+    border-radius: 15px;
+    padding: 1.5rem;
+    background: white;
+    position: relative;
+    transition: 0.4s ease-out;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+  .card:hover {
+    transform: translateY(20px);
+  }
+  .card:hover:before {
+    opacity: 1;
+  }
+  .card:hover .info {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  .card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  .card img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+  }
+  .card .info {
+    z-index: 3;
+    position: absolute;
+    top: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    height: 300px;
+    width: 80%;
+    color: white;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s;
+  }
+  .card .info h5 {
+    text-align: start;
+    margin: 0px;
+  }
+  .card .info p {
+    font-size: 15px;
+  }
+  .card .info .button {
+    padding: 0.6rem;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    background: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease;
+  }
+  .card .info .button:hover {
+    background: dodgerblue;
+    color: white;
+  }
