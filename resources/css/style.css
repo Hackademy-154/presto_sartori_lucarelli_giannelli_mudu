@@ -5,17 +5,19 @@
     font-style: normal;
     color: white;
 }
-
+a {
+    text-decoration: none !important;
+    color: #ffd342;
+}
 body {
     background-color: #eaeaea;
-    /* background-color: #cad2c5; */
 }
-
-/* Palette */
+.cambiacolore {
+    background-color: white !important;
+}
 
 /* Navbar */
 .bg_navbar1 {
-    /* background-color: #354f52; */
     background-color: #383838 !important;
     color: #d4af37 !important;
     z-index: 3;
@@ -41,6 +43,10 @@ body {
     width: 200px !important;
     left: -5px !important;
 }
+.dropdownUser {
+    width: 200px !important;
+    left: -10px !important;
+}
 
 /* Footer */
 .bg_footer1 {
@@ -48,6 +54,9 @@ body {
 }
 .bg_footer2 {
     background-color: #2f3e46;
+}
+.footerPadding {
+    margin-top: 120px !important;
 }
 /* Cards */
 .bg_card {
@@ -141,7 +150,17 @@ body {
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
-
+/* Articles */
+.imgCreate {
+    width: 80%;
+}
+.test2 {
+    filter: drop-shadow(0 0 0.35rem rgba(54, 54, 54, 0.76));
+}
+.test {
+    border-radius: 5px;
+    padding: 15px 200px;
+}
 /* Carousell */
 .immagine {
     height: 200px;

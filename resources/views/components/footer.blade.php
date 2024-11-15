@@ -1,5 +1,5 @@
-<footer class="bg_footer2 text-center">
-    <div class="container p-4">
+<footer class="bg_footer2 text-center ">
+    <div class="container p-4 footerPadding">
         <!-- Section: Social media -->
         <section class="mb-4">
             <!-- Facebook -->

@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container text-center bg-body-tertiary">
+    <div class="container text-center cambiacolore">
         <div class="row">
             <!-- CAROUSEL -->
             <div class="col-12 p-0">
