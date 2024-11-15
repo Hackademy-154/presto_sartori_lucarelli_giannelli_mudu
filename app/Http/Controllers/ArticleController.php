@@ -18,9 +18,9 @@ class ArticleController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Category $category)
+    public function index()
     {
-        return view('article.index',compact('category'));
+        return view('article.index', ['articles' => Article::orderBy('created_at', 'desc')->get()]);
     }
 
     /**

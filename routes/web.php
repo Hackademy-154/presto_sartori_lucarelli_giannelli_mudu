@@ -11,4 +11,5 @@ Route::get('/create/article', [ArticleController::class, 'create'])->name('artic
 Route::get('/show/article/{article}', [ArticleController::class, 'show'])->name('article.show');
 
 // index by category    
-Route::get('/index/article/{category}', [ArticleController::class, 'index'])->name('article.index');
+Route::get('/index/article/{category}', [ArticleController::class, 'byCategory'])->name('article.byCategory');
+Route::get('/index', [ArticleController::class, 'index'])->name('article.index');
