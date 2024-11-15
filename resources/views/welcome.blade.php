@@ -10,13 +10,16 @@
                                 alt="...">
                         </div>
                         <div class="carousel-item ratio ratio-21x9">
-                            <img src="{{ Storage::url('image/slide_sport.jpeg') }}" class="d-block w-100" alt="...">
+                            <img src="{{ Storage::url('image/slide_sport.jpeg') }}" class="d-block w-100"
+                                alt="...">
                         </div>
                         <div class="carousel-item ratio ratio-21x9">
-                            <img src="{{ Storage::url('image/slide_libri&riviste.webp') }}" class="d-block w-100" alt="...">
+                            <img src="{{ Storage::url('image/slide_libri&riviste.webp') }}" class="d-block w-100"
+                                alt="...">
                         </div>
                         <div class="carousel-item ratio ratio-21x9">
-                            <img src="{{ Storage::url('image/slide_casa&giardinaggio.webp') }}" class="d-block w-100" alt="...">
+                            <img src="{{ Storage::url('image/slide_casa&giardinaggio.webp') }}" class="d-block w-100"
+                                alt="...">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
@@ -39,15 +42,15 @@
         <div class="row  justify-content-evenly align-items-center mt-5 mb-5">
             <div class="wrapper">
                 @foreach ($articles as $article)
-
-                <div class="col-4 card"><img src="{{ Storage::url('image/slide_abbigliamento.png') }}">
-                    <div class="info">
-                        <h5>{{$article->title}}</h5>
-                        <p>{{$article->price}}€</p>
-                        <p>{{$article->category->name}}</p>
-                        <a href="{{route('article.show', compact('article'))}}" class="btn button">Vai all'articolo</a>
+                    <div class="col-4 card"><img src="{{ Storage::url('image/slide_abbigliamento.png') }}">
+                        <div class="info">
+                            <h5>{{ $article->title }}</h5>
+                            <p>{{ $article->price }}€</p>
+                            <p>{{ $article->category->name }}</p>
+                            <a href="{{ route('article.show', compact('article')) }}" class="btn button">Vai
+                                all'articolo</a>
+                        </div>
                     </div>
-                </div>
                 @endforeach
 
             </div>
