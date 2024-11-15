@@ -7,12 +7,21 @@
 }
 
 body {
-    background-color: #cad2c5;
+    background-color: #eaeaea;
+    /* background-color: #cad2c5; */
 }
+
+/* Palette */
+
 /* Navbar */
 .bg_navbar1 {
-    background-color: #354f52;
+    /* background-color: #354f52; */
+    background-color: #383838 !important;
+    color: #d4af37 !important;
     z-index: 3;
+}
+.textColor1 {
+    color: #d4af37 !important;
 }
 .bg_navbar2 {
     background-color: #52796f;
@@ -43,6 +52,32 @@ body {
 /* Cards */
 .bg_card {
     background-color: #84a98c;
+}
+.cardExepmle {
+    height: 350px;
+    width: 300px;
+    background-color: #84a98c;
+}
+.cardCustom {
+    height: 450px;
+    width: 320px;
+    border-radius: 10px;
+    background-color: #84a98c;
+    color: black !important;
+    filter: drop-shadow(0 0 0.35rem rgba(54, 54, 54, 0.76));
+}
+.imgCard {
+    border-radius: 10px;
+}
+.buttonCard {
+    border-radius: 20px;
+    background-color: orange;
+    color: white;
+    border: transparent;
+    padding: 5px 10px;
+    width: 150px;
+    font-weight: 700;
+    filter: drop-shadow(0 0 0.35rem rgba(54, 54, 54, 0.76));
 }
 
 /* Login & Register */
@@ -84,18 +119,13 @@ body {
     transition: background-color 0.3s ease;
 }
 
-
-.cardExepmle{
-    height: 350px;
-    width: 300px;
-    background-color: #84A98C;
-}
-.immagine{
+/* Carousell */
+.immagine {
     height: 200px;
     width: 280px;
     background-color: rgb(237, 237, 237);
 }
 
-.accordion-body{
+.accordion-body {
     background-color: orangered !important;
 }
