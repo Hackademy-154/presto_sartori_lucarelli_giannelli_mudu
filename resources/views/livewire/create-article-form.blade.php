@@ -27,7 +27,7 @@
     </div>
     <div class="mb-5">
         <select id="category" wire:model.blur="category" class="form-control">
-            <option label disabled> Seleziona una categoria</option>
+            <option label> Seleziona una categoria</option>
             @foreach ($categories as $category)
             <option value="{{$category->id}}">{{$category->name}}</option>
             @endforeach
