@@ -12,7 +12,7 @@ class ArticleController extends Controller
     public static function middleware()
     {
         return [
-            new Middleware('auth', except: ['index', 'show'])
+            new Middleware('auth', only: ['create'])
         ];
     }
     /**
