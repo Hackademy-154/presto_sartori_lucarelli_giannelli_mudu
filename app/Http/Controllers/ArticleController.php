@@ -18,9 +18,9 @@ class ArticleController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Category $category)
     {
-        //
+        return view('article.index',compact('category'));
     }
 
     /**

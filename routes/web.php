@@ -8,3 +8,6 @@ Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 
 //articoli
 Route::get('/create/article', [ArticleController::class, 'create'])->name('article.create');
+
+// index by category    
+Route::get('/index/article/{category}', [ArticleController::class, 'index'])->name('article.index');

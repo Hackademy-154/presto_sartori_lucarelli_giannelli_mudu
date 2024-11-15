@@ -74,7 +74,7 @@
         <div class="col-12 d-flex justify-content-center align-items-center">
             @foreach ($categories as $category)
                 <a class="text-white mx-3 pb-2 text-decoration-none text-uppercase"
-                    href="{{ rotue('article.index', compact($categoty)) }}">{{ $category->name }}
+                    href="{{ route('article.index', compact('category')) }}">{{ $category->name }}
                 </a>
             @endforeach
         </div>
