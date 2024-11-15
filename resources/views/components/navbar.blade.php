@@ -6,10 +6,8 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         @auth
-            <a href="{{ route('article.create') }}" class="textColor1 text-decoration-none ">Inserisci annuncio</a>
+            <a href="{{ route('article.create') }}" class="textColor1">Inserisci annuncio</a>
         @endauth
-        <a href="{{ route('article.index') }}" class="ms-3 text-decoration-none textColor1">Annunci</a>
-
         <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex">
                 <li class="nav-item dropdown ">
@@ -29,11 +27,12 @@
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Ciao, accedi
                         </a>
-                        <ul class="dropdown-menu dropdownUser">
+                        <ul class="dropdown-menu">
                             <div class="col-12">
-                                <div class="d-flex flex-column align-items-start">
-                                    <a class="dropdown-item" href="{{ route('login') }}">Login</a>
-
+                                <div class="d-flex flex-column align-items-center">
+                                    <a class="btn btn-warning" href="{{ route('login') }}">Login</a>
+                                    <p class="text-black">non sei ancora registrato? <a
+                                            href="{{ route('register') }}">Registrati</a></p>
                                 </div>
                             </div>
                             <li>
@@ -45,7 +44,7 @@
                     @else
                         <a class="nav-link dropdown-toggle textColor1" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Ciao, {{ ucWords(Auth::user()->name) }}!
+                            Ciao, {{ Auth::user()->name }}!
                         </a>
                         <ul class="dropdown-menu dropdownUserLoggato">
                             <form action="{{ route('logout') }}" method="POST">

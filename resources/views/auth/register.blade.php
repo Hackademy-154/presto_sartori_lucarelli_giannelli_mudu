@@ -1,6 +1,6 @@
 <x-layout>
     <div class="container-fluid">
-        <div class="row align-items-center justify-content-center py-5 my-5">
+        <div class="row align-items-center justify-content-center ">
             <div class="col-12 registerFrom d-flex flex-column justify-content-center align-items-center ">
                 <h2 class="fs-1 mb-3 text-center">Sign Up</h2>
                 <div class="d-flex justify-content-center">

@@ -1,4 +1,4 @@
-<form class="shadow p-5 pb-2 bg-tertiary rounded-3 text-center py-5 my-5 w-100 " wire:submit="save">
+<form class="shadow p-5 pb-2 bg-tertiary rounded-3 text-center" wire:submit="save">
     @if (session('success'))
         <div class="alert alert-success text-center">
             {{ session('success') }}
@@ -32,9 +32,9 @@
     <div class="mb-3 text-start">
         <label for="category" class="form-label text-dark">Categoria</label>
         <select id="category" wire:model.blur="category" class="form-control">
-            <option class="text-black" label> Seleziona una categoria</option>
+            <option label> Seleziona una categoria</option>
             @foreach ($categories as $category)
-                <option class="text-black" value="{{ $category->id }}">{{ ucFirst($category->name) }}</option>
+                <option value="{{ $category->id }}">{{ $category->name }}</option>
             @endforeach
         </select>
         @error('category')
@@ -43,6 +43,6 @@
 
     </div>
     <div class="mb-3 text-center">
-        <button type="submit" class="btn btn-dark w-25 mt-3">Inserisci</button>
+        <button type="submit" class="btn btn-dark w-25 mt-3">Crea</button>
     </div>
 </form>
