@@ -93,6 +93,7 @@ body {
     width: 200px;
     font-weight: 700;
     filter: drop-shadow(0 0 0.35rem rgba(54, 54, 54, 0.76));
+    cursor: pointer;
 }
 .cardLeft:hover + .cardRight {
     display: flex !important;

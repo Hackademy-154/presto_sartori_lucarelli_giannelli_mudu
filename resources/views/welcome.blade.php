@@ -31,40 +31,43 @@
         </div>
         <!-- FINE CAROUSEL -->
         <div class="row  justify-content-center align-items-center mt-5">
-            <div class="col-3 d-flex" id="cardLeft">
-                <div class="col-6  cardLeft">
-                    <div class="row justify-content-end align-items-end h-100  "
-                        style="background-image: url({{ Storage::url('image/slideAbbigliamento.jpg') }})">
-                        <div class="col-12 d-flex blur">
-                            <div class="row align-items-end">
-                                <div class="col-12 d-flex  text-start">
-                                    <h5 class="fw-bold mt-2">Felpa Nike limited edition</h5>
-                                </div>
-                                <div class="col-12 d-flex ">
-                                    <h5 class="fw-bold">$349.95</h5>
+            @foreach ($articles as $article)
+                <div class="col-3 d-flex" id="cardLeft">
+                    <div class="col-6  cardLeft">
+                        <div class="row justify-content-end align-items-end h-100  "
+                            style="background-image: url({{ Storage::url('image/slideAbbigliamento.jpg') }})">
+                            <div class="col-12 d-flex blur">
+                                <div class="row align-items-end">
+                                    <div class="col-12 d-flex  text-start">
+                                        <h5 class="fw-bold mt-2">Felpa Nike limited edition</h5>
+                                    </div>
+                                    <div class="col-12 d-flex ">
+                                        <h5 class="fw-bold">$349.95</h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-6 d-flex cardRight d-none" id="cardRight">
-                    <div class="row align-items-center justify-content-center align-content-center">
-                        <div class="col-12 d-flex  text-start mb-3">
-                            <h5 class="fw-bold mt-2">Felpa Nike limited edition</h5>
-                        </div>
-                        <div class="col-12 d-flex text-start mb-2">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit odio placeat doloribus.
-                            Temporibus similique eaque aspernatur sint eum odit beatae...
-                        </div>
-                        <div class="col-12 d-flex mt-2">
-                            <h5 class="fw-bold">$349.95</h5>
-                        </div>
-                        <div class="col-12  d-flex justify-content-center align-items-end mt-4 ">
-                            <button class="buttonCard">Vai al dettaglio</button>
+                    <div class="col-6 d-flex cardRight d-none" id="cardRight">
+                        <div class="row align-items-center justify-content-center align-content-center">
+                            <div class="col-12 d-flex  text-start mb-3">
+                                <h5 class="fw-bold mt-2">{{ $article->title }}</h5>
+                            </div>
+                            <div class="col-12 d-flex text-start mb-2">
+                                {{ $article->price }}
+                            </div>
+                            <div class="col-12 d-flex mt-2">
+                                <h5 class="fw-bold">{{ $article->description }}</h5>
+                            </div>
+                            <div class="col-12  d-flex justify-content-center align-items-end mt-4 ">
+                                <a href="{{ route('article.show', compact('article')) }}"
+                                    class="buttonCard text-decoration-none ">Vai al
+                                    dettaglio</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </x-layout>
