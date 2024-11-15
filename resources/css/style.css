@@ -53,13 +53,8 @@ body {
 .bg_card {
     background-color: #84a98c;
 }
-.cardExepmle {
-    height: 350px;
-    width: 300px;
-    background-color: #84a98c;
-}
 .cardLeft {
-    width: 250px;
+    width: 260px;
     aspect-ratio: 0.6;
     border-radius: 10px;
     background-color: #ffffff;
@@ -78,7 +73,6 @@ body {
     width: 350px;
     margin-left: 12px;
     padding-left: 15px;
-    height: 417px !important;
     z-index: 2;
 }
 .cardRight.active {

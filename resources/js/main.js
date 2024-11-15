@@ -1,11 +1,15 @@
-let cardRight = document.querySelector(".cardRight");
-let cardLeft = document.querySelector("#cardLeft");
+let card = document.querySelectorAll("#card");
 
-cardLeft.addEventListener("mouseenter", () => {
-    cardRight.classList.remove("d-none");
-    cardRight.classList.add("active");
-});
-cardLeft.addEventListener("mouseleave", () => {
-    cardRight.classList.add("d-none");
-    cardRight.classList.remove("active");
+card.forEach((el) => {
+    let cardLeft = el.querySelector(".cardLeft");
+    let cardRight = el.querySelector(".cardRight");
+
+    cardLeft.addEventListener("mouseenter", () => {
+        cardRight.classList.remove("d-none");
+        cardRight.classList.add("active");
+    });
+    el.addEventListener("mouseleave", () => {
+        cardRight.classList.add("d-none");
+        cardRight.classList.remove("active");
+    });
 });

@@ -32,17 +32,17 @@
         <!-- FINE CAROUSEL -->
         <div class="row  justify-content-center align-items-center mt-5">
             @foreach ($articles as $article)
-                <div class="col-3 d-flex" id="cardLeft">
-                    <div class="col-6  cardLeft">
+                <div class="col-3 d-flex" id="card">
+                    <div class="col-6 cardLeft">
                         <div class="row justify-content-end align-items-end h-100  "
                             style="background-image: url({{ Storage::url('image/slideAbbigliamento.jpg') }})">
                             <div class="col-12 d-flex blur">
                                 <div class="row align-items-end">
                                     <div class="col-12 d-flex  text-start">
-                                        <h5 class="fw-bold mt-2">Felpa Nike limited edition</h5>
+                                        <h5 class="fw-bold mt-2">{{ $article->title }}</h5>
                                     </div>
                                     <div class="col-12 d-flex ">
-                                        <h5 class="fw-bold">$349.95</h5>
+                                        <h5 class="fw-bold">{{ $article->price }} €</h5>
                                     </div>
                                 </div>
                             </div>
@@ -54,7 +54,7 @@
                                 <h5 class="fw-bold mt-2">{{ $article->title }}</h5>
                             </div>
                             <div class="col-12 d-flex text-start mb-2">
-                                {{ $article->price }}
+                                {{ $article->price }} €
                             </div>
                             <div class="col-12 d-flex mt-2">
                                 <h5 class="fw-bold">{{ $article->description }}</h5>
