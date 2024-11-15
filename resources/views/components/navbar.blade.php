@@ -28,7 +28,6 @@
                             Ciao, accedi
                         </a>
                         <ul class="dropdown-menu">
-
                             <div class="col-12">
                                 <div class="d-flex flex-column align-items-center">
                                     <a class="btn btn-warning" href="{{ route('login') }}">Login</a>
@@ -73,8 +72,7 @@
     <div class="row">
         <div class="col-12 d-flex justify-content-center align-items-center">
             @foreach ($categories as $category)
-                <a class="text-white mx-3 pb-2 text-decoration-none text-uppercase"
-                    href="{{ rotue('article.index', compact($categoty)) }}">{{ $category->name }}
+                <a class="text-white mx-3 pb-2 text-decoration-none text-uppercase" href="">{{ $category->name }}
                 </a>
             @endforeach
         </div>

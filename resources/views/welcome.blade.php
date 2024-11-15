@@ -31,128 +31,45 @@
         </div>
         <!-- FINE CAROUSEL -->
         <div class="row  justify-content-center align-items-center mt-5">
-
-            <div class="col-4 m-2 cardCustom">
-                <div class="row justify-content-between h-100 pb-3">
-                    <div class="col-12 px-2 pt-2"><img src="{{ Storage::url('image/slideAbbigliamento.jpg') }}"
-                            alt="" class="img-fluid imgCard"></div>
-                    <div class="col-12  text-start">
-                        <h5 class="fw-bold mt-2">Felpa Nike limited edition</h5>
+            <div class="col-3 d-flex" id="cardLeft">
+                <div class="col-6  cardLeft">
+                    <div class="row justify-content-end align-items-end h-100  "
+                        style="background-image: url({{ Storage::url('image/slideAbbigliamento.jpg') }})">
+                        <div class="col-12 d-flex blur">
+                            <div class="row align-items-end">
+                                <div class="col-12 d-flex  text-start">
+                                    <h5 class="fw-bold mt-2">Felpa Nike limited edition</h5>
+                                </div>
+                                <div class="col-12 d-flex ">
+                                    <h5 class="fw-bold">$349.95</h5>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-12  text-start">
-                        <h5 class="fw-bold">$349.95</h5>
-                    </div>
-                    <div class="col-12  d-flex text-start">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum fugiat quidem veniam
-                        perferendis iure tenetur, nobis ullam...
-                    </div>
-                    <div class="col-12  d-flex justify-content-end align-items-end mt-2 ">
-                        <button class="buttonCard">Vai al dettaglio</button>
+                </div>
+                <div class="col-6 d-flex cardRight d-none" id="cardRight">
+                    <div class="row align-items-center justify-content-center align-content-center">
+                        <div class="col-12 d-flex  text-start mb-3">
+                            <h5 class="fw-bold mt-2">Felpa Nike limited edition</h5>
+                        </div>
+                        <div class="col-12 d-flex text-start mb-2">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit odio placeat doloribus.
+                            Temporibus similique eaque aspernatur sint eum odit beatae...
+                        </div>
+                        <div class="col-12 d-flex mt-2">
+                            <h5 class="fw-bold">$349.95</h5>
+                        </div>
+                        <div class="col-12  d-flex justify-content-center align-items-end mt-4 ">
+                            <button class="buttonCard">Vai al dettaglio</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-4 m-2 cardCustom">
-                <div class="row justify-content-between h-100 pb-3">
-                    <div class="col-12 px-2 pt-2"><img src="{{ Storage::url('image/slideAbbigliamento.jpg') }}"
-                            alt="" class="img-fluid imgCard"></div>
-                    <div class="col-12  text-start">
-                        <h5 class="fw-bold mt-2">Felpa Nike limited edition</h5>
-                    </div>
-                    <div class="col-12  text-start">
-                        <h5 class="fw-bold">$349.95</h5>
-                    </div>
-                    <div class="col-12  d-flex text-start">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum fugiat quidem veniam
-                        perferendis iure tenetur, nobis ullam...
-                    </div>
-                    <div class="col-12  d-flex justify-content-end align-items-end mt-2 ">
-                        <button class="buttonCard">Vai al dettaglio</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4 m-2 cardCustom">
-                <div class="row justify-content-between h-100 pb-3">
-                    <div class="col-12 px-2 pt-2"><img src="{{ Storage::url('image/slideAbbigliamento.jpg') }}"
-                            alt="" class="img-fluid imgCard"></div>
-                    <div class="col-12  text-start">
-                        <h5 class="fw-bold mt-2">Felpa Nike limited edition</h5>
-                    </div>
-                    <div class="col-12  text-start">
-                        <h5 class="fw-bold">$349.95</h5>
-                    </div>
-                    <div class="col-12  d-flex text-start">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum fugiat quidem veniam
-                        perferendis iure tenetur, nobis ullam...
-                    </div>
-                    <div class="col-12  d-flex justify-content-end align-items-end mt-2 ">
-                        <button class="buttonCard">Vai al dettaglio</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4 m-2 cardCustom">
-                <div class="row justify-content-between h-100 pb-3">
-                    <div class="col-12 px-2 pt-2"><img src="{{ Storage::url('image/slideAbbigliamento.jpg') }}"
-                            alt="" class="img-fluid imgCard"></div>
-                    <div class="col-12  text-start">
-                        <h5 class="fw-bold mt-2">Felpa Nike limited edition</h5>
-                    </div>
-                    <div class="col-12  text-start">
-                        <h5 class="fw-bold">$349.95</h5>
-                    </div>
-                    <div class="col-12  d-flex text-start">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum fugiat quidem veniam
-                        perferendis iure tenetur, nobis ullam...
-                    </div>
-                    <div class="col-12  d-flex justify-content-end align-items-end mt-2 ">
-                        <button class="buttonCard">Vai al dettaglio</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4 m-2 cardCustom">
-                <div class="row justify-content-between h-100 pb-3">
-                    <div class="col-12 px-2 pt-2"><img src="{{ Storage::url('image/slideAbbigliamento.jpg') }}"
-                            alt="" class="img-fluid imgCard"></div>
-                    <div class="col-12  text-start">
-                        <h5 class="fw-bold mt-2">Felpa Nike limited edition</h5>
-                    </div>
-                    <div class="col-12  text-start">
-                        <h5 class="fw-bold">$349.95</h5>
-                    </div>
-                    <div class="col-12  d-flex text-start">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum fugiat quidem veniam
-                        perferendis iure tenetur, nobis ullam...
-                    </div>
-                    <div class="col-12  d-flex justify-content-end align-items-end mt-2 ">
-                        <button class="buttonCard">Vai al dettaglio</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4 m-2 cardCustom">
-                <div class="row justify-content-between h-100 pb-3">
-                    <div class="col-12 px-2 pt-2"><img src="{{ Storage::url('image/slideAbbigliamento.jpg') }}"
-                            alt="" class="img-fluid imgCard"></div>
-                    <div class="col-12  text-start">
-                        <h5 class="fw-bold mt-2">Felpa Nike limited edition</h5>
-                    </div>
-                    <div class="col-12  text-start">
-                        <h5 class="fw-bold">$349.95</h5>
-                    </div>
-                    <div class="col-12  d-flex text-start">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum fugiat quidem veniam
-                        perferendis iure tenetur, nobis ullam...
-                    </div>
-                    <div class="col-12  d-flex justify-content-end align-items-end mt-2 ">
-                        <button class="buttonCard">Vai al dettaglio</button>
-                    </div>
-                </div>
-            </div>
-
-
         </div>
     </div>
 </x-layout>
 {{-- Da rivedere --}}
-{{-- <div class=" col-4 m-2 cardExepmle rounded-3 d-flex flex-column justify-content-evenly align-items-center">
+{{-- <div class=" col-3 m-2 cardExepmle rounded-3 d-flex flex-column justify-content-evenly align-items-center">
     <div class="immagine mt-2"></div>
     <div class="d-flex flex-row justify-content-between mt-1 ">
         <h5>TITOLO</h5>
