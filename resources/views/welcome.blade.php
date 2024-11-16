@@ -5,21 +5,15 @@
         <div class="list">
 
             <div class="item active">
-                <img src="{{ Storage::url('image/slide_abbigliamento.png') }}" alt="">
+                <img src="{{ Storage::url('image/slide_welcome.jpg') }}" alt="">
                 <div class="content">
-                    <p>Category</p>
-                    <h2>ABBIGLIAMENTO</h2>
-                    <p>
-                        Entra nella sezione abbiggliamento per scoprire migliaia di capi alla moda, nuovi o usati.
-                        Clicca sul pulsante per vedere i prodotti
-                    </p>
-                    <a href="" class="btn btn-info">Scopri di più</a>
+                    <a href="{{route('article.index')}}" class="btn btn-info">Guarda tutte le categorie</a>
                 </div>
             </div>
 
             @foreach($categories as $category)
             <div class="item">
-                <img src="{{ Storage::url('image/slide_sport.jpeg') }}" alt="">
+                <img src="{{ Storage::url('image/slide_libri&riviste.webp') }}" alt="">
                 <div class="content">
                     <p>Category</p>
                     <h2>{{ $category->name }}</h2>
@@ -43,7 +37,7 @@
         <!-- thumbnails -->
         <div class="thumbnail">
 
-            <div class="item active">
+            <div class="item active d-none">
                 <img src="{{ Storage::url('image/slide_abbigliamento.png') }}">
                 <div class="content">
                     Abbigliamento
@@ -52,7 +46,7 @@
 
             @foreach($categories as $category)
             <div class="item">
-                <img src="{{ Storage::url('image/slide_sport.jpeg') }}">
+                <img src="{{ Storage::url('image/slide_casa&giardinaggio.webp') }}">
                 <div class="content">
                    {{ $category->name }}
                 </div>

@@ -24,12 +24,12 @@ a {
     /* background-color: #354f52; */
     /* background-color: #695e9dc1 !important; */
     height: 80px;
-    background-color: #ff6f00e1 !important;
-    color: #d4af37 !important;
+    background-color: #016328e1 !important;
+    color: #ffffff !important;
     z-index: 100;
 }
 .textColor1 {
-    color: #d4af37 !important;
+    color: #ffffff !important;
 }
 .bg_navbar2 {
     background-color: #4b4b4b;
@@ -370,7 +370,7 @@ a {
 /* THUMBNAIL */
 .thumbnail {
     position: absolute;
-    bottom: 50px;
+    bottom: -4px;
     z-index: 11;
     display: flex;
     gap: 10px;
@@ -385,8 +385,15 @@ a {
     width: 0;
 }
 .thumbnail .item {
-    width: 150px;
-    height: 220px;
+    width: 100px;
+    height: 190px;
+    filter: brightness(0.5);
+    transition: 0.5s;
+    flex-shrink: 0;
+}
+.thumbnail .item:hover {
+    width: 120px;
+    height: 200px;
     filter: brightness(0.5);
     transition: 0.5s;
     flex-shrink: 0;
