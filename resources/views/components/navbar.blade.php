@@ -5,12 +5,11 @@
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        @auth
-            <a href="{{ route('article.create') }}" class="textColor1">Inserisci annuncio</a>
-        @endauth
-        <a href="{{ route('article.index') }}" class="ms-3 text-decoration-none textColor1">Annunci</a>
-        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex">
+                <li class="nav-item">
+                    <a href="{{ route('article.index') }}" class="nav-link text-decoration-none textColor1">Annunci</a>
+                </li>
                 <li class="nav-item dropdown ">
                     <a class="nav-link dropdown-toggle textColor1" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
@@ -24,41 +23,42 @@
                 </li>
                 <li class="nav-item dropdown ">
                     @guest
-                        <a class="nav-link dropdown-toggle textColor1" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Ciao, accedi
-                        </a>
-                        <ul class="dropdown-menu dropdownUser">
-                            <div class="col-12">
-                                <div class="d-flex flex-column align-items-start">
-                                    <a class="dropdown-item" href="{{ route('login') }}">Login</a>
+                    <a class="nav-link dropdown-toggle textColor1" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Ciao, accedi
+                    </a>
+                    <ul class="dropdown-menu dropdownUser">
+                        <div class="col-12">
+                            <div class="d-flex flex-column align-items-start">
+                                <a class="dropdown-item" href="{{ route('login') }}">Login</a>
 
-                                </div>
                             </div>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Contattaci</a></li>
-                            <li><a class="dropdown-item" href="#">FAQ</a></li>
-                        </ul>
+                        </div>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Contattaci</a></li>
+                        <li><a class="dropdown-item" href="#">FAQ</a></li>
+                    </ul>
                     @else
-                        <a class="nav-link dropdown-toggle textColor1" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Ciao, {{ ucWords(Auth::user()->name) }}!
-                        </a>
-                        <ul class="dropdown-menu dropdownUserLoggato">
-                            <form action="{{ route('logout') }}" method="POST">
-                                @csrf
-                                <button class="dropdown-item" type=" submit">Logout</button>
-                            </form>
-                            <li><a class="dropdown-item" href="#">I miei ordini</a></li>
-                            <li><a class="dropdown-item" href="#">I miei articoli</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Contattaci</a></li>
-                            <li><a class="dropdown-item" href="#">FAQ</a></li>
-                        </ul>
+                    <a class="nav-link dropdown-toggle textColor1" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Ciao, {{ ucWords(Auth::user()->name) }}!
+                    </a>
+                    <ul class="dropdown-menu dropdownUserLoggato">
+                        <li><a href="{{ route('article.create') }}" class="dropdown-item">Inserisci annuncio</a></li>
+                        <li><a class="dropdown-item" href="#">I miei ordini</a></li>
+                        <li><a class="dropdown-item" href="#">I miei articoli</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button class="dropdown-item" type=" submit">Logout</button>
+                        </form>
+                        <li><a class="dropdown-item" href="#">Contattaci</a></li>
+                        <li><a class="dropdown-item" href="#">FAQ</a></li>
+                    </ul>
                     @endguest
                 </li>
                 <li class="nav-item mx-3">
