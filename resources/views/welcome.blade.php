@@ -17,44 +17,19 @@
                 </div>
             </div>
 
+            @foreach($categories as $category)
             <div class="item">
                 <img src="{{ Storage::url('image/slide_sport.jpeg') }}" alt="">
                 <div class="content">
                     <p>Category</p>
-                    <h2>SPORT</h2>
+                    <h2>{{ $category->name }}</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                        Entra per scoprire migliaia di prodotti nuovi o usate!
                     </p>
-                    <a href="" class="btn btn-info">Scopri di più</a>
+                    <a href="{{route('article.byCategory', compact('category'))}}" class="btn btn-info">Scopri di più</a>
                 </div>
             </div>
-
-            <div class="item">
-                <img src="{{ Storage::url('image/slide_casa&giardinaggio.webp') }}" alt="">
-                <div class="content">
-                    <p>Category</p>
-                    <h2>CASA & GIARDINAGGIO</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
-                    </p>
-                    <a href="" class="btn btn-info">Scopri di più</a>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="{{ Storage::url('image/slide_libri&riviste.webp') }}" alt="">
-                <div class="content">
-                    <p>Category</p>
-                    <h2>LIBRI & RIVISTE</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
-                    </p>
-                    <a href="" class="btn btn-info">Scopri di più</a>
-                </div>
-            </div>
+            @endforeach
 
         </div>
 
@@ -67,30 +42,23 @@
 
         <!-- thumbnails -->
         <div class="thumbnail">
+
             <div class="item active">
                 <img src="{{ Storage::url('image/slide_abbigliamento.png') }}">
                 <div class="content">
-                   Abbigliamento
+                    Abbigliamento
                 </div>
             </div>
+
+            @foreach($categories as $category)
             <div class="item">
                 <img src="{{ Storage::url('image/slide_sport.jpeg') }}">
                 <div class="content">
-                    Sport
+                   {{ $category->name }}
                 </div>
             </div>
-            <div class="item">
-                <img src="{{ Storage::url('image/slide_casa&giardinaggio.webp') }}">
-                <div class="content">
-                    Casa&Giardinaggio
-                </div>
-            </div>
-            <div class="item">
-                <img src="{{ Storage::url('image/slide_libri&riviste.webp') }}">
-                <div class="content">
-                    Libri&Riviste
-                </div>
-            </div>
+            @endforeach
+            
         </div>
 
     </div>

@@ -1,3 +1,5 @@
 <x-layout>
-    <h5>articoli della categoria <span>{{$category->name}}</span></h5>
+
+    <h5 class="text-black text-center">articoli della categoria <span>{{$category->name}}</span></h5>
+
 </x-layout>
