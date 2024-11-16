@@ -70,7 +70,7 @@
             <div class="item active">
                 <img src="{{ Storage::url('image/slide_abbigliamento.png') }}">
                 <div class="content">
-                   Abbigliamento
+                    Abbigliamento
                 </div>
             </div>
             <div class="item">
@@ -95,19 +95,19 @@
 
     </div>
 
-    <div class="container-fluid text-center bg-body-tertiary">
+    <div class="container-fluid text-center cambiacolore">
         <div class="row  justify-content-evenly align-items-center mt-5 mb-5">
             <div class="wrapper">
                 @foreach ($articles as $article)
-                <div class="col-4 card"><img src="{{ Storage::url('image/slide_abbigliamento.png') }}">
-                    <div class="info">
-                        <h5>{{ $article->title }}</h5>
-                        <p>{{ $article->price }}€</p>
-                        <p>{{ $article->category->name }}</p>
-                        <a href="{{ route('article.show', compact('article')) }}" class="btn button">Vai
-                            all'articolo</a>
+                    <div class="col-4 card"><img src="{{ Storage::url('image/slide_abbigliamento.png') }}">
+                        <div class="info">
+                            <h5>{{ $article->title }}</h5>
+                            <p>{{ $article->price }}€</p>
+                            <p>{{ $article->category->name }}</p>
+                            <a href="{{ route('article.show', compact('article')) }}" class="btn button">Vai
+                                all'articolo</a>
+                        </div>
                     </div>
-                </div>
                 @endforeach
 
             </div>
