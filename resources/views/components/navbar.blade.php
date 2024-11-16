@@ -68,14 +68,3 @@
         </div>
     </div>
 </nav>
-<div class="container-fluid bg_navbar2 ">
-    <div class="row">
-        <div class="col-12 d-flex justify-content-center align-items-center">
-            @foreach ($categories as $category)
-                <a class="text-white mx-3 pb-2 text-decoration-none text-uppercase"
-                    href="{{ route('article.byCategory', compact('category')) }}">{{ $category->name }}
-                </a>
-            @endforeach
-        </div>
-    </div>
-</div>

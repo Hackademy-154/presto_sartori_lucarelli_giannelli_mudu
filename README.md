@@ -90,3 +90,55 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
         </button>
     </div>
 </div>
+
+
+        <div class="row">
+            <!-- CAROUSEL -->
+            <div class="col-12 p-0 ">
+                <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active ratio ratio-21x9">
+                            <img src="{{ Storage::url('image/slide_abbigliamento.png') }}" class="d-block w-100"
+                                alt="...">
+                        </div>
+                        <div class="carousel-item ratio ratio-21x9">
+                            <img src="{{ Storage::url('image/slide_sport.jpeg') }}" class="d-block w-100"
+                                alt="...">
+                        </div>
+                        <div class="carousel-item ratio ratio-21x9">
+                            <img src="{{ Storage::url('image/slide_libri&riviste.webp') }}" class="d-block w-100"
+                                alt="...">
+                        </div>
+                        <div class="carousel-item ratio ratio-21x9">
+                            <img src="{{ Storage::url('image/slide_casa&giardinaggio.webp') }}" class="d-block w-100"
+                                alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- FINE CAROUSEL -->
+
+
+<!-- sotto navbar -->
+<div class="container-fluid bg_navbar2 ">
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center align-items-center">
+            @foreach ($categories as $category)
+                <a class="text-white mx-3 pb-2 text-decoration-none text-uppercase"
+                    href="{{ route('article.byCategory', compact('category')) }}">{{ $category->name }}
+                </a>
+            @endforeach
+        </div>
+    </div>
+</div>
