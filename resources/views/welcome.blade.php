@@ -59,11 +59,8 @@
 
     <div class="container-fluid text-center cambiacolore">
         <div class="row wrapper justify-content-evenly align-items-center mt-5 mb-5">
-           
                 @foreach ($articles as $article)
-                    <x-cardArticle :article="$article"></x-cardArticle>
+                <x-cardArticle :article="$article"></x-cardArticle>
                 @endforeach
-
-         
         </div>
 </x-layout>
