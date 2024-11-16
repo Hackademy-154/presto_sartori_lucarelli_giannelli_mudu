@@ -58,10 +58,10 @@
     </div>
 
     <div class="container-fluid text-center cambiacolore">
-        <div class="row  justify-content-evenly align-items-center mt-5 mb-5">
-            <div class="wrapper">
+        <div class="row wrapper justify-content-evenly align-items-center mt-5 mb-5">
+           
                 @foreach ($articles as $article)
-                    <div class="col-4 card"><img src="{{ Storage::url('image/slide_abbigliamento.png') }}">
+                    <div class="col-3 col-md-4 card"><img src="{{ Storage::url('image/slide_abbigliamento.png') }}">
                         <div class="info">
                             <h5>{{ $article->title }}</h5>
                             <p>{{ $article->price }}€</p>
@@ -72,6 +72,6 @@
                     </div>
                 @endforeach
 
-            </div>
+         
         </div>
 </x-layout>

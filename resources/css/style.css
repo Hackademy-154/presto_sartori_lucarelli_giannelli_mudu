@@ -268,10 +268,12 @@ a {
 .img-container {
     height: 450px;
     width: 600px;
+    border-radius: 10px;
 }
 .img-container img {
     height: 100%;
     width: 100%;
+    border-radius: 10px;
 }
 
 /* SLIDER 2 */
