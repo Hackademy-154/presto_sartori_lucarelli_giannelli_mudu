@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container vh-100">
+    <div class="container min-vh-100">
         <div class="row pt-5">
             <div class="col-12 pt-5">
                 <h1 class="text-center">articoli della categoria <span>{{$category->name}}</span></h1>

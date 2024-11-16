@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container cambiacolore vh-100">
+    <div class="container cambiacolore min-vh-100">
         <div class="row pt-5 justify-content-center">
             <div class="col-12 col-md-6 text-center mt-5">
                 <h3 class="display-3 text-black">
