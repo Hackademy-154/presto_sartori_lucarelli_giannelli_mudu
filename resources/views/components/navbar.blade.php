@@ -1,4 +1,4 @@
-<nav class="navbar position-fixed navbar-expand-lg bg_navbar1 w-100 d-flex flex-column">
+<nav class="navbar position-fixed navbar-expand-lg bg_navbar1 vw-100 d-flex flex-column">
     <div class="container-fluid ff">
         <a class="navbar-brand textColor1" href="{{ route('homepage') }}">PRESTO.IT</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"

@@ -48,7 +48,7 @@
             <div class="item">
                 <img src="{{ Storage::url('image/slide_casa&giardinaggio.webp') }}">
                 <div class="content">
-                   {{ $category->name }}
+                    {{ $category->name }}
                 </div>
             </div>
             @endforeach

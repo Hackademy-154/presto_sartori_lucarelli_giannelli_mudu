@@ -1,8 +1,8 @@
 <x-layout>
-    <div class="container cambiacolore">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-6 text-center">
-                <h3 class="display-3">
+    <div class="container cambiacolore vh-100">
+        <div class="row pt-5 justify-content-center">
+            <div class="col-12 col-md-6 text-center mt-5">
+                <h3 class="display-3 text-black">
                     Tutti gli annunci
                 </h3>
             </div>

@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid">
+    <div class="container-fluid vh-100 pt-5">
         <div class="row align-items-center justify-content-center py-5 ">
             <div class="col-12 registerFrom d-flex flex-column justify-content-center align-items-center ">
                 <h2 class="fs-1 mb-3 text-center">Sign Up</h2>
