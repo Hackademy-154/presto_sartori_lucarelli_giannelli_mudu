@@ -1,15 +1,15 @@
 <x-layout>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1 class="text-center text-dark fw-bold m-5">
+    <div class="container vh-100">
+        <div class="row justify-content-center align-items-center ">
+            <div class="col-4  w-100 my-5 d-flex justify-content-center shadow rounded-1">
+                <h1 class="text-center test text-dark fw-bold  ">
                     Inserire articolo
                 </h1>
             </div>
-        </div>
-
-        <div class="row">
-            <div class="col">
+            <div class="col-7 d-flex ">
+                <img class="imgCreate test2" src="{{ Storage::url('image/createImg.png') }}"></img>
+            </div>
+            <div class="col-5 d-flex ">
                 <!-- creare articolo con livewire -->
                 <livewire:create-article-form>
             </div>
