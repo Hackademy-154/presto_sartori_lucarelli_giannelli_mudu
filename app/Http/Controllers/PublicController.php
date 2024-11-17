@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class PublicController extends Controller
 {
     public function homepage()  {
-        $articles = Article::take(5)->orderBy('created_at', 'desc')->get();
+        $articles = Article::take(4)->orderBy('created_at', 'desc')->get();
         return view('welcome', compact('articles'));
     }
 }

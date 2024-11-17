@@ -1,6 +1,6 @@
 
 
-<div class="col-3 col-md-4 my-3 card"><img src="{{ Storage::url('image/slide_abbigliamento.png') }}">
+<div class="col-3 col-md-4 my-3 card"><img src="{{ Storage::url('image/ps5.jpg') }}">
     <div class="info">
         <h5>{{ $article->title }}</h5>
         <p>{{ $article->price }}€</p>
