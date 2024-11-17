@@ -7,7 +7,7 @@
             <div class="item active">
                 <img src="{{ Storage::url('image/slide_welcome.jpg') }}" alt="">
                 <div class="content">
-                    <a href="{{route('article.index')}}" class="btn btn-info">Guarda tutte le categorie</a>
+                    <a href="{{route('article.index')}}" class="btn buttonCharacter">Guarda tutte le categorie</a>
                 </div>
             </div>
 
@@ -20,7 +20,7 @@
                     <p>
                         Entra per scoprire migliaia di prodotti nuovi o usate!
                     </p>
-                    <a href="{{route('article.byCategory', compact('category'))}}" class="btn btn-info">Scopri di più</a>
+                    <a href="{{route('article.byCategory', compact('category'))}}" class="btn buttonCharacter">Scopri di più</a>
                 </div>
             </div>
             @endforeach
@@ -52,15 +52,19 @@
                 </div>
             </div>
             @endforeach
-            
+
         </div>
 
     </div>
 
+    <div class="d-flex justify-content-center align-items-center mt-5">
+        <h4 class="text-dark me-3">Dai uno sguardo gli ultimi articoli inseriti oppure </h4>
+        <a href="" class="btn buttonCharacter fs-5">Aggiungi un articolo</a>
+    </div>
     <div class="container-fluid text-center cambiacolore">
         <div class="row wrapper justify-content-evenly align-items-center mt-5 mb-5">
-                @foreach ($articles as $article)
-                <x-cardArticle :article="$article"></x-cardArticle>
-                @endforeach
+            @foreach ($articles as $article)
+            <x-cardArticle :article="$article"></x-cardArticle>
+            @endforeach
         </div>
 </x-layout>
