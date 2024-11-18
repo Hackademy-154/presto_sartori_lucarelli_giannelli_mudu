@@ -6,6 +6,12 @@
     color: white;
 }
 
+.textGrey {
+    color: #6c757d !important;
+}
+.sfumatura {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 body {
     background-color: #eaeaea;
     /* background-color: #cad2c5; */
@@ -17,8 +23,12 @@ a {
 .cambiacolore {
     background-color: white !important;
 }
-/* Palette */
-
+/* Varie */
+.divider {
+    height: 6px;
+    background-color: #eaeaea;
+    width: 100%;
+}
 /* Navbar */
 .bg_navbar1 {
     /* background-color: #354f52; */
@@ -60,6 +70,88 @@ a {
     width: 200px !important;
     left: -10px !important;
 }
+/* Header & Swiper */
+.imgHeader {
+    height: 450px;
+    transform: scaleX(-1);
+    filter: drop-shadow(0 0 0.75rem rgb(63, 62, 62));
+}
+.imgHeader2 {
+    height: 400px;
+    filter: drop-shadow(0 0 0.75rem rgb(63, 62, 62));
+}
+.headerSX {
+    padding-left: 180px !important;
+}
+.swiper {
+    width: 100%;
+    height: 450px;
+    background: #1f78b4;
+}
+.spazioNav {
+    padding-top: 76px;
+}
+.swiper-slide {
+    font-size: 18px;
+    color: #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.parallax-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 130%;
+    height: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.swiper-slide .title {
+    font-size: 41px;
+    font-weight: 300;
+}
+
+.swiper-slide .subtitle {
+    font-size: 21px;
+}
+
+.swiper-slide .text {
+    font-size: 14px;
+    max-width: 400px;
+    line-height: 1.3;
+}
+/* Section Info */
+.infoIcon i {
+    color: #007bff;
+}
+
+.infoIcon h5 {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #6c757d;
+}
+
+.infoIcon p {
+    color: #6c757d;
+}
+.divisorioIcons {
+    width: 80%;
+    height: 3px;
+    background: #007bff;
+    margin: 15px auto;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Section Arrow */
+.sectionsArrow {
+    height: 40px;
+}
+.sectionsArrow > h2 {
+    height: 40px;
+}
 /* Footer */
 .bg_footer1 {
     background-color: #253137;
@@ -87,7 +179,17 @@ a {
 .bg_card {
     background-color: #84a98c;
 }
-
+.buttonSection {
+    background-color: #e27120;
+    width: 278px;
+    border-radius: 5px;
+    color: #ffffff;
+    border: transparent;
+    padding: 10px 20px;
+    font-weight: 700;
+    filter: drop-shadow(0 0 0.35rem rgba(54, 54, 54, 0.76));
+    cursor: pointer;
+}
 /* card show */
 .divDescriptionCardShow {
     height: 310px;
@@ -159,6 +261,7 @@ a {
     filter: drop-shadow(0 0 0.35rem rgba(54, 54, 54, 0.76));
     cursor: pointer;
 }
+
 .buttonCharacter:hover {
     background-color: #c15203;
 }
@@ -306,81 +409,6 @@ a {
     height: 100%;
     width: 100%;
     border-radius: 10px;
-}
-/* Header & Swiper */
-.imgHeader {
-    height: 450px;
-    transform: scaleX(-1);
-    filter: drop-shadow(0 0 0.75rem rgb(63, 62, 62));
-}
-.imgHeader2 {
-    height: 400px;
-    filter: drop-shadow(0 0 0.75rem rgb(63, 62, 62));
-}
-.headerSX {
-    padding-left: 180px !important;
-}
-.swiper {
-    width: 100%;
-    height: 450px;
-    background: #1f78b4;
-}
-.spazioNav {
-    padding-top: 76px;
-}
-.swiper-slide {
-    font-size: 18px;
-    color: #fff;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.parallax-bg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 130%;
-    height: 100%;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-position: center;
-}
-
-.swiper-slide .title {
-    font-size: 41px;
-    font-weight: 300;
-}
-
-.swiper-slide .subtitle {
-    font-size: 21px;
-}
-
-.swiper-slide .text {
-    font-size: 14px;
-    max-width: 400px;
-    line-height: 1.3;
-}
-/* Section Info */
-.infoIcon i {
-    color: #007bff;
-}
-
-.infoIcon h5 {
-    font-weight: bold;
-    margin-top: 10px;
-    color: #6c757d;
-}
-
-.infoIcon p {
-    color: #6c757d;
-}
-.divisorioIcons {
-    width: 80%;
-    height: 3px;
-    background: #007bff;
-    margin: 15px auto;
-    border-radius: 3px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Media Query */
