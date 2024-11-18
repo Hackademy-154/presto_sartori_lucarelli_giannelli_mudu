@@ -17,16 +17,16 @@
                         <img src="{{ Storage::url('image/slide_abbigliamento.png') }}" alt="">
                     </div>
                     <div class="img-dettaglio">
-                    <img src="{{ Storage::url('image/slide_sport.jpeg') }}" alt="">
+                        <img src="{{ Storage::url('image/slide_sport.jpeg') }}" alt="">
                     </div>
                     <div class="img-dettaglio">
-                    <img src="{{ Storage::url('image/slide_casa&giardinaggio.webp') }}" alt="">
+                        <img src="{{ Storage::url('image/slide_casa&giardinaggio.webp') }}" alt="">
                     </div>
                     <div class="img-dettaglio">
-                    <img src="{{ Storage::url('image/slide_libri&riviste.webp') }}" alt="">
+                        <img src="{{ Storage::url('image/slide_libri&riviste.webp') }}" alt="">
                     </div>
                     <div class="img-dettaglio">
-                    <img src="{{ Storage::url('image/slide_sport.jpeg') }}" alt="">
+                        <img src="{{ Storage::url('image/slide_sport.jpeg') }}" alt="">
                     </div>
                 </div>
                 <div class="col-12 col-md-6 img-container">
@@ -37,7 +37,7 @@
                         <h2>{{$article->title}}</h2>
                         <h4> {{$article->price}}€</h4>
                         <div class="scrollspy-example text-black divDescriptionCardShow mb-3" data-bs-spy="scroll" data-bs-smooth-scroll="true" tabindex="0">
-                            <h6 >{{$article->description}}</h6>
+                            <h6>{{$article->description}}</h6>
                         </div>
                     </div>
                     <div class="d-flex justify-content-around align-items-end">
@@ -55,5 +55,3 @@
 
     </div>
 </x-layout>
-
-
