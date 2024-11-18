@@ -2,7 +2,7 @@
     <div class="container spazioNav2">
         <div class="row">
             <div class="col-6">
-                <img class="img-fluid sfumaturaa" src="{{ Storage::url('image/work.png') }}" alt="">
+                <img class="img-fluid sfumaturaa" src="/media/work.png" alt="">
             </div>
             <div class="col-6 d-flex flex-column align-items-center justify-content-center">
                 <div class="col-12 text-center py-3 shadow bg-tertiary rounded-3 px-2">
