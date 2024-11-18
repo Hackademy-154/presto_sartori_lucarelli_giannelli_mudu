@@ -17,7 +17,7 @@
 
 <body>
     <x-navbar></x-navbar>
-    <div class=" ">
+    <div class=" spazioNav2">
         {{ $slot }}
     </div>
     <x-footer></x-footer>

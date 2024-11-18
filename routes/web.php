@@ -31,3 +31,4 @@ Route::patch('/reject/{article}', [RevisorController::class, 'reject'])->name('r
 //Rotte mail
 Route::get('/revisor/request', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+Route::get('/make/revisor', [RevisorController::class, 'becomeRevisorForm'])->name('form.revisor');

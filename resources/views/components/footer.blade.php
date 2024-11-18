@@ -70,7 +70,7 @@
 
                             <ul class="list-unstyled mb-0">
                                 <li>
-                                    <a class="text-white" href="{{ route('become.revisor') }}">Diventa Revisor</a>
+                                    <a class="text-white" href="{{ route('form.revisor') }}">Diventa Revisor</a>
                                 </li>
                                 <li>
                                     <a class="text-white" href="#!">Link 2</a>

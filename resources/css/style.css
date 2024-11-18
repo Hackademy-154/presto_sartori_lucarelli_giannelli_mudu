@@ -37,7 +37,7 @@ a {
     /* background-color: #354f52; */
     /* background-color: #695e9dc1 !important; */
     /* height: 80px; */
-    background-color: #ff6f61 !important;
+    background-color: #006867 !important;
     color: #ffffff !important;
     z-index: 100;
 }
@@ -73,7 +73,6 @@ a {
     width: 200px !important;
     left: -10px !important;
 }
-
 
 /* Swiper Header */
 .imgHeader {
@@ -161,7 +160,7 @@ a {
 
 /* Section Info */
 .infoIcon i {
-    color: #ff6f61;
+    color: #068282;
 }
 
 .infoIcon h5 {
@@ -175,7 +174,7 @@ a {
 .divisorioIcons {
     width: 80%;
     height: 3px;
-    background: #ff6f61;
+    background: #068282;
     margin: 8px auto;
     border-radius: 3px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -283,7 +282,7 @@ a {
 }
 
 .buttonCharacter {
-    background-color: #ff6f61;
+    background-color: #068282;
     width: 250px;
     border-radius: 10px;
     color: #ffffff;
@@ -295,7 +294,7 @@ a {
 }
 
 .buttonCharacter:hover {
-    background-color: #e65a50;
+    background-color: #006867;
     color: #ffffff;
 }
 

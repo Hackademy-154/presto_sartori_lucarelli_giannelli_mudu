@@ -1,20 +1,7 @@
 <x-layout>
-    <div class="container sfumaturaa">
+    <div class="container sfumaturaa pb-3">
         {{-- Swiper Header --}}
-        <div class="row spazioNav2   borderTop ">
-
-            <div class="col-12 d-flex justify-content-center">
-                @if (session()->has('errorMessage'))
-                    <div class="alert alert-danger text-center shadow rounded w-50 mt-3">
-                        {{ session('errorMessage') }}
-                    </div>
-                @endif
-                @if (session()->has('message'))
-                    <div class="alert alert-success text-center shadow rounded w-50 mt-3">
-                        {{ session('message') }}
-                    </div>
-                @endif
-            </div>
+        <div class="row borderTop ">
             <div class=" col-12 swiper mySwiper borderTop"
                 style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff">
                 <div class="swiper-wrapper">
