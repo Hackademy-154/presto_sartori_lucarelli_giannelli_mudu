@@ -69,75 +69,87 @@
             </div>
         </div>
     </div>
-    <div class="container">
 
-    </div>
-    <div class="container text-center cambiacolore">
-        <div class="row py-4">
-            <div class="col-12 d-flex justify-content-center align-items-center contenitore">
-                <div class="row justify-content-center align-items-center ">
-                    @foreach ($categories as $category)
-                        <div class="col-2 d-flex justify-content-center align-items-center contenuto  mx-1">
-                            <a href="{{ route('article.byCategory', compact('category')) }}"
-                                class="d-flex flex-column justify-content-center align-items-center">
-                                <img src="{{ Storage::url('image/ps5.jpg') }}" alt=""
-                                    class="imgCategoryCerchio">
-                                <h6 class="text-dark mt-2">{{ $category->name }}</h6>
-                            </a>
-
-                        </div>
-                    @endforeach
+    <div class="container py-3 cambiacolore">
+        <div class="row text-center">
+            {{-- Punto di forza 1 --}}
+            <div class="col-6 col-md-3">
+                <div class="infoIcon">
+                    <i class="bi bi-truck fs-1 barraIcon  mb-3"></i>
+                    <h5>Spedizione Veloce</h5>
+                    <div class="divisorioIcons"></div>
+                    <p>Ricevi i tuoi acquisti in tempi record grazie al nostro servizio di consegna rapido
+                        ed efficiente.</p>
+                </div>
+            </div>
+            {{-- Punto di forza 2 --}}
+            <div class="col-6 col-md-3">
+                <div class="infoIcon">
+                    <i class="bi bi-lock fs-1 barraIcon  mb-3"></i>
+                    <h5>Pagamento Sicuro</h5>
+                    <div class="divisorioIcons"></div>
+                    <p>Acquista in totale tranquillità con i nostri metodi di pagamento affidabili e
+                        protetti.</p>
+                </div>
+            </div>
+            {{-- Punto di forza 3 --}}
+            <div class="col-6 col-md-3">
+                <div class="infoIcon">
+                    <i class="bi bi-award fs-1 barraIcon  mb-3"></i>
+                    <h5>Qualità Garantita</h5>
+                    <div class="divisorioIcons"></div>
+                    <p>Ogni prodotto è selezionato per garantirti il massimo della qualità e della
+                        soddisfazione.</p>
+                </div>
+            </div>
+            {{-- Punto di forza 4 --}}
+            <div class="col-6 col-md-3">
+                <div class="infoIcon">
+                    <i class="bi bi-headset fs-1 barraIcon  mb-3"></i>
+                    <h5>Assistenza 24/7</h5>
+                    <div class="divisorioIcons"></div>
+                    <p>Il nostro team è sempre disponibile per aiutarti in ogni fase del tuo acquisto.</p>
                 </div>
             </div>
         </div>
+    </div>
+
+
+
+    <div class="container text-center cambiacolore">
         <div class="row">
-            {{-- Sezione Info Icons --}}
-            <div class="container py-3">
-                <div class="row text-center">
-                    {{-- Punto di forza 1 --}}
-                    <div class="col-6 col-md-3">
-                        <div class="infoIcon">
-                            <i class="bi bi-truck fs-1 barraIcon  mb-3"></i>
-                            <h5>Spedizione Veloce</h5>
-                            <div class="divisorioIcons"></div>
-                            <p>Ricevi i tuoi acquisti in tempi record grazie al nostro servizio di consegna rapido
-                                ed efficiente.</p>
-                        </div>
+
+            <div class="swiper2 mySwiper2">
+                <div class="swiper-wrapper">
+                    @foreach ($categories as $category)
+                    <div class="swiper-slide">
+                        <a href="{{ route('article.byCategory', compact('category')) }}"
+                            class="d-flex flex-column justify-content-center align-items-center">
+                            <img src="{{ Storage::url('image/ps5.jpg') }}" alt=""
+                                class="imgCategoryCerchio">
+                            <h6 class="text-dark mt-2">{{ $category->name }}</h6>
+                        </a>
                     </div>
-                    {{-- Punto di forza 2 --}}
-                    <div class="col-6 col-md-3">
-                        <div class="infoIcon">
-                            <i class="bi bi-lock fs-1 barraIcon  mb-3"></i>
-                            <h5>Pagamento Sicuro</h5>
-                            <div class="divisorioIcons"></div>
-                            <p>Acquista in totale tranquillità con i nostri metodi di pagamento affidabili e
-                                protetti.</p>
-                        </div>
-                    </div>
-                    {{-- Punto di forza 3 --}}
-                    <div class="col-6 col-md-3">
-                        <div class="infoIcon">
-                            <i class="bi bi-award fs-1 barraIcon  mb-3"></i>
-                            <h5>Qualità Garantita</h5>
-                            <div class="divisorioIcons"></div>
-                            <p>Ogni prodotto è selezionato per garantirti il massimo della qualità e della
-                                soddisfazione.</p>
-                        </div>
-                    </div>
-                    {{-- Punto di forza 4 --}}
-                    <div class="col-6 col-md-3">
-                        <div class="infoIcon">
-                            <i class="bi bi-headset fs-1 barraIcon  mb-3"></i>
-                            <h5>Assistenza 24/7</h5>
-                            <div class="divisorioIcons"></div>
-                            <p>Il nostro team è sempre disponibile per aiutarti in ogni fase del tuo acquisto.</p>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
+                <div class="swiper-pagination"></div>
             </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="container cambiacolore">
+        <div class="row">
             <div class="col-12 wrapper justify-content-evenly align-items-center mt-5 mb-5">
                 @foreach ($articles as $article)
-                    <x-cardArticle :article="$article"></x-cardArticle>
+                <x-cardArticle :article="$article"></x-cardArticle>
                 @endforeach
             </div>
         </div>
