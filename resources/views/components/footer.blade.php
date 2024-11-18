@@ -28,8 +28,6 @@
                     <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
                             class="fab bi-github text-white fs-4"></i></a>
                 </section>
-
-
                 <section class="text-white">
                     <form action="">
                         <div class="row d-flex justify-content-center text-white">
@@ -52,8 +50,6 @@
                         </div>
                     </form>
                 </section>
-
-
                 <section class="mb-4 text-white">
                     <p class="text-white">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
@@ -61,25 +57,16 @@
                         harum corrupti dicta, aliquam sequi voluptate quas.
                     </p>
                 </section>
-
-
                 <section class="">
                     <div class="row ">
                         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                             <h5 class="text-uppercase text-white">Links</h5>
-
                             <ul class="list-unstyled mb-0">
                                 <li>
-                                    <a class="text-white" href="{{ route('form.revisor') }}">Diventa Revisor</a>
-                                </li>
-                                <li>
-                                    <a class="text-white" href="#!">Link 2</a>
-                                </li>
-                                <li>
-                                    <a class="text-white" href="#!">Link 3</a>
-                                </li>
-                                <li>
-                                    <a class="text-white" href="#!">Link 4</a>
+                                    <h6>
+                                        <a class="text-white " href="{{ route('form.revisor') }}">Lavora con
+                                            noi</a>
+                                    </h6>
                                 </li>
                             </ul>
                         </div>
@@ -140,7 +127,6 @@
 
                     </div>
                 </section>
-
             </div>
         </div>
     </div>

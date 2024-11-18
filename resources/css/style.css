@@ -5,7 +5,13 @@
     font-style: normal;
     color: #333333;
 }
-
+h1,
+h2 {
+    color: #006867 !important;
+}
+.colorPetrolio {
+    color: #006867 !important;
+}
 .text-white {
     color: #ffffff !important;
 }
@@ -519,9 +525,8 @@ a {
     z-index: 3;
 }
 
-
 /* INDEX revisore */
-.cardRev{
+.cardRev {
     background-color: #e6e6e6;
     padding: 10px;
     border-radius: 10px;

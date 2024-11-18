@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container sfumaturaa pb-3">
+    <div class="container sfumaturaa mb-4">
         {{-- Swiper Header --}}
         <div class="row borderTop ">
             <div class=" col-12 swiper mySwiper borderTop"
@@ -9,7 +9,7 @@
                         <div class="row h-100">
                             <div class="col-6 d-flex flex-column justify-content-center p-5 headerSX">
                                 <div class="title" data-swiper-parallax="-300">
-                                    <h1>Benvenuto</h1>
+                                    <h1 class="fw-bold">Benvenuto</h1>
                                 </div>
                                 <div class="subtitle" data-swiper-parallax="-200">
                                     <h3 class="pb-3">Il tuo shopping, il nostro impegno</h3>
@@ -112,11 +112,12 @@
     </div>
 
     {{-- Swiper Category --}}
-    <div class="container text-center cambiacolore sfumaturaa mt-3 border">
+    <div class="container text-center cambiacolore sfumaturaa mt-3 mb-4 border">
         <div class="row justify-content-center ">
             <div class="col-12 d-flex justify-content-start align-items-center mb-1 mt-2 sectionsArrow ps-4 pt-3">
-                <h2 class="m-0 textGrey fw-bold ">Categorie</h2><a href="{{ route('article.index') }}"><i
-                        class="bi textGrey fw-bold bi-arrow-right-short fs-1 mt-1"></i></a>
+                <h2 class="m-0 textGrey fw-bold ">Categorie</h2><a class="colorPetrolio mt-1"
+                    href="{{ route('article.index') }}"><i
+                        class="bi colorPetrolio fw-bold bi-arrow-right-short fs-1 mt-1"></i></a>
             </div>
             <div class="col-12 swiper2 d-flex">
                 <div class="swiper-wrapper">
@@ -134,11 +135,12 @@
         </div>
     </div>
     {{-- Ultimi 4 annunci --}}
-    <div class="container cambiacolore sfumaturaa mt-3 border">
+    <div class="container cambiacolore sfumaturaa mt-4 border">
         <div class="row">
             <div class="col-12 d-flex justify-content-start align-items-center mb-4 mt-2 sectionsArrow ps-4 pt-3">
-                <h2 class="m-0 textGrey fw-bold ">Annunci</h2><a href="{{ route('article.index') }}"><i
-                        class="bi textGrey fw-bold bi-arrow-right-short fs-1 mt-1"></i></a>
+                <h2 class="m-0 textGrey fw-bold ">Annunci</h2><a class="mt-1 colorPetrolio"
+                    href="{{ route('article.index') }}"><i
+                        class="bi colorPetrolio fw-bold bi-arrow-right-short fs-1 mt-1"></i></a>
             </div>
             <div class="col-12 d-flex  wrapper justify-content-evenly align-items-center mt-1 pb-5">
                 @foreach ($articles as $article)
