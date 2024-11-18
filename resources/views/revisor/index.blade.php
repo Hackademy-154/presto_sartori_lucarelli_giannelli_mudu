@@ -6,7 +6,7 @@
                 <h1>Dashboard del Revisore</h1>
 
                 <!-- messaggio di avvenuta accettazione o rifiuto dell'articolo  -->
-                 @if (session()->has('message'))
+                @if (session()->has('message'))
                     <div class="row justify-content-center">
                         <div class="col-5 alert alert-success text-center shadow rounded">
                             {{session('message')}}
@@ -35,7 +35,7 @@
                     <div>
                         <!-- dettagli articolo -->
                         <h1>{{$article_to_check->user->title}}</h1>
-                        <h3>Autore: {{$rticle_to_check->user->name}}</h3>
+                        <h3>Autore: {{$article_to_check->user->name}}</h3>
                         <h4>{{$article_to_check->price}} €</h4>
                         <h4 class="fst-italic text-muted"># {{$article_to_check->category->name}}</h4>
                         <p>{{$article_to_check->description}}</p>

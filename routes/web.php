@@ -17,8 +17,8 @@ Route::get('/index', [ArticleController::class, 'index'])->name('article.index')
 
 //revisore
 Route::get('/revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
-Route::patch('/accep/{article}', [RevisorController::class, 'accept'])->name('accept');
-
+Route::patch('/accept/{article}', [RevisorController::class, 'accept'])->name('accept');
+Route::patch('/reject/{article}', [RevisorController::class, 'reject'])->name('reject');
 
 
 
