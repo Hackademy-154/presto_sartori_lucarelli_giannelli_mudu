@@ -8,8 +8,21 @@
                 <!-- messaggio di avvenuta accettazione o rifiuto dell'articolo  -->
                 @if (session()->has('message'))
                 <div class="row justify-content-center">
-                    <div class="col-5 alert alert-success text-center shadow rounded">
+                    <div class="col-5 d-flex align-items-center justify-content-evenly alert alert-success text-center shadow rounded">
                         {{session('message')}}
+                        <form action="{{route('undoSetArticle')}}" method="POST">
+                            @csrf
+                            @method('PATCH')
+                            <button class="btn btn-warning">Annulla revisione</button>
+                        </form>
+                    </div>
+                </div>
+                @endif
+                <!-- messaggio di avvenuta accettazione o rifiuto dell'articolo  -->
+                @if (session()->has('messageUndo'))
+                <div class="row justify-content-center">
+                    <div class="col-5 alert alert-warning text-center shadow rounded">
+                        {{session('messageUndo')}}
                     </div>
                 </div>
                 @endif

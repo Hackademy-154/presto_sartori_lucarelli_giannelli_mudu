@@ -19,12 +19,12 @@ class RevisorController extends Controller
 
     public function accept(Article $article){
         $article->setAccepted(true);
-        return redirect()->back()->with('message', "Hai accettato l'articolo $article->title");
+        return redirect()->back()->with('message', "Hai accettato l'articolo ''$article->title''");
     }
 
     public function reject(Article $article){
         $article->setAccepted(false);
-        return redirect()->back()->with('message', "Hai rifiutato l'articolo $article->title");
+        return redirect()->back()->with('message', "Hai rifiutato l'articolo ''$article->title''");
     }
     public function becomeRevisor(){
         Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
@@ -36,5 +36,10 @@ class RevisorController extends Controller
     }
     public function becomeRevisorForm(){
         return view('revisor.become-revisor-form');
+    }
+    public function undoSetArticle(){
+        $article = Article::orderBy('updated_at', 'desc')->first();
+        $article->setAccepted(null);
+        return redirect()->back()->with('messageUndo', "Hai annullato la revisione dell'articolo ''$article->title''");
     }
 }
