@@ -113,30 +113,43 @@
             </div>
         </div>
     </div>
-    <div class="container text-center cambiacolore">
-        <div class="row py-4">
-            <div class="col-12 d-flex justify-content-center align-items-center contenitore">
-                <div class="row justify-content-center align-items-center ">
-                    @foreach ($categories as $category)
-                        <div class="col-2 d-flex justify-content-center align-items-center contenuto  mx-1">
-                            <a href="{{ route('article.byCategory', compact('category')) }}"
-                                class="d-flex flex-column justify-content-center align-items-center">
-                                <img src="{{ Storage::url('image/ps5.jpg') }}" alt=""
-                                    class="imgCategoryCerchio">
-                                <h6 class="text-dark mt-2">{{ $category->name }}</h6>
-                            </a>
 
-                        </div>
+
+
+    <div class="container text-center cambiacolore">
+        <div class="row">
+
+            <div class="swiper2 mySwiper2">
+                <div class="swiper-wrapper">
+                    @foreach ($categories as $category)
+                    <div class="swiper-slide">
+                        <a href="{{ route('article.byCategory', compact('category')) }}"
+                            class="d-flex flex-column justify-content-center align-items-center">
+                            <img src="{{ Storage::url('image/ps5.jpg') }}" alt=""
+                                class="imgCategoryCerchio">
+                            <h6 class="text-dark mt-2">{{ $category->name }}</h6>
+                        </a>
+                    </div>
                     @endforeach
                 </div>
+                <div class="swiper-pagination"></div>
             </div>
+
         </div>
     </div>
+
+
+
+
+
+
+
+
     <div class="container cambiacolore">
         <div class="row">
             <div class="col-12 wrapper justify-content-evenly align-items-center mt-5 mb-5">
                 @foreach ($articles as $article)
-                    <x-cardArticle :article="$article"></x-cardArticle>
+                <x-cardArticle :article="$article"></x-cardArticle>
                 @endforeach
             </div>
         </div>
