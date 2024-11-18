@@ -69,8 +69,49 @@
             </div>
         </div>
     </div>
-    <div class="container">
 
+    <div class="container py-3 cambiacolore">
+        <div class="row text-center">
+            {{-- Punto di forza 1 --}}
+            <div class="col-6 col-md-3">
+                <div class="infoIcon">
+                    <i class="bi bi-truck fs-1 barraIcon  mb-3"></i>
+                    <h5>Spedizione Veloce</h5>
+                    <div class="divisorioIcons"></div>
+                    <p>Ricevi i tuoi acquisti in tempi record grazie al nostro servizio di consegna rapido
+                        ed efficiente.</p>
+                </div>
+            </div>
+            {{-- Punto di forza 2 --}}
+            <div class="col-6 col-md-3">
+                <div class="infoIcon">
+                    <i class="bi bi-lock fs-1 barraIcon  mb-3"></i>
+                    <h5>Pagamento Sicuro</h5>
+                    <div class="divisorioIcons"></div>
+                    <p>Acquista in totale tranquillità con i nostri metodi di pagamento affidabili e
+                        protetti.</p>
+                </div>
+            </div>
+            {{-- Punto di forza 3 --}}
+            <div class="col-6 col-md-3">
+                <div class="infoIcon">
+                    <i class="bi bi-award fs-1 barraIcon  mb-3"></i>
+                    <h5>Qualità Garantita</h5>
+                    <div class="divisorioIcons"></div>
+                    <p>Ogni prodotto è selezionato per garantirti il massimo della qualità e della
+                        soddisfazione.</p>
+                </div>
+            </div>
+            {{-- Punto di forza 4 --}}
+            <div class="col-6 col-md-3">
+                <div class="infoIcon">
+                    <i class="bi bi-headset fs-1 barraIcon  mb-3"></i>
+                    <h5>Assistenza 24/7</h5>
+                    <div class="divisorioIcons"></div>
+                    <p>Il nostro team è sempre disponibile per aiutarti in ogni fase del tuo acquisto.</p>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="container text-center cambiacolore">
         <div class="row py-4">
@@ -90,51 +131,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="container cambiacolore">
         <div class="row">
-            {{-- Sezione Info Icons --}}
-            <div class="container py-3">
-                <div class="row text-center">
-                    {{-- Punto di forza 1 --}}
-                    <div class="col-6 col-md-3">
-                        <div class="infoIcon">
-                            <i class="bi bi-truck fs-1 barraIcon  mb-3"></i>
-                            <h5>Spedizione Veloce</h5>
-                            <div class="divisorioIcons"></div>
-                            <p>Ricevi i tuoi acquisti in tempi record grazie al nostro servizio di consegna rapido
-                                ed efficiente.</p>
-                        </div>
-                    </div>
-                    {{-- Punto di forza 2 --}}
-                    <div class="col-6 col-md-3">
-                        <div class="infoIcon">
-                            <i class="bi bi-lock fs-1 barraIcon  mb-3"></i>
-                            <h5>Pagamento Sicuro</h5>
-                            <div class="divisorioIcons"></div>
-                            <p>Acquista in totale tranquillità con i nostri metodi di pagamento affidabili e
-                                protetti.</p>
-                        </div>
-                    </div>
-                    {{-- Punto di forza 3 --}}
-                    <div class="col-6 col-md-3">
-                        <div class="infoIcon">
-                            <i class="bi bi-award fs-1 barraIcon  mb-3"></i>
-                            <h5>Qualità Garantita</h5>
-                            <div class="divisorioIcons"></div>
-                            <p>Ogni prodotto è selezionato per garantirti il massimo della qualità e della
-                                soddisfazione.</p>
-                        </div>
-                    </div>
-                    {{-- Punto di forza 4 --}}
-                    <div class="col-6 col-md-3">
-                        <div class="infoIcon">
-                            <i class="bi bi-headset fs-1 barraIcon  mb-3"></i>
-                            <h5>Assistenza 24/7</h5>
-                            <div class="divisorioIcons"></div>
-                            <p>Il nostro team è sempre disponibile per aiutarti in ogni fase del tuo acquisto.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="col-12 wrapper justify-content-evenly align-items-center mt-5 mb-5">
                 @foreach ($articles as $article)
                     <x-cardArticle :article="$article"></x-cardArticle>
