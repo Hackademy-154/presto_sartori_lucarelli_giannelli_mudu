@@ -70,7 +70,7 @@
         </div>
     </div>
 
-    <div class="container py-3 cambiacolore">
+    <div class="container py-3 cambiacolore sfumatura">
         <div class="row text-center">
             {{-- Punto di forza 1 --}}
             <div class="col-6 col-md-3">
@@ -78,7 +78,7 @@
                     <i class="bi bi-truck fs-1 barraIcon  mb-3"></i>
                     <h5>Spedizione Veloce</h5>
                     <div class="divisorioIcons"></div>
-                    <p>Ricevi i tuoi acquisti in tempi record grazie al nostro servizio di consegna rapido
+                    <p>Servizio di consegna rapido
                         ed efficiente.</p>
                 </div>
             </div>
@@ -88,7 +88,7 @@
                     <i class="bi bi-lock fs-1 barraIcon  mb-3"></i>
                     <h5>Pagamento Sicuro</h5>
                     <div class="divisorioIcons"></div>
-                    <p>Acquista in totale tranquillità con i nostri metodi di pagamento affidabili e
+                    <p>Metodi di pagamento affidabili e
                         protetti.</p>
                 </div>
             </div>
@@ -98,7 +98,7 @@
                     <i class="bi bi-award fs-1 barraIcon  mb-3"></i>
                     <h5>Qualità Garantita</h5>
                     <div class="divisorioIcons"></div>
-                    <p>Ogni prodotto è selezionato per garantirti il massimo della qualità e della
+                    <p>Massimo della qualità e della
                         soddisfazione.</p>
                 </div>
             </div>
@@ -108,37 +108,46 @@
                     <i class="bi bi-headset fs-1 barraIcon  mb-3"></i>
                     <h5>Assistenza 24/7</h5>
                     <div class="divisorioIcons"></div>
-                    <p>Il nostro team è sempre disponibile per aiutarti in ogni fase del tuo acquisto.</p>
+                    <p>Servizio di assistenza sempre disponibile.</p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container text-center cambiacolore">
-        <div class="row py-4">
-            <div class="col-12 d-flex justify-content-center align-items-center contenitore">
+    <div class="container text-center cambiacolore sfumatura mt-2">
+        <div class="row my-4">
+            <div class="col-12 d-flex justify-content-start align-items-center mb-4 mt-2 sectionsArrow ps-4 pt-3">
+                <h2 class="m-0 textGrey fw-bold ">Categorie</h2>
+                <a class="mt-1" href=""><i class="bi textGrey fw-bold bi-arrow-right-short fs-1 "></i>
+                </a>
+            </div>
+            <div class="col-12 d-flex justify-content-center align-items-center contenitore pt-3 pb-3">
                 <div class="row justify-content-center align-items-center ">
                     @foreach ($categories as $category)
-                        <div class="col-2 d-flex justify-content-center align-items-center contenuto  mx-1">
+                        <div class="col-2 d-flex justify-content-center align-items-center contenuto  m-1">
                             <a href="{{ route('article.byCategory', compact('category')) }}"
                                 class="d-flex flex-column justify-content-center align-items-center">
                                 <img src="{{ Storage::url('image/ps5.jpg') }}" alt=""
                                     class="imgCategoryCerchio">
-                                <h6 class="text-dark mt-2">{{ $category->name }}</h6>
+                                <h6 class="text-dark mt-2">{{ ucWords($category->name) }}</h6>
                             </a>
-
                         </div>
                     @endforeach
                 </div>
             </div>
         </div>
     </div>
-    <div class="container cambiacolore">
+    <div class="container cambiacolore sfumatura mt-2">
         <div class="row">
-            <div class="col-12 wrapper justify-content-evenly align-items-center mt-5 mb-5">
+            <div class="col-12 d-flex justify-content-start align-items-center mb-4 mt-2 sectionsArrow ps-4 pt-3">
+                <h2 class="m-0 textGrey fw-bold ">Annunci</h2><a href=""><i
+                        class="bi textGrey fw-bold bi-arrow-right-short fs-1 mt-1"></i></a>
+            </div>
+            <div class="col-12 d-flex  wrapper justify-content-evenly align-items-center mt-1 pb-5">
                 @foreach ($articles as $article)
                     <x-cardArticle :article="$article"></x-cardArticle>
                 @endforeach
             </div>
+
         </div>
     </div>
 </x-layout>
