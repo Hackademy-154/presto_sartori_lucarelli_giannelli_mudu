@@ -124,7 +124,7 @@
                     @foreach ($categories as $category)
                         <div class="swiper-slide ">
                             <a href="{{ route('article.byCategory', compact('category')) }}">
-                                <img src="{{ Storage::url('image/ps5.jpg') }}" alt=""
+                                <img src={{ '/media/category_pic/' . $category->id . '.jpg' }}
                                     class="imgCategoryCerchio sfumatura">
                                 <h5 class="text-dark mt-3 fw-bold">{{ ucWords($category->name) }}</h5>
                             </a>

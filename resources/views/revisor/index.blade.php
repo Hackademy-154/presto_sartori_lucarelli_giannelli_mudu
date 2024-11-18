@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container">
 
-        <div class="row spazioNav">
+        <div class="row">
             <div class="col-12 text text-center my-5">
                 <h1 class="text-dark">Dashboard del Revisore</h1>
 
