@@ -3,7 +3,7 @@
     <div class="container">
         {{-- Swiper Header --}}
         <div class="row spazioNav">
-            <div class=" col-12 swiper mySwiper "
+            <div class=" col-12 swiper mySwiper"
                 style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
