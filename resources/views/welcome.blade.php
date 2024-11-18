@@ -1,17 +1,21 @@
 <x-layout>
-    @if (session()->has('errorMessage'))
-        <div class="alert alert-danger text-center shadow rounded w-50">
-            {{session('errorMessage')}}
-        </div>
-    @endif
-    @if (session()->has('message'))
-        <div class="alert alert-success text-center shadow rounded w-50">
-            {{session('message')}}
-        </div>
-    @endif
     <div class="container">
         {{-- Swiper Header --}}
         <div class="row spazioNav">
+
+            <div class="col-12 d-flex justify-content-center">
+                @if (session()->has('errorMessage'))
+                <div class="alert alert-danger text-center shadow rounded w-50 mt-3">
+                    {{session('errorMessage')}}
+                </div>
+                @endif
+                @if (session()->has('message'))
+                <div class="alert alert-success text-center shadow rounded w-50 mt-3">
+                    {{session('message')}}
+                </div>
+                @endif
+            </div>
+
             <div class=" col-12 swiper mySwiper"
                 style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff">
                 <div class="swiper-wrapper">
@@ -132,13 +136,13 @@
             <div class="col-12 swiper2 d-flex">
                 <div class="swiper-wrapper">
                     @foreach ($categories as $category)
-                        <div class="swiper-slide">
-                            <a href="{{ route('article.byCategory', compact('category')) }}">
-                                <img src="{{ Storage::url('image/ps5.jpg') }}" alt=""
-                                    class="imgCategoryCerchio">
-                                <h6 class="text-dark mt-2">{{ ucWords($category->name) }}</h6>
-                            </a>
-                        </div>
+                    <div class="swiper-slide">
+                        <a href="{{ route('article.byCategory', compact('category')) }}">
+                            <img src="{{ Storage::url('image/ps5.jpg') }}" alt=""
+                                class="imgCategoryCerchio">
+                            <h6 class="text-dark mt-2">{{ ucWords($category->name) }}</h6>
+                        </a>
+                    </div>
                     @endforeach
                 </div>
             </div>
@@ -153,7 +157,7 @@
             </div>
             <div class="col-12 d-flex  wrapper justify-content-evenly align-items-center mt-1 pb-5">
                 @foreach ($articles as $article)
-                    <x-cardArticle :article="$article"></x-cardArticle>
+                <x-cardArticle :article="$article"></x-cardArticle>
                 @endforeach
             </div>
         </div>
