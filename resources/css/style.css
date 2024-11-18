@@ -444,3 +444,23 @@ a {
         scrollbar-color: transparent transparent;
     }
 }
+
+.imgCategoryCerchio {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.contenitore {
+}
+.contenuto {
+    transition: 0.5s;
+}
+
+.contenitore:hover > :not(:hover) {
+    opacity: 0.5;
+}
+.contenuto:hover {
+    scale: 1.05;
+    z-index: 3;
+}

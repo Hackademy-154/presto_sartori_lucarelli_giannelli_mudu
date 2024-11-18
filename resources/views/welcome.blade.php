@@ -69,6 +69,23 @@
             </div>
         </div>
     </div>
+
+
+    <div class="row my-5">
+        <div class="col-12 d-flex justify-content-center align-items-center contenitore">
+            @foreach ($categories as $category)
+                <div class="d-flex contenuto mx-2">
+                    <a href="{{ route('article.byCategory', compact('category')) }}"
+                        class="d-flex flex-column justify-content-center align-items-center">
+                        <img src="{{ Storage::url('image/ps5.jpg') }}" alt="" class="imgCategoryCerchio">
+                        <h6 class="text-dark mt-2">{{ $category->name }}</h6>
+                    </a>
+
+                </div>
+            @endforeach
+        </div>
+    </div>
+
     <div class="container text-center cambiacolore">
         <div class="row">
             {{-- Sezione Info Icons --}}
@@ -117,7 +134,10 @@
             </div>
             <div class="col-12 wrapper justify-content-evenly align-items-center mt-5 mb-5">
                 @foreach ($articles as $article)
-                    <x-cardArticle :article="$article"></x-cardArticle>
+                    <<<<<<< HEAD <x-cardArticle :article="$article"></x-cardArticle>
+                        =======
+                        <x-cardArticle :article="$article"></x-cardArticle>
+                        >>>>>>> 6274a38797ccc80204232fb7ac020248090571be
                 @endforeach
             </div>
         </div>
