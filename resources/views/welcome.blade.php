@@ -1,6 +1,7 @@
 <x-layout>
 
     <div class="container">
+        {{-- Swiper Header --}}
         <div class="row spazioNav">
             <div class=" col-12 swiper mySwiper "
                 style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff">
@@ -65,11 +66,10 @@
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
             </div>
         </div>
     </div>
-
+    {{-- Section Info --}}
     <div class="container py-3 cambiacolore sfumatura">
         <div class="row text-center">
             {{-- Punto di forza 1 --}}
@@ -113,42 +113,33 @@
             </div>
         </div>
     </div>
-
-
-
-    <div class="container text-center cambiacolore">
-        <div class="row">
-
-            <div class="swiper2 mySwiper2">
+    {{-- Swiper Category --}}
+    <div class="container text-center cambiacolore sfumatura mt-3 ">
+        <div class="row justify-content-center pb-4">
+            <div class="col-12 d-flex justify-content-start align-items-center mb-4 mt-2 sectionsArrow ps-4 pt-3">
+                <h2 class="m-0 textGrey fw-bold ">Categorie</h2><a href="{{ route('article.index') }}"><i
+                        class="bi textGrey fw-bold bi-arrow-right-short fs-1 mt-1"></i></a>
+            </div>
+            <div class="col-12 swiper2 d-flex">
                 <div class="swiper-wrapper">
                     @foreach ($categories as $category)
                         <div class="swiper-slide">
-                            <a href="{{ route('article.byCategory', compact('category')) }}"
-                                class="d-flex flex-column justify-content-center align-items-center">
+                            <a href="{{ route('article.byCategory', compact('category')) }}">
                                 <img src="{{ Storage::url('image/ps5.jpg') }}" alt=""
                                     class="imgCategoryCerchio">
-                                <h6 class="text-dark mt-2">{{ $category->name }}</h6>
+                                <h6 class="text-dark mt-2">{{ ucWords($category->name) }}</h6>
                             </a>
                         </div>
                     @endforeach
                 </div>
-                <div class="swiper-pagination"></div>
             </div>
-
         </div>
     </div>
-
-
-
-
-
-
-
-
-    <div class="container cambiacolore">
+    {{-- Ultimi 4 annunci --}}
+    <div class="container cambiacolore sfumatura mt-3">
         <div class="row">
             <div class="col-12 d-flex justify-content-start align-items-center mb-4 mt-2 sectionsArrow ps-4 pt-3">
-                <h2 class="m-0 textGrey fw-bold ">Annunci</h2><a href=""><i
+                <h2 class="m-0 textGrey fw-bold ">Annunci</h2><a href="{{ route('article.index') }}"><i
                         class="bi textGrey fw-bold bi-arrow-right-short fs-1 mt-1"></i></a>
             </div>
             <div class="col-12 d-flex  wrapper justify-content-evenly align-items-center mt-1 pb-5">
@@ -156,7 +147,6 @@
                     <x-cardArticle :article="$article"></x-cardArticle>
                 @endforeach
             </div>
-
         </div>
     </div>
 </x-layout>
