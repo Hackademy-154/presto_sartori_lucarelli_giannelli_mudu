@@ -113,30 +113,39 @@
             </div>
         </div>
     </div>
-    <div class="container text-center cambiacolore sfumatura mt-2">
-        <div class="row my-4">
-            <div class="col-12 d-flex justify-content-start align-items-center mb-4 mt-2 sectionsArrow ps-4 pt-3">
-                <h2 class="m-0 textGrey fw-bold ">Categorie</h2>
-                <a class="mt-1" href=""><i class="bi textGrey fw-bold bi-arrow-right-short fs-1 "></i>
-                </a>
-            </div>
-            <div class="col-12 d-flex justify-content-center align-items-center contenitore pt-3 pb-3">
-                <div class="row justify-content-center align-items-center ">
+
+
+
+    <div class="container text-center cambiacolore">
+        <div class="row">
+
+            <div class="swiper2 mySwiper2">
+                <div class="swiper-wrapper">
                     @foreach ($categories as $category)
-                        <div class="col-2 d-flex justify-content-center align-items-center contenuto  m-1">
+                        <div class="swiper-slide">
                             <a href="{{ route('article.byCategory', compact('category')) }}"
                                 class="d-flex flex-column justify-content-center align-items-center">
                                 <img src="{{ Storage::url('image/ps5.jpg') }}" alt=""
                                     class="imgCategoryCerchio">
-                                <h6 class="text-dark mt-2">{{ ucWords($category->name) }}</h6>
+                                <h6 class="text-dark mt-2">{{ $category->name }}</h6>
                             </a>
                         </div>
                     @endforeach
                 </div>
+                <div class="swiper-pagination"></div>
             </div>
+
         </div>
     </div>
-    <div class="container cambiacolore sfumatura mt-2">
+
+
+
+
+
+
+
+
+    <div class="container cambiacolore">
         <div class="row">
             <div class="col-12 d-flex justify-content-start align-items-center mb-4 mt-2 sectionsArrow ps-4 pt-3">
                 <h2 class="m-0 textGrey fw-bold ">Annunci</h2><a href=""><i

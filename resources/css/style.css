@@ -473,11 +473,7 @@ a {
     }
 }
 
-.imgCategoryCerchio {
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-}
+
 
 .contenitore {
 }
@@ -492,3 +488,33 @@ a {
     scale: 1.05;
     z-index: 3;
 }
+
+
+
+/* swiper category */
+.swiper2 {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    aspect-ratio: 1/1;
+   
+    text-align: center;
+    font-size: 18px;
+    background:transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    aspect-ratio: 1/1;
+   
+    border-radius: 50%;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
