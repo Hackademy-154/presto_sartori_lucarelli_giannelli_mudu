@@ -3,49 +3,49 @@
         <div class="row">
             <div class="col-12">
                 <!-- Section: Social media -->
-                <section class="mb-4">
+                <section class="mb-4 text-white">
                     <!-- Facebook -->
                     <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
-                            class="fab bi-facebook-f"></i></a>
+                            class="fab bi-facebook-f "></i></a>
 
                     <!-- Twitter -->
                     <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
-                            class="fab bi-twitter"></i></a>
+                            class="fab bi-twitter text-white fs-4"></i></a>
 
                     <!-- Google -->
                     <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
-                            class="fab bi-google"></i></a>
+                            class="fab bi-google text-white fs-4"></i></a>
 
                     <!-- Instagram -->
                     <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
-                            class="fab bi-instagram"></i></a>
+                            class="fab bi-instagram text-white fs-4"></i></a>
 
                     <!-- Linkedin -->
                     <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
-                            class="fab bi-linkedin"></i></a>
+                            class="fab bi-linkedin text-white fs-4"></i></a>
 
                     <!-- Github -->
                     <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
-                            class="fab bi-github"></i></a>
+                            class="fab bi-github text-white fs-4"></i></a>
                 </section>
 
 
-                <section class="">
+                <section class="text-white">
                     <form action="">
-                        <div class="row d-flex justify-content-center">
+                        <div class="row d-flex justify-content-center text-white">
                             <div class="col-auto">
-                                <p class="pt-2">
-                                    <strong>Sign up for our newsletter</strong>
+                                <p class="pt-2 text-white">
+                                    <strong class="text-white">Sign up for our newsletter</strong>
                                 </p>
                             </div>
                             <div class="col-md-5 col-12">
-                                <div data-mdb-input-init class="form-outline mb-4">
+                                <div data-mdb-input-init class="form-outline mb-4 ">
                                     <input type="email" id="form5Example24" class="form-control" />
-                                    <label class="form-label" for="form5Example24">Email address</label>
+                                    <label class="form-label text-white" for="form5Example24">Email address</label>
                                 </div>
                             </div>
                             <div class="col-auto">
-                                <button data-mdb-ripple-init type="submit" class="btn btn-outline mb-4">
+                                <button data-mdb-ripple-init type="submit" class="btn btn-outline mb-4 text-white">
                                     Subscribe
                                 </button>
                             </div>
@@ -54,8 +54,8 @@
                 </section>
 
 
-                <section class="mb-4">
-                    <p>
+                <section class="mb-4 text-white">
+                    <p class="text-white">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
                         repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam eum
                         harum corrupti dicta, aliquam sequi voluptate quas.
@@ -64,83 +64,83 @@
 
 
                 <section class="">
-                    <div class="row">
+                    <div class="row ">
                         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                            <h5 class="text-uppercase">Links</h5>
+                            <h5 class="text-uppercase text-white">Links</h5>
 
                             <ul class="list-unstyled mb-0">
                                 <li>
-                                    <a class="text-body" href="{{route('become.revisor')}}">Diventa Revisor</a>
+                                    <a class="text-white" href="{{ route('become.revisor') }}">Diventa Revisor</a>
                                 </li>
                                 <li>
-                                    <a class="text-body" href="#!">Link 2</a>
+                                    <a class="text-white" href="#!">Link 2</a>
                                 </li>
                                 <li>
-                                    <a class="text-body" href="#!">Link 3</a>
+                                    <a class="text-white" href="#!">Link 3</a>
                                 </li>
                                 <li>
-                                    <a class="text-body" href="#!">Link 4</a>
+                                    <a class="text-white" href="#!">Link 4</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                            <h5 class="text-uppercase">Links</h5>
+                            <h5 class="text-uppercase text-white">Links</h5>
 
                             <ul class="list-unstyled mb-0">
                                 <li>
-                                    <a class="text-body" href="#!">Link 1</a>
+                                    <a class="text-body text-white" href="#!">Link 1</a>
                                 </li>
                                 <li>
-                                    <a class="text-body" href="#!">Link 2</a>
+                                    <a class="text-body text-white" href="#!">Link 2</a>
                                 </li>
                                 <li>
-                                    <a class="text-body" href="#!">Link 3</a>
+                                    <a class="text-body text-white" href="#!">Link 3</a>
                                 </li>
                                 <li>
-                                    <a class="text-body" href="#!">Link 4</a>
+                                    <a class="text-body text-white" href="#!">Link 4</a>
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0 text-white">
                             <h5 class="text-uppercase">Links</h5>
 
                             <ul class="list-unstyled mb-0">
                                 <li>
-                                    <a class="text-body" href="#!">Link 1</a>
+                                    <a class="text-body text-white" href="#!">Link 1</a>
                                 </li>
                                 <li>
-                                    <a class="text-body" href="#!">Link 2</a>
+                                    <a class="text-body text-white" href="#!">Link 2</a>
                                 </li>
                                 <li>
-                                    <a class="text-body" href="#!">Link 3</a>
+                                    <a class="text-body text-white" href="#!">Link 3</a>
                                 </li>
                                 <li>
-                                    <a class="text-body" href="#!">Link 4</a>
+                                    <a class="text-body text-white" href="#!">Link 4</a>
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0 text-white">
                             <h5 class="text-uppercase">Links</h5>
 
                             <ul class="list-unstyled mb-0">
                                 <li>
-                                    <a class="text-body" href="#!">Link 1</a>
+                                    <a class="text-body text-white" href="#!">Link 1</a>
                                 </li>
                                 <li>
-                                    <a class="text-body" href="#!">Link 2</a>
+                                    <a class="text-body text-white" href="#!">Link 2</a>
                                 </li>
                                 <li>
-                                    <a class="text-body" href="#!">Link 3</a>
+                                    <a class="text-body text-white" href="#!">Link 3</a>
                                 </li>
                                 <li>
-                                    <a class="text-body" href="#!">Link 4</a>
+                                    <a class="text-body text-white" href="#!">Link 4</a>
                                 </li>
                             </ul>
                         </div>
 
                     </div>
                 </section>
-        
+
             </div>
         </div>
     </div>

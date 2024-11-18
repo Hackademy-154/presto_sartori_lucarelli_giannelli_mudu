@@ -1,22 +1,21 @@
 <x-layout>
-    <div class="container">
+    <div class="container sfumaturaa">
         {{-- Swiper Header --}}
-        <div class="row spazioNav">
+        <div class="row spazioNav2   borderTop ">
 
             <div class="col-12 d-flex justify-content-center">
                 @if (session()->has('errorMessage'))
-                <div class="alert alert-danger text-center shadow rounded w-50 mt-3">
-                    {{session('errorMessage')}}
-                </div>
+                    <div class="alert alert-danger text-center shadow rounded w-50 mt-3">
+                        {{ session('errorMessage') }}
+                    </div>
                 @endif
                 @if (session()->has('message'))
-                <div class="alert alert-success text-center shadow rounded w-50 mt-3">
-                    {{session('message')}}
-                </div>
+                    <div class="alert alert-success text-center shadow rounded w-50 mt-3">
+                        {{ session('message') }}
+                    </div>
                 @endif
             </div>
-
-            <div class=" col-12 swiper mySwiper"
+            <div class=" col-12 swiper mySwiper borderTop"
                 style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -81,12 +80,10 @@
                 <div class="swiper-button-prev"></div>
             </div>
         </div>
-    </div>
-    {{-- Section Info --}}
-    <div class="container py-3 cambiacolore sfumatura">
-        <div class="row text-center">
+        {{-- Section Info --}}
+        <div class="row text-center cambiacolore  borderBottom">
             {{-- Punto di forza 1 --}}
-            <div class="col-6 col-md-3">
+            <div class="col-6 col-md-3 pt-2">
                 <div class="infoIcon">
                     <i class="bi bi-truck fs-1 barraIcon  mb-3"></i>
                     <h5>Spedizione Veloce</h5>
@@ -96,7 +93,7 @@
                 </div>
             </div>
             {{-- Punto di forza 2 --}}
-            <div class="col-6 col-md-3">
+            <div class="col-6 col-md-3 pt-2">
                 <div class="infoIcon">
                     <i class="bi bi-lock fs-1 barraIcon  mb-3"></i>
                     <h5>Pagamento Sicuro</h5>
@@ -106,7 +103,7 @@
                 </div>
             </div>
             {{-- Punto di forza 3 --}}
-            <div class="col-6 col-md-3">
+            <div class="col-6 col-md-3 pt-2">
                 <div class="infoIcon">
                     <i class="bi bi-award fs-1 barraIcon  mb-3"></i>
                     <h5>Qualità Garantita</h5>
@@ -116,7 +113,7 @@
                 </div>
             </div>
             {{-- Punto di forza 4 --}}
-            <div class="col-6 col-md-3">
+            <div class="col-6 col-md-3 pt-2">
                 <div class="infoIcon">
                     <i class="bi bi-headset fs-1 barraIcon  mb-3"></i>
                     <h5>Assistenza 24/7</h5>
@@ -126,30 +123,31 @@
             </div>
         </div>
     </div>
+
     {{-- Swiper Category --}}
-    <div class="container text-center cambiacolore sfumatura mt-3 ">
-        <div class="row justify-content-center pb-4">
-            <div class="col-12 d-flex justify-content-start align-items-center mb-4 mt-2 sectionsArrow ps-4 pt-3">
+    <div class="container text-center cambiacolore sfumaturaa mt-3 border">
+        <div class="row justify-content-center ">
+            <div class="col-12 d-flex justify-content-start align-items-center mb-1 mt-2 sectionsArrow ps-4 pt-3">
                 <h2 class="m-0 textGrey fw-bold ">Categorie</h2><a href="{{ route('article.index') }}"><i
                         class="bi textGrey fw-bold bi-arrow-right-short fs-1 mt-1"></i></a>
             </div>
             <div class="col-12 swiper2 d-flex">
                 <div class="swiper-wrapper">
                     @foreach ($categories as $category)
-                    <div class="swiper-slide">
-                        <a href="{{ route('article.byCategory', compact('category')) }}">
-                            <img src="{{ Storage::url('image/ps5.jpg') }}" alt=""
-                                class="imgCategoryCerchio">
-                            <h6 class="text-dark mt-2">{{ ucWords($category->name) }}</h6>
-                        </a>
-                    </div>
+                        <div class="swiper-slide ">
+                            <a href="{{ route('article.byCategory', compact('category')) }}">
+                                <img src="{{ Storage::url('image/ps5.jpg') }}" alt=""
+                                    class="imgCategoryCerchio sfumatura">
+                                <h5 class="text-dark mt-3 fw-bold">{{ ucWords($category->name) }}</h5>
+                            </a>
+                        </div>
                     @endforeach
                 </div>
             </div>
         </div>
     </div>
     {{-- Ultimi 4 annunci --}}
-    <div class="container cambiacolore sfumatura mt-3">
+    <div class="container cambiacolore sfumaturaa mt-3 border">
         <div class="row">
             <div class="col-12 d-flex justify-content-start align-items-center mb-4 mt-2 sectionsArrow ps-4 pt-3">
                 <h2 class="m-0 textGrey fw-bold ">Annunci</h2><a href="{{ route('article.index') }}"><i
@@ -157,7 +155,7 @@
             </div>
             <div class="col-12 d-flex  wrapper justify-content-evenly align-items-center mt-1 pb-5">
                 @foreach ($articles as $article)
-                <x-cardArticle :article="$article"></x-cardArticle>
+                    <x-cardArticle :article="$article"></x-cardArticle>
                 @endforeach
             </div>
         </div>
