@@ -47,17 +47,21 @@
                         Ciao, {{ ucWords(Auth::user()->name) }}!
                     </a>
                     <ul class="dropdown-menu dropdownUserLoggato">
+                        <!-- revisore -->
+                        @if(Auth::user()->is_revisor)
+                            <li>
+                                <a href="{{ route('revisor.index') }}" class="dropdown-item">Zona revisore</a>
+                                <span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-danger">
+                                    {{\App\Models\Article::toBeRevisedCount()}}
+                                </span>
+                            </li>
+                        @endif
                         <li><a href="{{ route('article.create') }}" class="dropdown-item">Inserisci annuncio</a></li>
                         <li><a class="dropdown-item" href="#">I miei ordini</a></li>
                         <li><a class="dropdown-item" href="#">I miei articoli</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <!-- revisore -->
-                         @if(Auth::user()->is_revisor)
-                            <li><a href="{{ route('revisor.index') }}" class="dropdown-item">Zona revisore</a></li>
-
-                         @endif
 
 
                         <form action="{{ route('logout') }}" method="POST">
