@@ -70,7 +70,7 @@
 
                             <ul class="list-unstyled mb-0">
                                 <li>
-                                    <a class="text-body" href="#!">Link 1</a>
+                                    <a class="text-body" href="{{route('become.revisor')}}">Diventa Revisor</a>
                                 </li>
                                 <li>
                                     <a class="text-body" href="#!">Link 2</a>
