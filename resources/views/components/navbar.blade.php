@@ -9,7 +9,6 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex">
-
                 <li class="nav-item dropdown ">
                     <a class="nav-link dropdown-toggle textColor1" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
@@ -23,12 +22,10 @@
                 </li>
                 <li class="nav-item dropdown ">
                     @guest
-
                         <a class="nav-link dropdown-toggle textColor1" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Ciao, accedi
                         </a>
-
                         <ul class="dropdown-menu dropdownUser">
                             <div class="col-12">
                                 <div class="d-flex flex-column align-items-start">
@@ -46,7 +43,7 @@
                         <a class="nav-link dropdown-toggle textColor1" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Ciao, {{ ucWords(Auth::user()->name) }}
-                            @if (\App\Models\Article::toBeRevisedCount() != null)
+                            @if (\App\Models\Article::toBeRevisedCount() != null && Auth::user()->is_revisor)
                                 <i class="bi bi-bell-fill  start-100  badge   ">
                                 </i>
                             @endif
