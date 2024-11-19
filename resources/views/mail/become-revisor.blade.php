@@ -11,6 +11,7 @@
         <h3>Ecco i suoi dati:</h3>
         <h5>Nome: {{ $user->name }}</h5>
         <h5>Email: {{ $user->email }}</h5>
+        <h5>Dettagli richiesta: {{$messageUser}}</h5>
         <h5>Se vuoi confermare la sua richiesta, clicca qui sotto:</h5>
         <a href="{{route('make.revisor', compact('user'))}}">Accetta Revisor</a>
     </div>

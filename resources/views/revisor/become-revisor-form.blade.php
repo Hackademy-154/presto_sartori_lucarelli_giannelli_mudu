@@ -20,13 +20,15 @@
                         </div>
                     @endif
                 </div>
-                <form action="" method="POST"
+                <form action="{{route('become.revisor')}}" method="POST"
                     class="shadow pt-3 p-4 pb-2 bg-tertiary rounded-3 text-center py-5 mb-5 mt-4 w-100">
                     @csrf
+                    
                     <div class="row">
+                        
                         <div class="col-12 d-flex flex-column justify-content-start">
-                            <label for="message" class="text-start">Inserisci messaggio</label>
-                            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                            <label for="messageUser" class="text-start">Inserisci messaggio</label>
+                            <textarea name="messageUser" id="messageUser" cols="30" rows="10"></textarea>
                         </div>
                         <div class="col-12 d-flex mb-3 text-center justify-content-between">
                             <a class="btn btn-danger w-25 mt-3" href="{{ route('homepage') }}">Annulla</a>

@@ -14,13 +14,15 @@ class BecomeRevisor extends Mailable
 {
     use Queueable, SerializesModels;
     public $user;
+    public $messageUser;
 
     /**
      * Create a new message instance.
      */
-    public function __construct(User $user)
+    public function __construct(User $user, $messageUser)
     {
         $this->user = $user;
+        $this->messageUser = $messageUser;
     }
 
     /**

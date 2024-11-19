@@ -29,6 +29,6 @@ Route::patch('/undoSetArticle', [RevisorController::class, 'undoSetArticle'])->n
 
 
 //Rotte mail
-Route::get('/revisor/request', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
+Route::post('/revisor/request', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 Route::get('/make/revisor', [RevisorController::class, 'becomeRevisorForm'])->name('form.revisor');

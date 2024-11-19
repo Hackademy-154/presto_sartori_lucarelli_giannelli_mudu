@@ -26,9 +26,10 @@ class RevisorController extends Controller
         $article->setAccepted(false);
         return redirect()->back()->with('message', "Hai rifiutato l'articolo ''$article->title''");
     }
-    public function becomeRevisor(){
-        Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
-        return redirect()->route('homepage')->with('message', 'Richiesta inviata');
+    public function becomeRevisor(Request $request){
+        $messageUser = $request->messageUser;
+        Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user(), $messageUser));
+        return redirect()->route('form.revisor')->with('message', 'Richiesta inviata');
     } 
     public function makeRevisor(User $user){
         Artisan::call('app:make-user-revisor', ['email' => $user->email]);
