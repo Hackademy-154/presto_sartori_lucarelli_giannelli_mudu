@@ -14,23 +14,23 @@
                 <div class="contImgDettaglio d-flex flex-column justify-content-evenly">
 
                     <div class="img-dettaglio">
-                        <img src="{{ Storage::url('image/slide_abbigliamento.png') }}" alt="">
+                        <img class="imgShow" src="{{ Storage::url('image/slide_abbigliamento.png') }}" alt="">
                     </div>
                     <div class="img-dettaglio">
-                        <img src="{{ Storage::url('image/slide_sport.jpeg') }}" alt="">
+                        <img class="imgShow" src="{{ Storage::url('image/slide_sport.jpeg') }}" alt="">
                     </div>
                     <div class="img-dettaglio">
-                        <img src="{{ Storage::url('image/slide_casa&giardinaggio.webp') }}" alt="">
+                        <img class="imgShow" src="{{ Storage::url('image/slide_casa&giardinaggio.webp') }}" alt="">
                     </div>
                     <div class="img-dettaglio">
-                        <img src="{{ Storage::url('image/slide_libri&riviste.webp') }}" alt="">
+                        <img class="imgShow" src="{{ Storage::url('image/slide_libri&riviste.webp') }}" alt="">
                     </div>
                     <div class="img-dettaglio">
-                        <img src="{{ Storage::url('image/slide_sport.jpeg') }}" alt="">
+                        <img class="imgShow" src="{{ Storage::url('image/slide_sport.jpeg') }}" alt="">
                     </div>
                 </div>
                 <div class="col-12 col-md-6 img-container">
-                    <img src="{{ Storage::url('image/slide_abbigliamento.png') }}" alt="">
+                    <img class="imgShow" src="{{ Storage::url('image/slide_abbigliamento.png') }}" alt="">
                 </div>
                 <div class="col-12 col-md-4 ms-3 d-flex flex-column justify-content-between">
                     <div class="d-flex flex-column justify-content-between text-dark">

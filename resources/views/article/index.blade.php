@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container cambiacolore min-vh-100">
+    <div class="container min-vh-100">
         <div class="row pt-5 justify-content-center">
             <div class="col-12 col-md-6 text-center mt-5">
                 <h3 class="display-3 text-black">
@@ -7,11 +7,12 @@
                 </h3>
             </div>
         </div>
-        <div class="row justify-content-around py-5 wrapper">
+        <div class="row justify-content-evenly align-items-center py-5 ">
             @foreach ($articles as $article)
-                <x-cardArticle :article="$article"></x-cardArticle>
+            <x-cardArticleIndex :article="$article"></x-cardArticleIndex>
             @endforeach
         </div>
-        
+
     </div>
+    
 </x-layout>
