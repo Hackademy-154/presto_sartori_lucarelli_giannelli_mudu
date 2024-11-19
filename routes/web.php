@@ -8,7 +8,7 @@ use App\Http\Controllers\RevisorController;
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 
 //articoli
-Route::get('/create/article', [ArticleController::class, 'create'])->name('article.create');
+Route::get('/create/article', [ArticleController::class, 'create'])->middleware('auth')->name('article.create');
 Route::get('/show/article/{article}', [ArticleController::class, 'show'])->name('article.show');
 
 // index by category    
