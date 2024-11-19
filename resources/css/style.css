@@ -54,7 +54,39 @@ a {
     background-color: #b0bec5;
     padding-top: 67px;
 }
+.bi-bell-fill {
+    left: 94px !important;
+    top: 0px;
+    height: 20px !important;
+    width: 20px !important;
+    position: absolute;
+    animation: shaking 0.8s infinite ease-in-out;
+    color: orange;
+}
 
+@keyframes shaking {
+    0% {
+        rotate: 0deg;
+    }
+    10% {
+        rotate: 10deg;
+    }
+    30% {
+        rotate: -10deg;
+    }
+    45% {
+        rotate: 5deg;
+    }
+    55% {
+        rotate: -5deg;
+    }
+    60% {
+        rotate: 0deg;
+    }
+}
+.dropdown-toggle::after {
+    margin-left: 8px;
+}
 .logo {
     width: 50px;
     height: 50px;
@@ -255,7 +287,7 @@ a {
     border-radius: 5px;
     border: none;
     box-shadow: 0 0px 15px grey;
-    background-color: #2f3e46;
+    background-color: #ffffff;
     margin: 0;
 }
 .registerFrom {
@@ -264,7 +296,7 @@ a {
     border-radius: 5px;
     border: none;
     box-shadow: 0 0px 15px grey;
-    background-color: #2f3e46;
+    background-color: #ffffff;
     margin: 0;
 }
 .registerFrom > form > div > input {
@@ -278,15 +310,19 @@ a {
 .buttonCustom {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: orange;
+    background-color: #006867;
     color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    transition: 0.4s;
 }
-
+.buttonCustom:hover {
+    background-color: #068282;
+    scale: 0.98;
+}
 .buttonCharacter {
     background-color: #068282;
     width: 250px;
@@ -297,11 +333,13 @@ a {
     font-weight: 700;
     filter: drop-shadow(0 0 0.35rem rgba(54, 54, 54, 0.76));
     cursor: pointer;
+    transition: 0.4s;
 }
 
 .buttonCharacter:hover {
     background-color: #006867;
     color: #ffffff;
+    scale: 0.98;
 }
 
 /* Carousell */

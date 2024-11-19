@@ -25,7 +25,7 @@ var swiper2 = new Swiper(".swiper2", {
         delay: 3000,
     },
     speed: 800,
-    slidesPerView: 6,
+    slidesPerView: 5,
     initialSlide: 2,
     loop: true,
     centeredSlides: true,
