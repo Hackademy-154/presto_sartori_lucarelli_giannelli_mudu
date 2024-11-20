@@ -1,11 +1,8 @@
 // Card Show
 
-const allHoverImages = document.querySelectorAll(
-    ".imgShow"
-);
+const allHoverImages = document.querySelectorAll(".imgShow");
 
 if (allHoverImages.length > 0) {
-
     const imgContainer = document.querySelector(".img-container");
 
     window.addEventListener("DOMContentLoaded", () => {
@@ -26,31 +23,102 @@ if (allHoverImages.length > 0) {
         });
     }
 }
+// Carrello
+let offcanvasExample = document.querySelector("#offcanvasExample");
 
-let sidebarCart = document.querySelector('#sidebarCart');
+let wrapper = document.querySelector("#sidebarCart");
+let cardCart = document.querySelectorAll(".cardCart");
+cardCart = Array.from(cardCart);
+console.log(cardCart);
 
-let offcanvasExample = document.querySelector('#offcanvasExample');
-let cardCart = document.querySelector('#cardCart');
-let icon = document.querySelector('.cartIcon');
-if (icon) {
-    let cartIcon = document.querySelectorAll('.cartIcon');
-    console.log(cartIcon);
+let cardElements = [];
 
-    cartIcon.forEach((cart) => {
-        cart.addEventListener('click', () => {
-            cart.classList.toggle('bi-cart-plus');
-            cart.classList.toggle('bi-cart-check');
-            if (cart.classList.contains('bi-cart-check')) {
-                sidebarCart.innerHTML =
-                    `
-                    <div class="d-flex justify-content-evenly align-items-center">
-                        <h5 class="text-dark">{{$article->name}}</h5>
-                        <p class="text-dark">{$article->price}</p>
-                    </div>`;
-                console.log('ciao');
+cardCart.forEach((el) => {
+    let cardTitle = el.querySelector("#cardTitle");
+    let cardPrice = el.querySelector("#cardPrice");
+    let cardCategory = el.querySelector("#cardCategory");
+    let cardIcon = el.querySelector(".cartIcon");
+
+    cardIcon.addEventListener("click", () => {
+        if (cardIcon.classList.contains("bi-cart-plus")) {
+            wrapper.innerHTML = ``;
+            cardIcon.classList.toggle("bi-cart-plus");
+            cardIcon.classList.toggle("bi-cart-check");
+
+            let cardElementsNew = {
+                title: cardTitle.innerHTML,
+                price: cardPrice.innerHTML,
+                category: cardCategory.innerHTML,
+                id: cardIcon.id,
+            };
+
+            let doppione = cardElements.some((el) => {
+                el.title === cardElements.title &&
+                    el.price === cardElements.price &&
+                    el.category === cardElements.category;
+            });
+            if (!doppione) {
+                cardElements.push(cardElementsNew);
             }
-        })
-    })
-}
+            let deleteCardElement;
 
+            function createCards() {
+                wrapper.innerHTML = ``;
+                cardElements.forEach((el) => {
+                    let div = document.createElement("div");
 
+                    div.innerHTML = `
+                <div class="d-flex flex-column  ">
+                    <h5 class="text-dark text-start">Titolo: ${el.title}</h5>
+                    <h5 class="text-dark text-start">${el.price}</h5>
+                    <p class="text-dark text-start">${el.category}</p>
+                    <i class="bi bi-x pointer" id=""></i>
+                </div>
+                `;
+                    wrapper.appendChild(div);
+                });
+                deleteCardElement = wrapper.querySelectorAll(".bi-x");
+                deleteCardElement.forEach((el, i) => {
+                    el.addEventListener("click", () => {
+                        let elemento = cardElements.find((el, j) => j == i);
+                        let icona = document.querySelector(`#${elemento.id}`);
+                        icona.classList.remove("bi-cart-check");
+                        icona.classList.add("bi-cart-plus");
+                        cardElements.splice(i, 1);
+                        createCards();
+                    });
+                });
+            }
+            createCards();
+        } else {
+            wrapper.innerHTML = ``;
+            cardElements = cardElements.filter(
+                (el) => el.title !== cardTitle.innerHTML
+            );
+
+            cardIcon.classList.toggle("bi-cart-plus");
+            cardIcon.classList.toggle("bi-cart-check");
+
+            cardElements.forEach((el) => {
+                let div = document.createElement("div");
+                div.innerHTML = `
+            <div class="d-flex flex-column">
+                <h5 class="text-dark text-start">Titolo: ${el.title}</h5>
+                <h5 class="text-dark text-start">${el.price}</h5>
+                <p class="text-dark text-start">${el.category}</p>
+                <i class="bi bi-x pointer" id=""></i>
+            </div>
+            `;
+                wrapper.appendChild(div);
+            });
+            console.log(cardElements);
+            // ssss
+            let deleteCardElement = wrapper.querySelectorAll(".bi-x");
+            deleteCardElement.forEach((el, i) => {
+                el.addEventListener("click", () => {
+                    console.log(el);
+                });
+            });
+        }
+    });
+});

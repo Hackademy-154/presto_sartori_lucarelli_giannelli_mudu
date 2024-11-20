@@ -780,7 +780,7 @@ a {
     -o-object-fit: cover;
 }
 
-.btnCart{
+.btnCart {
     height: 100%;
     aspect-ratio: 1/1;
     border-color: transparent;
@@ -789,14 +789,14 @@ a {
     box-shadow: 15px 15px 30px #adadad, -15px -15px 30px #ffffff;
 }
 
-.cartIcon{
+.cartIcon {
     color: rgb(0, 0, 0);
     font-size: 25px;
     cursor: pointer;
 }
-.bi-cart-check{
+.bi-cart-check {
     color: green;
-    -webkit-text-stroke: 0.6px; 
+    -webkit-text-stroke: 0.6px;
 }
 /* INDEX PAGE SHOW */
 .incipit {
@@ -806,4 +806,7 @@ a {
     border: 2px solid white;
     background: #a64ffd;
     box-shadow: 15px 15px 30px #a9a9a9, -15px -15px 30px #ffffff;
+}
+.bi-x {
+    cursor: pointer;
 }
