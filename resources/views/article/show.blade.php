@@ -41,8 +41,7 @@
                         </div>
                     </div>
                     <div class="d-flex justify-content-around align-items-end">
-                        <a href="" class="btn btn-dark">Acquista</a>
-                        <a href="" class="btn btn-warning">Aggiungi al carrello</a>
+                        <a href="" class="btn btn-warning"><i class="bi bi-cart-plus"></i></a>
                     </div>
                 </div>
 

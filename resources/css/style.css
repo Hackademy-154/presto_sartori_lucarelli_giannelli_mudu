@@ -68,10 +68,13 @@ a {
 }
 
 .bi-bell-fill {
+    left: 94px !important;
+    top: 0px;
+    height: 20px !important;
+    width: 20px !important;
+    position: absolute;
     animation: shaking 0.8s infinite ease-in-out;
     color: orange;
-    top: 5px;
-    right: -7px;
 }
 
 @keyframes shaking {
@@ -777,7 +780,7 @@ a {
     -o-object-fit: cover;
 }
 
-.btnCuore {
+.btnCart{
     height: 100%;
     aspect-ratio: 1/1;
     border-color: transparent;
@@ -786,12 +789,15 @@ a {
     box-shadow: 15px 15px 30px #adadad, -15px -15px 30px #ffffff;
 }
 
-.heartIcon {
-    color: red;
+.cartIcon{
+    color: rgb(0, 0, 0);
     font-size: 25px;
     cursor: pointer;
 }
-
+.bi-cart-check{
+    color: green;
+    -webkit-text-stroke: 0.6px; 
+}
 /* INDEX PAGE SHOW */
 .incipit {
     height: 350px;

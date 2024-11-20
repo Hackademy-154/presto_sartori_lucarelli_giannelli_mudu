@@ -27,17 +27,30 @@ if (allHoverImages.length > 0) {
     }
 }
 
+let sidebarCart = document.querySelector('#sidebarCart');
 
-
-
-let icon = document.querySelector('.heartIcon');
+let offcanvasExample = document.querySelector('#offcanvasExample');
+let cardCart = document.querySelector('#cardCart');
+let icon = document.querySelector('.cartIcon');
 if (icon) {
-    let cuoreIcon = document.querySelectorAll('.heartIcon');
-    console.log(cuoreIcon);
-    cuoreIcon.forEach((cuore) => {
-        cuore.addEventListener('click', () => {
-            cuore.classList.toggle('bi-heart');
-            cuore.classList.toggle('bi-heart-fill');
+    let cartIcon = document.querySelectorAll('.cartIcon');
+    console.log(cartIcon);
+
+    cartIcon.forEach((cart) => {
+        cart.addEventListener('click', () => {
+            cart.classList.toggle('bi-cart-plus');
+            cart.classList.toggle('bi-cart-check');
+            if (cart.classList.contains('bi-cart-check')) {
+                sidebarCart.innerHTML =
+                    `
+                    <div class="d-flex justify-content-evenly align-items-center">
+                        <h5 class="text-dark">{{$article->name}}</h5>
+                        <p class="text-dark">{$article->price}</p>
+                    </div>`;
+                console.log('ciao');
+            }
         })
     })
 }
+
+

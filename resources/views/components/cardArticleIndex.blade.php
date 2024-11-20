@@ -1,4 +1,4 @@
-<div class="col-3 cardIndexContainer m-3 p-1">
+<div class="col-3 cardIndexContainer m-3 p-1" id="cardCart"> 
 
     <img src="{{ Storage::url('image/slide_sport.jpeg') }} " class="indexImg" alt="">
     <div class="px-3 pt-2 d-flex justify-content-between align-items-center">
@@ -9,8 +9,8 @@
     <div class="d-flex justify-content-between align-items-center pt-4 mx-3">
         <a href="{{ route('article.show', compact('article')) }}" class="btn btn-warning">Vai all'articolo</a>
 
-        <button type="button" class="btnCuore ">
-            <i id="{{$article->id}}" class="bi bi-heart heartIcon"></i>
+        <button type="button" class="btnCart">
+            <i id="{{$article->id}}" class="bi bi-cart-plus cartIcon"></i>
         </button>
     </div>
 
