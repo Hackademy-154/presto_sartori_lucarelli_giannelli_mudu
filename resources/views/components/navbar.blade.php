@@ -12,11 +12,12 @@
                 <form action="{{ route('article.search') }}" class="d-flex ms-auto searchInput ms-3" role="search"
                     method="GET">
                     <div class="d-flex p-0 z">
-                        <select id="category" wire:model.blur="category" name="query2" class="form-control xx" style=" box-shadow: none;">
+                        <select id="category" wire:model.blur="category" name="query2" class="form-control xx"
+                            style=" box-shadow: none;">
                             <option class="textSearch" label>Categorie</option>
                             @foreach ($categories as $category)
-                            <option class="textSearch" value="{{ $category->id }}">{{ ucFirst($category->name) }}
-                            </option>
+                                <option class="textSearch" value="{{ $category->id }}">{{ ucFirst($category->name) }}
+                                </option>
                             @endforeach
                         </select>
                     </div>
@@ -45,56 +46,57 @@
                 </li>
                 <li class="nav-item dropdown ">
                     @guest
-                    <a class="nav-link dropdown-toggle textColor1" href="#" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Ciao, accedi
-                    </a>
-                    <ul class="dropdown-menu dropdownUser">
-                        <div class="col-12">
-                            <div class="d-flex flex-column align-items-start">
-                                <a class="dropdown-item" href="{{ route('login') }}">Login</a>
+                        <a class="nav-link dropdown-toggle textColor1" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Ciao, accedi
+                        </a>
+                        <ul class="dropdown-menu dropdownUser">
+                            <div class="col-12">
+                                <div class="d-flex flex-column align-items-start">
+                                    <a class="dropdown-item" href="{{ route('login') }}">Login</a>
 
+                                </div>
                             </div>
-                        </div>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Contattaci</a></li>
-                        <li><a class="dropdown-item" href="#">FAQ</a></li>
-                    </ul>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Contattaci</a></li>
+                            <li><a class="dropdown-item" href="#">FAQ</a></li>
+                        </ul>
                     @else
-                    <a class="nav-link dropdown-toggle textColor1 d-flex align-items-center" href="#"
-                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span class="revisor-name text-white">Ciao, {{ ucWords(Auth::user()->name) }}</span>
-                        @if (\App\Models\Article::toBeRevisedCount() != null && Auth::user()->is_revisor)
-                        <i class="bi bi-bell-fill  badge position-absolute   translate-middle   ">
-                        </i>
-                        @endif
-                    </a>
-                    <ul class="dropdown-menu dropdownUserLoggato">
-                        <!-- revisore -->
-                        @if (Auth::user()->is_revisor)
-                        <li>
-                            <a href="{{ route('revisor.index') }}" class="dropdown-item">Zona revisore <span
-                                    class="badge bg-danger">{{ \App\Models\Article::toBeRevisedCount() }}</span></a>
-                        </li>
-                        @endif
-                        <li><a href="{{ route('article.create') }}" class="dropdown-item">Inserisci annuncio</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <form action="{{ route('logout') }}" method="POST">
-                            @csrf
-                            <button class="dropdown-item" type=" submit">Logout</button>
-                        </form>
-                        <li><a class="dropdown-item" href="#">Contattaci</a></li>
-                        <li><a class="dropdown-item" href="#">FAQ</a></li>
-                    </ul>
+                        <a class="nav-link dropdown-toggle textColor1 d-flex align-items-center" href="#"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="revisor-name text-white">Ciao, {{ ucWords(Auth::user()->name) }}</span>
+                            @if (\App\Models\Article::toBeRevisedCount() != null && Auth::user()->is_revisor)
+                                <i class="bi bi-bell-fill  badge position-absolute   translate-middle   ">
+                                </i>
+                            @endif
+                        </a>
+                        <ul class="dropdown-menu dropdownUserLoggato">
+                            <!-- revisore -->
+                            @if (Auth::user()->is_revisor)
+                                <li>
+                                    <a href="{{ route('revisor.index') }}" class="dropdown-item">Zona revisore <span
+                                            class="badge bg-danger">{{ \App\Models\Article::toBeRevisedCount() }}</span></a>
+                                </li>
+                            @endif
+                            <li><a href="{{ route('article.create') }}" class="dropdown-item">Inserisci annuncio</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <form action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <button class="dropdown-item" type=" submit">Logout</button>
+                            </form>
+                            <li><a class="dropdown-item" href="#">Contattaci</a></li>
+                            <li><a class="dropdown-item" href="#">FAQ</a></li>
+                        </ul>
                     @endguest
                 </li>
 
                 <li class="nav-item mx-3 me-4">
-                    <a class="nav-link pe-3 py-0" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                    <a class="nav-link pe-3 py-0" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                        aria-controls="offcanvasExample">
                         <i class="bi bi-cart fs-4 p-0"></i>
                     </a>
                 </li>
@@ -103,14 +105,14 @@
     </div>
 </nav>
 
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">CARRELLO</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <div id="sidebarCart">
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">CARRELLO</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div id="sidebarCart">
 
-            </div>
         </div>
     </div>
+</div>

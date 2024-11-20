@@ -68,13 +68,10 @@ a {
 }
 
 .bi-bell-fill {
-    left: 94px !important;
-    top: 0px;
-    height: 20px !important;
-    width: 20px !important;
-    position: absolute;
     animation: shaking 0.8s infinite ease-in-out;
     color: orange;
+    top: 5px;
+    right: -7px;
 }
 
 @keyframes shaking {
