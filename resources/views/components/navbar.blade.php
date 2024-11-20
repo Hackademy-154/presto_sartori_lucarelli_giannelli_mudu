@@ -7,6 +7,12 @@
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <form action="{{route('article.search')}}" class="d-flex ms-auto" role="search" method="GET">
+            <div class="input-group">
+                <input type="search" name="query" class="form-control" placeholder="Cerca qui" aria-label="search">
+                <button type="submit" class="input-group-text btn btn-outline-success" id="basic-addon2">Cerca</button>
+            </div>
+        </form>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex">
                 <li class="nav-item dropdown ">

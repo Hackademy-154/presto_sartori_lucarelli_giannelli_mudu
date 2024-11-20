@@ -21,7 +21,8 @@ Route::patch('/accept/{article}', [RevisorController::class, 'accept'])->name('a
 Route::patch('/reject/{article}', [RevisorController::class, 'reject'])->name('reject');
 Route::patch('/undoSetArticle', [RevisorController::class, 'undoSetArticle'])->name('undoSetArticle');
 
-
+//rotte ricerca
+Route::get('/search/article', [PublicController::class, 'searchArticles'])->name('article.search');
 
 
 
