@@ -9,17 +9,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="d-flex  searchBar mx-4">
-                <div class="d-flex p-0 z">
-                    <select id="category" wire:model.blur="category" class="form-control xx"style=" box-shadow: none;">
-                        <option class="textSearch " label>Categorie</option>
-                        @foreach ($categories as $category)
-                            <option class="textSearch" value="{{ $category->id }}">{{ ucFirst($category->name) }}
-                            </option>
-                        @endforeach
-                    </select>
-                </div>
                 <form action="{{ route('article.search') }}" class="d-flex ms-auto searchInput ms-3" role="search"
                     method="GET">
+                    <div class="d-flex p-0 z">
+                        <select id="category" wire:model.blur="category" name="query2" class="form-control xx" style=" box-shadow: none;">
+                            <option class="textSearch" label>Categorie</option>
+                            @foreach ($categories as $category)
+                            <option class="textSearch" value="{{ $category->id }}">{{ ucFirst($category->name) }}
+                            </option>
+                            @endforeach
+                        </select>
+                    </div>
                     <div class="ms-2 p-0 y">
                         <input class="searchInput" type="search" name="query" placeholder="Cerca prodotti..."
                             aria-label="search">
