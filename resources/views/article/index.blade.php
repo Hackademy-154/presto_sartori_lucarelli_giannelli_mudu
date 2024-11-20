@@ -1,9 +1,12 @@
 <x-layout>
     <div class="container min-vh-100">
         <div class="row pt-5 justify-content-center">
-            <div class="col-12 col-md-6 text-center mt-5">
-                <h3 class="display-3 text-black">
-                    Tutti gli annunci
+            <div class="col-12 d-flex flex-column justify-content-center align-items-center my-3 incipit">
+                <h3 class="text-white fs-1 fw-bold">
+                    ESPLORA SENZA FILTRI
+                </h3>
+                <h3 class="text-white fs-1 fw-bold">
+                    FRA TUTTI I PRODOTTI DISPONIBILI
                 </h3>
             </div>
         </div>
@@ -14,5 +17,5 @@
         </div>
 
     </div>
-    
+
 </x-layout>
