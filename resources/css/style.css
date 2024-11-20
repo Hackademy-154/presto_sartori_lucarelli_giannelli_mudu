@@ -409,7 +409,8 @@ a {
 
 .registerFrom {
     width: 550px;
-    height: 550px;
+    padding: 15px;
+    min-height: 550px;
     border-radius: 5px;
     border: none;
     box-shadow: 0 0px 15px grey;
