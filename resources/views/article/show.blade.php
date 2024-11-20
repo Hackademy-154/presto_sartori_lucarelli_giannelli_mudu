@@ -40,8 +40,9 @@
                             <h6>{{$article->description}}</h6>
                         </div>
                     </div>
+                    <!-- qui deve andare il bottone del carrello -->
                     <div class="d-flex justify-content-around align-items-end">
-                        <a href="" class="btn btn-warning"><i class="bi bi-cart-plus"></i></a>
+                        
                     </div>
                 </div>
 

@@ -804,6 +804,21 @@ a {
     background: #a64ffd;
     box-shadow: 15px 15px 30px #a9a9a9, -15px -15px 30px #ffffff;
 }
-.bi-x {
+
+
+/* SIDE TRASH  */
+.trashItemContainer{
+    border-radius: 20px;
+    background: rgb(229, 229, 229);
+}
+
+.trashItem2{
+    width: 100%;
+}
+
+.bi-trash3-fill{
     cursor: pointer;
+    font-size: 25px;
+    color: red;
+
 }

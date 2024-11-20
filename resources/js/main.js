@@ -68,16 +68,20 @@ cardCart.forEach((el) => {
                     let div = document.createElement("div");
 
                     div.innerHTML = `
-                <div class="d-flex flex-column  ">
-                    <h5 class="text-dark text-start">Titolo: ${el.title}</h5>
-                    <h5 class="text-dark text-start">${el.price}</h5>
-                    <p class="text-dark text-start">${el.category}</p>
-                    <i class="bi bi-x pointer" id=""></i>
-                </div>
+                            <div class="d-flex flex-column justify-content-between align-items-start p-3 my-2 trashItemContainer">
+                                <div class="dflex justify-content-between align-items-center">
+                                    <h5 class="text-dark">${el.title}</h5>
+                                    <h5 class="text-dark">${el.price}</h5>
+                                </div>
+                                <div class="d-flex justify-content-between align-content-center trashItem2">
+                                    <p class="text-dark">${el.category}</p>
+                                    <i class="bi bi-trash3-fill" id=""></i>
+                                </div>
+                            </div>
                 `;
                     wrapper.appendChild(div);
                 });
-                deleteCardElement = wrapper.querySelectorAll(".bi-x");
+                deleteCardElement = wrapper.querySelectorAll(".bi-trash3-fill");
                 deleteCardElement.forEach((el, i) => {
                     el.addEventListener("click", () => {
                         let elemento = cardElements.find((el, j) => j == i);
@@ -106,14 +110,14 @@ cardCart.forEach((el) => {
                 <h5 class="text-dark text-start">Titolo: ${el.title}</h5>
                 <h5 class="text-dark text-start">${el.price}</h5>
                 <p class="text-dark text-start">${el.category}</p>
-                <i class="bi bi-x pointer" id=""></i>
+                <i class="bi bi-trash3-fill" id=""></i>
             </div>
             `;
                 wrapper.appendChild(div);
             });
             console.log(cardElements);
             // ssss
-            let deleteCardElement = wrapper.querySelectorAll(".bi-x");
+            let deleteCardElement = wrapper.querySelectorAll(".bi-trash3-fill");
             deleteCardElement.forEach((el, i) => {
                 el.addEventListener("click", () => {
                     console.log(el);
@@ -122,3 +126,13 @@ cardCart.forEach((el) => {
         }
     });
 });
+
+
+
+
+{/* <div class="d-flex flex-column  ">
+                    <h5 class="text-dark text-start">Titolo: ${el.title}</h5>
+                    <h5 class="text-dark text-start">${el.price}</h5>
+                    <p class="text-dark text-start">${el.category}</p>
+                    <i class="bi bi-x pointer" id=""></i>
+                </div> */}
