@@ -70,18 +70,8 @@
         {{-- Section Info --}}
         <div class="row text-center cambiacolore  borderBottom">
             {{-- Search --}}
-            <div class="col-12 px-1 d-flex justify-content-center searchBar w-100">
-                <div class="row w-100">
-                    <div class="col-11">
-                        <input class="searchInput" type="text" placeholder="Cerca prodotti...">
-                    </div>
-                    <div class="col-1 d-flex justify-content-center align-items-center vv p-0">
-                        <button class="buttonSearch">
-                            <i class="bi bi-search text-white"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
+
+
             {{-- Punto di forza 1 --}}
             <div class="col-6 col-md-3 pt-2">
                 <div class="infoIcon">

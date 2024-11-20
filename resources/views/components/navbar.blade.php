@@ -1,19 +1,36 @@
 <nav class="navbar position-fixed navbar-expand-lg bg_navbar1 vw-100 d-flex flex-column">
     <div class="container-fluid ff">
         <a class="navbar-brand textColor1" href="{{ route('homepage') }}"><img src="{{ Storage::url('image/logo.png') }}"
-                class="logo ms-5" alt=""></a>
+                class="logo ms-3" alt=""></a>
         <a class="navbar-brand textColor1" href="{{ route('homepage') }}">PRESTO.IT</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <form action="{{route('article.search')}}" class="d-flex ms-auto" role="search" method="GET">
-            <div class="input-group">
-                <input type="search" name="query" class="form-control" placeholder="Cerca qui" aria-label="search">
-                <button type="submit" class="input-group-text btn btn-outline-success" id="basic-addon2">Cerca</button>
-            </div>
-        </form>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex  searchBar mx-4">
+                <div class="d-flex p-0 z">
+                    <select id="category" wire:model.blur="category" class="form-control xx"style=" box-shadow: none;">
+                        <option class="textSearch " label>Categorie</option>
+                        @foreach ($categories as $category)
+                            <option class="textSearch" value="{{ $category->id }}">{{ ucFirst($category->name) }}
+                            </option>
+                        @endforeach
+                    </select>
+                </div>
+                <form action="{{ route('article.search') }}" class="d-flex ms-auto searchInput ms-3" role="search"
+                    method="GET">
+                    <div class="ms-2 p-0 y">
+                        <input class="searchInput" type="search" name="query" placeholder="Cerca prodotti..."
+                            aria-label="search">
+                    </div>
+                    <div class="x">
+                        <button class="buttonSearch" type="submit" id="basic-addon2">
+                            <i class="bi bi-search text-white"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex">
                 <li class="nav-item dropdown ">
                     <a class="nav-link dropdown-toggle textColor1" href="#" role="button"

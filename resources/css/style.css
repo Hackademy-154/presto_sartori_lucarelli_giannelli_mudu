@@ -189,43 +189,71 @@ a {
     line-height: 1.3;
 }
 /* Searchbar */
-/* .vv {
-    width: 50px !important;
-    height: 50px !important;
-} */
+
 .searchBar {
-    max-width: 1000px;
-    height: 50px;
+    width: 100%;
+    height: 45px;
     background-color: #ffffff;
-    border-radius: 25px;
+    border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
+    flex-wrap: nowrap;
+    outline: none;
+}
+.x {
+    place-self: center;
+}
+.y {
+    flex: 1;
+}
+.xx {
+    width: fit-content;
 }
 
-.searchBar input.searchInput {
-    width: 100%;
+.searchBar .searchInput {
     height: 100%;
+    width: 100%;
     border: none;
-    padding: 0 15px;
+    padding-right: 7px;
     font-size: 16px;
     color: #333;
     outline: none;
     border-radius: 0;
 }
-
+.form-control:focus {
+    outline: none;
+}
+.form-control {
+    display: block;
+    /* width: 200px; */
+    padding: 0px 11px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border: 0;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    appearance: none;
+    background-color: #e6e6e6 !important;
+    color: #333;
+    outline: none;
+}
+.textSearch {
+    color: #333 !important;
+}
 .searchBar .buttonSearch {
     background-color: #068282;
     color: #fff;
-    width: 40px !important;
-    height: 40px !important;
+    width: 35px !important;
+    height: 35px !important;
     border: none;
-    border-radius: 50%;
-    margin-left: 40px;
+    border-radius: 5px;
     display: flex;
     padding: 0;
     justify-content: center;
     align-items: center;
     transition: background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
 
@@ -765,12 +793,11 @@ a {
 }
 
 /* INDEX PAGE SHOW */
-.incipit{
+.incipit {
     height: 350px;
     width: 90%;
     border-radius: 30px;
     border: 2px solid white;
     background: #a64ffd;
-    box-shadow: 15px 15px 30px #a9a9a9,
-        -15px -15px 30px #ffffff;
+    box-shadow: 15px 15px 30px #a9a9a9, -15px -15px 30px #ffffff;
 }
