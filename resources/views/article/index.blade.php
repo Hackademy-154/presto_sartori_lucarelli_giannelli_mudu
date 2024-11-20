@@ -12,7 +12,7 @@
         </div>
         <div class="row justify-content-evenly align-items-center py-5 ">
             @foreach ($articles as $article)
-            <x-cardArticleIndex :article="$article"></x-cardArticleIndex>
+            <x-cardArticleIndex :article="$article" :category="$article->category"></x-cardArticleIndex>
             @endforeach
         </div>
 
