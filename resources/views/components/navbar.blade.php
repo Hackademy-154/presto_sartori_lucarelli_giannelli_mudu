@@ -40,11 +40,11 @@
                             <li><a class="dropdown-item" href="#">FAQ</a></li>
                         </ul>
                     @else
-                        <a class="nav-link dropdown-toggle textColor1" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Ciao, {{ ucWords(Auth::user()->name) }}
+                        <a class="nav-link dropdown-toggle textColor1 d-flex align-items-center" href="#"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="revisor-name text-white">Ciao, {{ ucWords(Auth::user()->name) }}</span>
                             @if (\App\Models\Article::toBeRevisedCount() != null && Auth::user()->is_revisor)
-                                <i class="bi bi-bell-fill  start-100  badge   ">
+                                <i class="bi bi-bell-fill  badge position-absolute   translate-middle   ">
                                 </i>
                             @endif
                         </a>
@@ -69,7 +69,7 @@
                         </ul>
                     @endguest
                 </li>
-                <li class="nav-item mx-3">
+                <li class="nav-item mx-3 me-4">
                     <a class="nav-link p-0 " href="#"><i class="bi bi-cart fs-4 p-0"></i></a>
                 </li>
             </ul>
