@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container sfumaturaa mb-4">
         {{-- Swiper Header --}}
-        <div class="row borderTop ">
+        <div class="row borderTop spazioNav3">
             <div class=" col-12 swiper mySwiper borderTop"
                 style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff">
                 <div class="swiper-wrapper">
