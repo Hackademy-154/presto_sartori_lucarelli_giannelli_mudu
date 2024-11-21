@@ -36,12 +36,21 @@ a {
 .cambiacolore {
     background-color: white !important;
 }
-
+.bi-cart::before {
+    transform: scaleX(-1) !important;
+    transition: 0.4s;
+}
+.bi-cart:hover::before {
+    scale: 0.9;
+}
 /* Varie */
 .divider {
     height: 6px;
     background-color: #eaeaea;
     width: 100%;
+}
+.spazioMinimo {
+    min-height: 527px;
 }
 
 .border {
@@ -358,7 +367,7 @@ a {
 
 /* Articles */
 .imgCreate {
-    width: 80%;
+    /* width: 80%; */
 }
 
 .test2 {
@@ -405,6 +414,7 @@ a {
     box-shadow: 0 0px 15px grey;
     background-color: #ffffff;
     margin: 0;
+    margin-bottom: 28px;
 }
 
 .registerFrom {
@@ -428,6 +438,69 @@ a {
 }
 
 /* Buttons */
+.btn {
+    min-width: 135px !important;
+    min-height: 38px !important;
+    transition: 0.4s;
+}
+.btnCustom2 {
+    --bs-btn-padding-x: 0.75rem;
+    --bs-btn-padding-y: 0.375rem;
+    --bs-btn-font-family: ;
+    --bs-btn-font-size: 1rem;
+    --bs-btn-font-weight: 400;
+    --bs-btn-line-height: 1.5;
+    --bs-btn-color: var(--bs-body-color);
+    --bs-btn-bg: transparent;
+    --bs-btn-border-width: var(--bs-border-width);
+    --bs-btn-border-color: transparent;
+    --bs-btn-border-radius: var(--bs-border-radius);
+    --bs-btn-hover-border-color: transparent;
+    --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+        0 1px 1px rgba(0, 0, 0, 0.075);
+    --bs-btn-disabled-opacity: 0.65;
+    --bs-btn-focus-box-shadow: 0 0 0 0.25rem
+        rgba(var(--bs-btn-focus-shadow-rgb), 0.5);
+    display: inline-block;
+    padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+    font-family: var(--bs-btn-font-family);
+    font-size: var(--bs-btn-font-size);
+    font-weight: var(--bs-btn-font-weight);
+    line-height: var(--bs-btn-line-height);
+    color: var(--bs-btn-color);
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+    border-radius: var(--bs-btn-border-radius);
+    background-color: var(--bs-btn-bg);
+    transition: 0.4s;
+}
+.btn:hover,
+.btnCustom2:hover {
+    scale: 0.98;
+}
+.bi .iconGrand {
+    height: 38px !important;
+    width: 38px !important;
+}
+.bi-arrow-clockwise {
+    transition: 0.4s;
+}
+
+.btnCustomIcon {
+    height: 35px;
+    width: 35px;
+    background-color: darkorange;
+    border-radius: 5px;
+    border: 0px;
+    filter: drop-shadow(0 0 0.35rem rgba(54, 54, 54, 0.76));
+    transform: scaleX(-1);
+}
 .buttonCustom {
     margin-top: 20px;
     padding: 10px 20px;
@@ -585,7 +658,8 @@ a {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px #000000;
-    max-height: 470px;
+    max-height: 560px;
+    width: 1125px;
 }
 
 .contImgDettaglio {
@@ -806,20 +880,18 @@ a {
     box-shadow: 15px 15px 30px #a9a9a9, -15px -15px 30px #ffffff;
 }
 
-
 /* SIDE TRASH  */
-.trashItemContainer{
+.trashItemContainer {
     border-radius: 20px;
     background: rgb(229, 229, 229);
 }
 
-.trashItem2{
+.trashItem2 {
     width: 100%;
 }
 
-.bi-trash3-fill{
+.bi-trash3-fill {
     cursor: pointer;
     font-size: 25px;
     color: red;
-
 }
