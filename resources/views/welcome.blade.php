@@ -72,9 +72,9 @@
             <div class="col-6 col-md-3 pt-2">
                 <div class="infoIcon">
                     <i class="bi bi-lock fs-1 barraIcon  mb-3"></i>
-                    <h5>{{__('ui.securePayement')}}</h5>
+                    <h5>{{__('ui.securePayment')}}</h5>
                     <div class="divisorioIcons"></div>
-                    <p>{{__('ui.textPayement')}}</p>
+                    <p>{{__('ui.textPayment')}}</p>
                 </div>
             </div>
             {{-- Punto di forza 3 --}}

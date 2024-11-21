@@ -50,4 +50,5 @@ return [
     'btnAdd' => 'Añadir',
     'titleIndex' => 'Artículos en la categoría',
     'login' => 'Identificate',
+    'register' => 'Registro',
 ];

@@ -52,7 +52,7 @@ return [
     'btnAdd' => 'Add',
 
     'titleIndex' => 'Articles of the category',
-    'login' => 'Login',     
-    
+    'login' => 'Login',  
+    'register' => 'Register',
 
 ];
