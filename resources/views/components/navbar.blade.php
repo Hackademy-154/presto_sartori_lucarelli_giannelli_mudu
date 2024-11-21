@@ -16,8 +16,8 @@
                             style=" box-shadow: none;">
                             <option class="textSearch" label>{{__('ui.categories')}}</option>
                             @foreach ($categories as $category)
-                                <option class="textSearch" value="{{ $category->id }}">{{ ucFirst(__("ui.$category->name")) }}
-                                </option>
+                            <option class="textSearch" value="{{ $category->id }}">{{ ucFirst(__("ui.$category->name")) }}
+                            </option>
                             @endforeach
                         </select>
                     </div>
@@ -32,65 +32,70 @@
                     </div>
                 </form>
             </div>
+
+
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex">
                 <li class="nav-item dropdown ">
-                    <a class="nav-link dropdown-toggle textColor1" href="#" role="button"
+                    <a class="nav-link dropdown-toggle textColor1" id="navbarDropdowner" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        IT/EN/ESP
+                        
                     </a>
                     <ul class="dropdown-menu dropdownLanguage ">
-                        <li><a class="dropdown-item" href="#">  <x-_locale lang="it" /> </a></li>
-                        <li><a class="dropdown-item" href="#"> <x-_locale lang="en" /> </a></li>
-                        <li><a class="dropdown-item" href="#"> <x-_locale lang="es" /> </a></li>
+                        <li><a class="dropdown-item bandierine" href="#"> <x-_locale lang="it" /> </a></li>
+                        <li><a class="dropdown-item bandierine" href="#"> <x-_locale lang="en" /> </a></li>
+                        <li><a class="dropdown-item bandierine" href="#"> <x-_locale lang="es" /> </a></li>
                     </ul>
                 </li>
+
+
+
                 <li class="nav-item dropdown ">
                     @guest
-                        <a class="nav-link dropdown-toggle textColor1" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            {{__('ui.hello')}}{{__('ui.login')}}
-                        </a>
-                        <ul class="dropdown-menu dropdownUser">
-                            <div class="col-12">
-                                <div class="d-flex flex-column align-items-start">
-                                    <a class="dropdown-item" href="{{ route('login') }}">{{__('ui.login')}}</a>
+                    <a class="nav-link dropdown-toggle textColor1" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        {{__('ui.hello')}}{{__('ui.login')}}
+                    </a>
+                    <ul class="dropdown-menu dropdownUser">
+                        <div class="col-12">
+                            <div class="d-flex flex-column align-items-start">
+                                <a class="dropdown-item" href="{{ route('login') }}">{{__('ui.login')}}</a>
 
-                                </div>
                             </div>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">{{__('ui.contactUs')}}</a></li>
-                            <li><a class="dropdown-item" href="#">{{__('ui.faq')}}</a></li>
-                        </ul>
+                        </div>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">{{__('ui.contactUs')}}</a></li>
+                        <li><a class="dropdown-item" href="#">{{__('ui.faq')}}</a></li>
+                    </ul>
                     @else
-                        <a class="nav-link dropdown-toggle textColor1 d-flex align-items-center" href="#"
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <span class="revisor-name text-white">{{__('ui.hello')}}{{ ucWords(Auth::user()->name) }}</span>
-                            @if (\App\Models\Article::toBeRevisedCount() != null && Auth::user()->is_revisor)
-                                <i class="bi bi-bell-fill  badge position-absolute   translate-middle   ">
-                                </i>
-                            @endif
-                        </a>
-                        <ul class="dropdown-menu dropdownUserLoggato">
-                            <!-- revisore -->
-                            @if (Auth::user()->is_revisor)
-                                <li>
-                                    <a href="{{ route('revisor.index') }}" class="dropdown-item">{{__('ui.btnRevisor')}} <span
-                                            class="badge bg-danger">{{ \App\Models\Article::toBeRevisedCount() }}</span></a>
-                                </li>
-                            @endif
-                            <li><a href="{{ route('article.create') }}" class="dropdown-item">{{__('ui.btnAddAds')}}</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <form action="{{ route('logout') }}" method="POST">
-                                @csrf
-                                <button class="dropdown-item" type=" submit">{{__('ui.logout')}}</button>
-                            </form>
-                            <li><a class="dropdown-item" href="#">{{__('ui.contactUs')}}</a></li>
-                            <li><a class="dropdown-item" href="#">{{__('ui.faq')}}</a></li>
-                        </ul>
+                    <a class="nav-link dropdown-toggle textColor1 d-flex align-items-center" href="#"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="revisor-name text-white">{{__('ui.hello')}}{{ ucWords(Auth::user()->name) }}</span>
+                        @if (\App\Models\Article::toBeRevisedCount() != null && Auth::user()->is_revisor)
+                        <i class="bi bi-bell-fill  badge position-absolute   translate-middle   ">
+                        </i>
+                        @endif
+                    </a>
+                    <ul class="dropdown-menu dropdownUserLoggato">
+                        <!-- revisore -->
+                        @if (Auth::user()->is_revisor)
+                        <li>
+                            <a href="{{ route('revisor.index') }}" class="dropdown-item">{{__('ui.btnRevisor')}} <span
+                                    class="badge bg-danger">{{ \App\Models\Article::toBeRevisedCount() }}</span></a>
+                        </li>
+                        @endif
+                        <li><a href="{{ route('article.create') }}" class="dropdown-item">{{__('ui.btnAddAds')}}</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button class="dropdown-item" type=" submit">{{__('ui.logout')}}</button>
+                        </form>
+                        <li><a class="dropdown-item" href="#">{{__('ui.contactUs')}}</a></li>
+                        <li><a class="dropdown-item" href="#">{{__('ui.faq')}}</a></li>
+                    </ul>
                     @endguest
                 </li>
 

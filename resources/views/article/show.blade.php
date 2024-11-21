@@ -6,7 +6,7 @@
             </div>
         </div>
         <div class="row justify-content-center align-items-center">
-            <div class="col-12 col-md-10 d-flex justify-content-start align-items-center cardShow ps-0 pb-3">
+            <div class="col-12 col-md-10 d-flex justify-content-start align-items-center cardShow ps-0 pb-3 cardCart">
                 <div class="contImgDettaglio d-flex flex-column justify-content-evenly">
                     <div class="img-dettaglio">
                         <img class="imgShow" src="{{ Storage::url('image/slide_abbigliamento.png') }}" alt="">
@@ -47,7 +47,11 @@
                         <h6 class="fst-italic mb-3">Autore: <span class="fw-bold">{{ ucfirst($article->user->name) }}</span>
                         </h6>
                     </div>
-                    <!-- qui deve andare il bottone del carrello -->
+
+                    <button type="button" class="btnCart">
+                        <i id="icona_{{ $article->id }}" class="bi bi-cart-plus cartIcon"></i>
+                    </button>
+
                     <div class=" d-flex justify-content-between">
                         <a class="btn btn-secondary w-25 " href="{{ route('homepage') }}">Indietro</a>
                         <button type="submit" class="btn btn-success w-25 ">Acquista</button>

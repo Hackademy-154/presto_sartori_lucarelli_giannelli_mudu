@@ -1,3 +1,27 @@
+// cambio bandierina
+// document.addEventListener("DOMContentLoaded", function () {
+//     // Seleziona tutte le voci di lingua nel dropdown
+//     const languageItems = document.querySelectorAll(".bandierine");
+//     const dropdownToggle = document.querySelector("#navbarDropdowner");
+
+//     // Aggiungi un listener a ciascun elemento di lingua
+//     languageItems.forEach((item) => {
+//         item.addEventListener("click", function (event) {
+//             event.preventDefault(); // Evita il comportamento predefinito del link
+
+//             // Recupera il contenuto del tag <x-_locale> cliccato
+//             const localeTag = this.querySelector("x-_locale").outerHTML;
+
+//             // Aggiorna il contenuto del toggle con il contenuto del tag <x-_locale>
+//             dropdownToggle.innerHTML = localeTag;
+//         });
+//     });
+// });
+
+
+
+
+
 // Card Show
 
 const allHoverImages = document.querySelectorAll(".imgShow");
