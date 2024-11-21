@@ -30,21 +30,21 @@
                 </div>
                 <div class="col-12 col-md-4 ms-4 d-flex flex-column justify-content-between">
                     <div class="d-flex flex-column justify-content-between text-dark">
-                        <h4 class="mt-2 mb-1 fst-italic">Titolo: <span class="fw-bold">{{ $article->title }}</span></h4>
+                        <h4 class="mt-2 mb-1 fst-italic">Titolo: <span class="fw-bold">{{ ucfirst($article->title)  }}</span></h4>
                         <hr class="my-2">
-                        <h6 class="fst-italic ">Categoria: <span class="fw-bold">#{{ $article->category->name }}</span>
+                        <h6 class="fst-italic ">Categoria: <span class="fw-bold">#{{ ucfirst($article->category->name)  }}</span>
                         </h6>
                         <hr class="my-2">
                         <div class="scrollspy-example text-black divDescriptionCardRev mb-3" data-bs-spy="scroll"
                             data-bs-smooth-scroll="true" tabindex="0">
                             <h6 class="fst-italic">Descrizione:</h6>
-                            <span class="fw-bold">{{ $article->description }}</span>
+                            <span class="fw-bold">{{ ucfirst($article->description)  }}</span>
                         </div>
                         <hr class="my-2">
                         <h6 class="fst-italic mb-2">Prezzo: <span class="fw-bold">{{ $article->price }}
                                 €</span> </h6>
                         <hr class="my-2">
-                        <h6 class="fst-italic mb-3">Autore: <span class="fw-bold">{{ $article->user->name }}</span>
+                        <h6 class="fst-italic mb-3">Autore: <span class="fw-bold">{{ ucfirst($article->user->name) }}</span>
                         </h6>
                     </div>
                     <!-- qui deve andare il bottone del carrello -->

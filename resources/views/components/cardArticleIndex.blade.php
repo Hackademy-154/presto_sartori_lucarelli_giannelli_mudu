@@ -9,7 +9,7 @@
         <h6 class="text-dark px-3 m-0 " id="cardCategory">{{ ucfirst($article->category->name) }}</h6>
     </a>
     <div class="d-flex justify-content-between align-items-center pt-4 mx-3">
-        <a href="{{ route('article.show', compact('article')) }}" class="btn btn-warning">Vai all'articolo</a>
+        <a href="{{ route('article.show', compact('article')) }}" class="btn btn-warning">{{__('ui.btnShow')}}</a>
         <button type="button" class="btnCart">
             <i id="icona_{{ $article->id }}" class="bi bi-cart-plus cartIcon"></i>
         </button>

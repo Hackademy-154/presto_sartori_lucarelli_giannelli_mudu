@@ -3,6 +3,6 @@
         <h5>{{ $article->title }}</h5>
         <p class="text-white">{{ $article->price }}€</p>
         <p class="text-white">{{ $article->category->name }}</p>
-        <a href="{{ route('article.show', compact('article')) }}" class="btn button">Vai all'articolo</a>
+        <a href="{{ route('article.show', compact('article')) }}" class="btn button">{{__('ui.btnShow')}}</a>
     </div>
 </div>

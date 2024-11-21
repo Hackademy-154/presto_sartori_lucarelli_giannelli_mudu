@@ -2,7 +2,7 @@
     <div class="container-fluid spazioNav2 pt-5">
         <div class="row align-items-center justify-content-center spazioNav2 py-5 ">
             <div class="col-12 registerFrom d-flex flex-column justify-content-center align-items-center ">
-                <h2 class="fs-1 mb-3 text-center fw-bold">Sign Up</h2>
+                <h2 class="fs-1 mb-3 text-center fw-bold">{{__('ui.register')}}</h2>
                 <div class="d-flex justify-content-center">
                     <!-- Facebook -->
                     <a data-mdb-ripple-init class="btnCustom2 btn-outline btn-floating m-1" href="#!"

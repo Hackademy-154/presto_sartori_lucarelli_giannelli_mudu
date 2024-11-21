@@ -125,7 +125,7 @@
     <div class="container cambiacolore sfumaturaa mt-4 border">
         <div class="row">
             <div class="col-12 d-flex justify-content-start align-items-center mb-4 mt-2 sectionsArrow ps-4 pt-3">
-                <h2 class="m-0 textGrey fw-bold ">Annunci</h2><a class="mt-1 colorPetrolio"
+                <h2 class="m-0 textGrey fw-bold ">{{__('ui.allArticles')}}</h2><a class="mt-1 colorPetrolio"
                     href="{{ route('article.index') }}"><i
                         class="bi colorPetrolio fw-bold bi-arrow-right-short fs-1 mt-1"></i></a>
             </div>

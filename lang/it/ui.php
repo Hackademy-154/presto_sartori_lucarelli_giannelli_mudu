@@ -1,5 +1,59 @@
 <?php
 return [
-    'hello' => 'Ciao, accedi',
-    'allArticles' => 'Tutti gli articoli'
+    'hello' => 'Ciao,',
+    'login' => 'Accedi',
+    'register' => 'Registrati',
+    'allArticles' => 'Tutti gli articoli',
+    'category' => 'Categoria',
+    'categories' => 'Categorie',
+    'abbigliamento' => 'Abbigliamento',
+    'accessori' => 'Accessori',
+    'animali domestici' => 'Animali domestici',
+    'casa e giardinaggio' => 'Casa & Giardinaggio',
+    'elettronica' => 'Elettronica',
+    'giocattoli' => 'Gioccatoli',
+    'libri e riviste' => 'Libri & Riviste',
+    'motori' => 'Motori',
+    'salute e bellezza' => 'Salute & Bellezza',
+    'sport' => 'Sport',
+
+    'welcome' => 'Benvenuto',
+    'slogan1' => 'Il tuo shopping, il nostro impegno',
+    'text1' => "Scopri un mondo di prodotti selezionati con cura per soddisfare ogni tua esigenza. Siamo qui per offrirti un'esperienza di acquisto semplice, sicura e piacevole. Esplora le nostre offerte, approfitta di vantaggi esclusivi e lascia che la tua prossima avventura inizi con noi. La qualità e la tua soddisfazione sono la nostra priorità!",
+    'btnDiscoverAds' => 'Scopri Annunci',
+
+    'addAds' => 'Inserisci Annuncio',
+    'slogan2' => 'Senza perdere tempo',
+    'text2' => "Pubblica i tuoi annunci in pochi semplici passaggi. La nostra piattaforma è pensata per farti risparmiare tempo prezioso, permettendoti di concentrarti su ciò che conta davvero. Non aspettare, inizia ora!",
+    'btnAddAds' => 'Aggiungi un articolo',
+
+    'fastDelivery' => 'Spedizione Veloce',
+    'textDelivery' => 'Servizio di consegna rapido ed efficiente.',
+    'securePayment' => 'Pagamento Sicuro',
+    'textPayment' => 'Metodi di pagamento affidabili e protetti.',
+    'quality' => 'Qualità Garantita',
+    'textQuality' => 'Massimo della qualità e della soddisfazione.',
+    'customService' => 'Assistenza 24/7',
+    'textService' => 'Servizio di assistenza sempre disponibile.',
+
+    'btnShow' => "Mostra l'articolo",
+    'cart' => 'Carrello',
+    'btnRevisor' => "Zona revisore",
+    'search' => 'Cerca prodotti ...',
+    'logout' => 'Logout',
+    'contactUs' => 'Contattaci',
+    'faq' => 'FAQ',
+    
+    'title' => 'Titolo',
+    'placeholder1' => 'Titolo articolo...',
+    'description' => 'Descrizione',
+    'placeholder2' => "Piccola descrizione dell'articolo...",
+    'price' => 'Prezzo',
+    'placeholder3' => '12.5 €',
+    'selectCategory' => 'Seleziona Categoria',
+    'btnBack' => 'Indietro',
+    'btnAdd' => 'Inserisci',
+
+    'titleIndex' => 'Articoli della categoria',
+
 ];

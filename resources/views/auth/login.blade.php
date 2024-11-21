@@ -2,7 +2,7 @@
     <div class="container-fluid spazioNav2 pt-5  px-0">
         <div class="row pt-5 align-items-center justify-content-center mx-1 py-5 spazioNav2">
             <div class="col-12 loginFrom d-flex flex-column justify-content-center align-items-center">
-                <h2 class="fs-1 mb-2 text-center colorPetrolio fw-bold">Sign In</h2>
+                <h2 class="fs-1 mb-2 text-center colorPetrolio fw-bold">{{__('ui.login')}}</h2>
                 <div class="d-flex justify-content-center mb-2">
                     <!-- Facebook -->
                     <a data-mdb-ripple-init class="btnCustom2 btn-outline btn-floating m-1" href="#!"
