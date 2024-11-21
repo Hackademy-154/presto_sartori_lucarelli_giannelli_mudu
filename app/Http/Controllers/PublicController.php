@@ -19,4 +19,9 @@ class PublicController extends Controller
         $query2 = $request->input('query') ? $request->input('query') : Category::find($request->input('query2'))->name;
         return view('article.searched', ['articles'=>$articles, 'query'=>$query2]);
     }
+
+    public function setLanguage($lang){
+        session()->put('locale', $lang);
+        return redirect()->back();
+    }
 }

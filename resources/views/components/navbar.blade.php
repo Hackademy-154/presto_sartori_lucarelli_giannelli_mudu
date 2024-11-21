@@ -39,16 +39,16 @@
                         IT/EN/ESP
                     </a>
                     <ul class="dropdown-menu dropdownLanguage ">
-                        <li><a class="dropdown-item" href="#">Italiano</a></li>
-                        <li><a class="dropdown-item" href="#">English</a></li>
-                        <li><a class="dropdown-item" href="#">Espaniol</a></li>
+                        <li><a class="dropdown-item" href="#">  <x-_locale lang="it" /> </a></li>
+                        <li><a class="dropdown-item" href="#"> <x-_locale lang="en" /> </a></li>
+                        <li><a class="dropdown-item" href="#"> <x-_locale lang="es" /> </a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown ">
                     @guest
                         <a class="nav-link dropdown-toggle textColor1" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Ciao, accedi
+                            {{__('ui.hello')}}
                         </a>
                         <ul class="dropdown-menu dropdownUser">
                             <div class="col-12">

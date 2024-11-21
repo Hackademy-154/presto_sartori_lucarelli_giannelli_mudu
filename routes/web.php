@@ -33,3 +33,6 @@ Route::get('/search/article', [PublicController::class, 'searchArticles'])->name
 Route::post('/revisor/request', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 Route::get('/make/revisor', [RevisorController::class, 'becomeRevisorForm'])->name('form.revisor');
+
+//cambio lingua
+Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
