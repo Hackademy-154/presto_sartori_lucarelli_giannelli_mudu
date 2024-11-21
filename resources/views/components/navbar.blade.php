@@ -1,7 +1,7 @@
 <nav class="navbar position-fixed navbar-expand-lg bg_navbar1 vw-100 d-flex flex-column">
     <div class="container-fluid ff">
-        <a class="navbar-brand textColor1" href="{{ route('homepage') }}"><img src="{{ Storage::url('image/logo.png') }}"
-                class="logo ms-3" alt=""></a>
+        <a class="navbar-brand me-1 textColor1" href="{{ route('homepage') }}"><img
+                src="{{ Storage::url('image/logo.png') }}" class="logo ms-3" alt=""></a>
         <a class="navbar-brand textColor1" href="{{ route('homepage') }}">PRESTO.IT</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

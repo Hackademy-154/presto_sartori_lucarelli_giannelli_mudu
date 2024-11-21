@@ -1,10 +1,10 @@
 <x-layout>
     <div class="container spazioNav2">
-        <div class="row align-items-center">
+        <div class="row align-items-center justify-content-between">
             <div class="col-6 d-flex">
                 <img class="img-fluid sfumaturaa" src="/media/work.png" alt="">
             </div>
-            <div class="col-6 d-flex flex-column align-items-center justify-content-center">
+            <div class="col-5 d-flex flex-column align-items-center justify-content-center">
                 <div class="col-12 d-flex justify-content-center">
                     @if (session()->has('errorMessage'))
                         <div class="alert alert-danger text-center shadow rounded w-50 mt-3">
