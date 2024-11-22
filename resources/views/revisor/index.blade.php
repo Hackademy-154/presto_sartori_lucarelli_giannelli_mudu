@@ -66,7 +66,7 @@
                                 @endif
                             </div>
                             <div class="col-12 col-md-6 img-container">
-                                <img src="{{Storage::url($article->images->first()->path)}}" alt="">
+                                <img src="{{Storage::url($article_to_check->images->first()->path)}}" alt="">
                             </div>
                             <div class="col-12 col-md-4 ms-4 d-flex flex-column justify-content-center">
                                 <div class="d-flex flex-column justify-content-between text-dark">

@@ -11,7 +11,7 @@ return [
     'animali domestici' => 'Animali domestici',
     'casa e giardinaggio' => 'Casa & Giardinaggio',
     'elettronica' => 'Elettronica',
-    'giocattoli' => 'Gioccatoli',
+    'giocattoli' => 'Giocattoli',
     'libri e riviste' => 'Libri & Riviste',
     'motori' => 'Motori',
     'salute e bellezza' => 'Salute & Bellezza',
