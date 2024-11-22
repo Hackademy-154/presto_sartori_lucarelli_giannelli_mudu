@@ -125,10 +125,40 @@ a {
 }
 
 .dropdownLanguage {
-    width: 150px !important;
-    left: 0px !important;
+    width: 60px !important;
+    left: -5px !important;
 }
-
+.dropdown-menu.dropdownLanguage {
+    --bs-dropdown-min-width: 50px;
+}
+#selectedFlag > form > .btn2 {
+    background-color: transparent;
+    padding: 0px;
+    width: 32px;
+}
+#selectedFlag > form > .btn2:hover {
+    background-color: transparent;
+}
+.bandierine {
+    display: flex;
+    justify-content: center;
+    width: 58.67px !important;
+}
+.btn2 {
+    width: 58.67px;
+    border: 0px;
+    transition: 0.4s;
+    background-color: transparent;
+}
+.btn2:hover {
+    background-color: #333333;
+}
+.btn2 > img {
+    transition: 0.4s;
+}
+.btn2 > img:hover {
+    scale: 1.1;
+}
 .dropdown-menu[data-bs-popper] {
     left: -250px;
 }
@@ -864,6 +894,9 @@ a {
     border-radius: 50px;
     background: #e0e0e0;
     box-shadow: 15px 15px 30px #adadad, -15px -15px 30px #ffffff;
+}
+#show .bi-cart-check {
+    color: rgb(0, 0, 0);
 }
 
 .cartIcon {

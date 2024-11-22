@@ -1,29 +1,4 @@
-// cambio bandierina
-// document.addEventListener("DOMContentLoaded", function () {
-//     // Seleziona tutte le voci di lingua nel dropdown
-//     const languageItems = document.querySelectorAll(".bandierine");
-//     const dropdownToggle = document.querySelector("#navbarDropdowner");
-
-//     // Aggiungi un listener a ciascun elemento di lingua
-//     languageItems.forEach((item) => {
-//         item.addEventListener("click", function (event) {
-//             event.preventDefault(); // Evita il comportamento predefinito del link
-
-//             // Recupera il contenuto del tag <x-_locale> cliccato
-//             const localeTag = this.querySelector("x-_locale").outerHTML;
-
-//             // Aggiorna il contenuto del toggle con il contenuto del tag <x-_locale>
-//             dropdownToggle.innerHTML = localeTag;
-//         });
-//     });
-// });
-
-
-
-
-
 // Card Show
-
 const allHoverImages = document.querySelectorAll(".imgShow");
 
 if (allHoverImages.length > 0) {
@@ -53,7 +28,6 @@ let offcanvasExample = document.querySelector("#offcanvasExample");
 let wrapper = document.querySelector("#sidebarCart");
 let cardCart = document.querySelectorAll(".cardCart");
 cardCart = Array.from(cardCart);
-console.log(cardCart);
 
 let cardElements = [];
 
@@ -84,6 +58,7 @@ cardCart.forEach((el) => {
             if (!doppione) {
                 cardElements.push(cardElementsNew);
             }
+
             let deleteCardElement;
 
             function createCards() {
@@ -139,24 +114,6 @@ cardCart.forEach((el) => {
             `;
                 wrapper.appendChild(div);
             });
-            console.log(cardElements);
-            // ssss
-            let deleteCardElement = wrapper.querySelectorAll(".bi-trash3-fill");
-            deleteCardElement.forEach((el, i) => {
-                el.addEventListener("click", () => {
-                    console.log(el);
-                });
-            });
         }
     });
 });
-
-
-
-
-{/* <div class="d-flex flex-column  ">
-                    <h5 class="text-dark text-start">Titolo: ${el.title}</h5>
-                    <h5 class="text-dark text-start">${el.price}</h5>
-                    <p class="text-dark text-start">${el.category}</p>
-                    <i class="bi bi-x pointer" id=""></i>
-                </div> */}
