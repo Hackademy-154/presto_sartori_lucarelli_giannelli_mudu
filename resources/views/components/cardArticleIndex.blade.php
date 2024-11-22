@@ -9,8 +9,6 @@
                     </div>
                 @endforeach
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
         </div>
         <div class="col-9 d-flex flex-column cardCart">
             <div class="d-flex flex-column justify-content-between text-dark">
