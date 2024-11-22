@@ -4,7 +4,7 @@
             <div class="swiper-wrapper">
                 @foreach ($article->images as $key => $image)
                     <div class="swiper-slide ">
-                        <img src="{{ $article->images->isNotEmpty() ? $article->images->first()->getUrl(800,800) : Storage::url('image/default.png') }} "
+                        <img src="{{$image->getUrl(800,800)}}"
                             class="img-fluid" alt="" id="cardImg">
                     </div>
                 @endforeach
