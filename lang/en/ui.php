@@ -1,17 +1,6 @@
 <?php
 return [
-
     'hello' => 'Hello,',
-    'login' => 'Login',  
-    'messLogin' => "Don't have an account?",
-    'emailError' => 'Invalid email address',
-    'passwordError' => 'Invalid password',
-    'register' => 'Register',
-    'name' => 'Name:',
-    'confirm' => 'Confirm',
-    'messRegister' => 'Are you already registered?',
-    'nameError' => 'Name required',
-    'emailErrorRegister' => 'Email address required',
     'allArticles' => 'All articles',
     'category' => 'Category',
     'categories' => 'Categories',
@@ -63,6 +52,21 @@ return [
     'btnAdd' => 'Add',
 
     'titleIndex' => 'Articles of the category',
-    
+    'login' => 'Login',  
+    'register' => 'Register',
 
+    'slogan3' => 'Publish and Earn!',
+    'text3' => 'Add your item today and start monetizing. Don\'t wait, your audience is waiting for you!',
+    'btnSellNow' => 'Sell now',
+    'aboutUs' => 'About us',
+    'textAboutUs' => 'Find out more about our mission and values.',
+    'mission' => 'Our mission',
+    'textMission' => 'We believe in the value of ideas and want to create meaningful connections between people. Our platform offers a safe place to share and discover unique items.',
+    'whyUs' => 'Why choose us?',
+    'answer1' => 'Ease of use to publish your articles.',
+    'answer2' => 'A safe and reliable community.',
+    'answer3' => 'Constant and personalized support.',
+    'joinUs' => 'Join us',
+    'textJoinUs' => 'Do you believe in change? We are always looking for new talent. Join our team and make a difference!',
+    'btnJoinUs' => 'Join us now!',
 ];

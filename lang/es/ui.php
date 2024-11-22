@@ -61,4 +61,19 @@ return [
     'btnAdd' => 'Añadir',
     'titleIndex' => 'Artículos en la categoría',
     
+
+    'slogan3' => '¡Publica y Gana!',
+    'text3' => 'Agrega tu artículo hoy y comienza a monetizarlo. ¡No esperes, tu audiencia te está esperando!',
+    'btnSellNow' => 'Vender ahora',
+    'aboutUs' => 'Sobre nosotros',
+    'textAboutUs' => 'Descubra más sobre nuestra misión y valores.',
+    'mission' => 'Nuestra misión',
+    'textMission' => 'Creemos en el valor de las ideas y queremos crear conexiones significativas entre las personas. Nuestra plataforma ofrece un lugar seguro para compartir y descubrir artículos únicos.',
+    'whyUs' => '¿Por qué elegirnos?',
+    'answer1' => 'Facilidad de uso para publicar tus artículos.',
+    'answer2' => 'Una comunidad segura y confiable.',
+    'answer3' => 'Soporte constante y personalizado.',
+    'joinUs' => 'Únete a nosotros',
+    'textJoinUs' => '¿Crees en el cambio? Siempre estamos buscando nuevos talentos. ¡Únete a nuestro equipo y marca la diferencia!',
+    'btnJoinUs' => '¡Únase a nosotros ahora!',
 ];

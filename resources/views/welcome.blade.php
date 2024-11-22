@@ -125,16 +125,10 @@
         <div class="row justify-content-center align-items-center sfumaturaa ">
             <div
                 class="col-12 d-flex flex-column justify-content-start align-items-center callToActionWork pb-4 px-4 py-4">
-                <h2 class="text-center fw-bold  mb-2  textGrey">Pubblica e Guadagna!</h2>
-                <p class=" mt-0 text-muted fst-italic sfumaturaa my-4 mb-3">Carica il tuo articolo oggi e inizia a
-                    monetizzare. Non
-                    aspettare,
-                    il tuo
-                    pubblico ti
-                    sta aspettando!
+                <h2 class="text-center fw-bold  mb-2  textGrey">{{__('ui.slogan3')}}</h2>
+                <p class=" mt-0 text-muted fst-italic sfumaturaa my-4 mb-3">{{__('ui.text3')}}
                 </p>
-                <a class="text-white buttonCustom btn mt-0" href="{{ route('article.create') }}">Pubblica
-                    subito</a>
+                <a class="text-white buttonCustom btn mt-0" href="{{ route('article.create') }}">{{__('ui.btnSellNow')}}</a>
             </div>
         </div>
     </div>
@@ -158,8 +152,8 @@
     <div class="container mt-4 py-5 cambiacolore border sfumaturaa">
         <div class="row text-center mb-4">
             <div class="col-12">
-                <h2 class="fw-bold textGrey">Chi Siamo</h2>
-                <p class="text-muted">Scopri di più sulla nostra missione e sui nostri valori.</p>
+                <h2 class="fw-bold textGrey">{{__('ui.aboutUs')}}</h2>
+                <p class="text-muted">{{__('ui.textAboutUs')}}</p>
             </div>
         </div>
         <hr class="">
@@ -168,23 +162,21 @@
                 <img src="/media/hiring4.jpeg" class="img-fluid rounded shadow" alt="Il nostro team al lavoro">
             </div>
             <div class="col-md-6">
-                <h3 class="fw-bold text-black">La nostra missione</h3>
-                <p class="text-muted">Crediamo nel valore delle idee e vogliamo creare connessioni significative
-                    tra le persone. La nostra piattaforma offre un luogo sicuro per condividere e scoprire articoli
-                    unici.</p>
-                <h4 class="fw-bold mt-4 text-black">Perché sceglierci?</h4>
+                <h3 class="fw-bold text-black">{{__('ui.mission')}}</h3>
+                <p class="text-muted">{{__('ui.textMission')}}</p>
+                <h4 class="fw-bold mt-4 text-black">{{__('ui.whyUs')}}</h4>
                 <ul class="list-unstyled">
                     <li class="d-flex align-items-center mb-3">
                         <i class="bi bi-check-circle-fill text-success me-3"></i>
-                        <span>Facilità d'uso per pubblicare i tuoi articoli.</span>
+                        <span>{{__('ui.answer1')}}</span>
                     </li>
                     <li class="d-flex align-items-center mb-3">
                         <i class="bi bi-check-circle-fill text-success me-3"></i>
-                        <span>Una community sicura e affidabile.</span>
+                        <span>{{__('ui.answer2')}}</span>
                     </li>
                     <li class="d-flex align-items-center mb-3">
                         <i class="bi bi-check-circle-fill text-success me-3"></i>
-                        <span>Supporto costante e personalizzato.</span>
+                        <span>{{__('ui.answer3')}}</span>
                     </li>
                 </ul>
             </div>
@@ -192,11 +184,9 @@
         <hr class="">
         <div class="row mt-4 text-center">
             <div class="col-12 textGrey">
-                <h3 class="fw-bold textGrey">Unisciti a noi!</h3>
-                <p class="text-muted">Credi nel cambiamento? Siamo sempre alla ricerca di nuovi talenti. Unisciti
-                    al nostro team e fai la differenza!</p>
-                <a href="{{ route('form.revisor') }}" class="text-white buttonCustom btn mt-0 ">Candidati
-                    Ora</a>
+                <h3 class="fw-bold textGrey">{{__('ui.joinUs')}}</h3>
+                <p class="text-muted">{{__('ui.textJoinUs')}}</p>
+                <a href="{{ route('form.revisor') }}" class="text-white buttonCustom btn mt-0 ">{{__('ui.btnJoinUs')}}</a>
             </div>
         </div>
     </div>

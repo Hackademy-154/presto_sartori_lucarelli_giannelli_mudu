@@ -65,4 +65,19 @@ return [
 
     'titleIndex' => 'Articoli della categoria',
 
+    'slogan3' => 'Pubblica e Guadagna!',
+    'text3' => 'Carica il tuo articolo oggi e inizia a monetizzare. Non aspettare, il tuo pubblico ti sta aspettando!',
+    'btnSellNow' => 'Pubblica subito',
+    'aboutUs' => 'Chi Siamo',
+    'textAboutUs' => 'Scopri di più sulla nostra missione e sui nostri valori.',
+    'mission' => 'La nostra missione',
+    'textMission' => 'Crediamo nel valore delle idee e vogliamo creare connessioni significative tra le persone. La nostra piattaforma offre un luogo sicuro per condividere e scoprire articoli unici.',
+    'whyUs' => 'Perché sceglierci?',
+    'answer1' => 'Facilità d\'uso per pubblicare i tuoi articoli.',
+    'answer2' => 'Una community sicura e affidabile.',
+    'answer3' => 'Supporto costante e personalizzato.',
+    'joinUs' => 'Unisci a noi!',
+    'textJoinUs' => 'Credi nel cambiamento? Siamo sempre alla ricerca di nuovi talenti. Unisciti al nostro team e fai la differenza!',
+    'btnJoinUs' => 'Candidati ora!',
+
 ];
