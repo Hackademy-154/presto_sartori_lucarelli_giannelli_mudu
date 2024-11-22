@@ -1,8 +1,17 @@
 <?php
 return [
+    
     'hello' => 'Ciao,',
     'login' => 'Accedi',
+    'messLogin' => 'Non hai un account?',
+    'emailError' => 'Indirizzo email non valido',
+    'passwordError' => 'Password non valida',
     'register' => 'Registrati',
+    'name' => 'Nome:',
+    'confirm' => 'Conferma',
+    'messRegister' => 'Sei già registrato?',
+    'nameError' => 'Nome obbligatorio',
+    'emailErrorRegister' => 'Indirizzo email obbligatorio',
     'allArticles' => 'Tutti gli articoli',
     'category' => 'Categoria',
     'categories' => 'Categorie',

@@ -1,6 +1,17 @@
 <?php
 return [
+
     'hello' => 'Hola, ',
+    'login' => 'Identificate',
+    'messLogin' => '¿No tienes una cuenta?',
+    'emailError' => 'Dirección de correo electrónico no válida',
+    'passwordError' => 'Contraseña no válida',
+    'register' => 'Registro',
+    'name' => 'Nombre:',
+    'confirm' => 'Confirmar',
+    'messRegister' => '¿Ya estás registrado?',
+    'nameError' => 'Nombre obligatorio',
+    'emailErrorRegister' => 'Email obligatorio',
     'allArticles' => 'Todos los articulos',
     'category' => 'Categoria',
     'categories' => 'Categorias',
@@ -49,6 +60,5 @@ return [
     'btnBack' => 'Volver',
     'btnAdd' => 'Añadir',
     'titleIndex' => 'Artículos en la categoría',
-    'login' => 'Identificate',
-    'register' => 'Registro',
+    
 ];

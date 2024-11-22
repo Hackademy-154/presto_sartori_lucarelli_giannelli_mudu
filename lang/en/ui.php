@@ -1,6 +1,17 @@
 <?php
 return [
+
     'hello' => 'Hello,',
+    'login' => 'Login',  
+    'messLogin' => "Don't have an account?",
+    'emailError' => 'Invalid email address',
+    'passwordError' => 'Invalid password',
+    'register' => 'Register',
+    'name' => 'Name:',
+    'confirm' => 'Confirm',
+    'messRegister' => 'Are you already registered?',
+    'nameError' => 'Name required',
+    'emailErrorRegister' => 'Email address required',
     'allArticles' => 'All articles',
     'category' => 'Category',
     'categories' => 'Categories',
@@ -52,7 +63,6 @@ return [
     'btnAdd' => 'Add',
 
     'titleIndex' => 'Articles of the category',
-    'login' => 'Login',  
-    'register' => 'Register',
+    
 
 ];

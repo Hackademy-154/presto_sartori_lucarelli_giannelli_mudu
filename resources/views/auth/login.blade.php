@@ -23,22 +23,22 @@
                         <label class="fw-bold" for="email ">Email:</label>
                         <input type="email" name="email" class="my-1  p-1 @error('email') is-invalid @enderror">
                         @error('email')
-                            <div class="text-danger fst-italic">Indirizzo email non valido</div>
+                            <div class="text-danger fst-italic">{{__('ui.emailError')}}</div>
                         @enderror
                     </div>
                     <div class="d-flex flex-column ">
                         <label class="fw-bold" for="password ">Password:</label>
                         <input type="password" name="password" class="my-1 p-1 @error('password') is-invalid @enderror">
                         @error('password')
-                            <div class="text-danger fst-italic">Password non valida</div>
+                            <div class="text-danger fst-italic">{{__('ui.passwordError')}}</div>
                         @enderror
                     </div>
                     <div class="d-flex flex-column justify-content-center text-center mt-1">
                         <span class="fst-italic ">
-                            Non hai un account? <a href="{{ route('register') }}"
-                                class="fst-italic  cursor-pointer colorPetrolio fw-bold">Registrati</a>
+                        {{__('ui.messLogin')}} <a href="{{ route('register') }}"
+                                class="fst-italic  cursor-pointer colorPetrolio fw-bold">{{__('ui.register')}}</a>
                         </span>
-                        <button type="submit" class="buttonCustom">Login</button>
+                        <button type="submit" class="buttonCustom">{{__('ui.login')}}</button>
                     </div>
                 </form>
             </div>
