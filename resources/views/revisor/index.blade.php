@@ -51,18 +51,11 @@
                             <!-- 6 img per l'articolo -->
                             <div class="contImgDettaglio d-flex flex-column justify-content-evenly">
                                 @if ($article_to_check->images->count())
-<<<<<<< HEAD
-                                    @foreach ($article_to_check->images as $key=>$image)
-                                    <div class="img-dettaglio">
-                                        <img src="{{ $image->getUrl(800,800) }}" class="imgShow" alt="Immagine {{$key+1}} dell'articolo '{{$article_to_check->title}}'">
-                                    </div>
-=======
                                     @foreach ($article_to_check->images as $key => $image)
                                         <div class="img-dettaglio">
-                                            <img src="{{ Storage::url($image->path) }}" class="imgShow"
+                                            <img src="{{ $image->getUrl(800, 800) }}" class="imgShow"
                                                 alt="Immagine {{ $key + 1 }} dell'articolo '{{ $article_to_check->title }}'">
                                         </div>
->>>>>>> 6ee95b7 (fix vari front-end)
                                     @endforeach
                                 @else
                                     @for ($i = 0; $i < 6; $i++)
@@ -74,12 +67,7 @@
                                 @endif
                             </div>
                             <div class="col-12 col-md-6 img-container">
-<<<<<<< HEAD
-                                <img class="imgShow" src="{{$image->getUrl(800, 800)}}" alt="">
-=======
-                                <img src="{{ $article_to_check->images->isNotEmpty() ? Storage::url($article_to_check->images->first()->path) : 'https://picsum.photos/350' }}"
-                                    alt="">
->>>>>>> 6ee95b7 (fix vari front-end)
+                                <img class="imgShow" src="{{ $image->getUrl(800, 800) }}" alt="">
                             </div>
                             <div class="col-12 col-md-4 ms-4 d-flex flex-column justify-content-center">
                                 <div class="d-flex flex-column justify-content-between text-dark">
