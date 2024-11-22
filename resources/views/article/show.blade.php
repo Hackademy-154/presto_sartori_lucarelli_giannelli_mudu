@@ -55,7 +55,7 @@
                         <a class="btn btn-secondary w-25 d-flex justify-content-center align-items-center"
                             href="{{ route('homepage') }}">Indietro</a>
                         <button type="" class="btn btn-success  w-25">
-                            <i id="icona_{{ $article->id }}" class="bi bi-cart-plus fs-5 cartIcon"></i>
+                            <i id="icona_{{ $article->id }}" class="bi bi-cart-plus fs-5 cartIcon text-white"></i>
                         </button>
                     </div>
                 </div>

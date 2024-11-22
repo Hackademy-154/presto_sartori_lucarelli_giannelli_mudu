@@ -36,3 +36,21 @@ var swiper2 = new Swiper(".swiper2", {
         clickable: true,
     },
 });
+// Swiper Index
+document.querySelectorAll(".swiper3").forEach((swiperEl, index) => {
+    new Swiper(swiperEl, {
+        autoplay: {
+            delay: 3000,
+        },
+        speed: 800,
+        slidesPerView: 1,
+        loop: true,
+        centeredSlides: true,
+        spaceBetween: 0,
+        grabCursor: true,
+        navigation: {
+            nextEl: swiperEl.querySelector(".swiper-button-next"),
+            prevEl: swiperEl.querySelector(".swiper-button-prev"),
+        },
+    });
+});
