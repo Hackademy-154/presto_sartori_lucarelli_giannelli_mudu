@@ -7,7 +7,8 @@
 }
 
 h1,
-h2 {
+h2,
+h3 {
     color: #006867 !important;
 }
 
@@ -18,7 +19,9 @@ h2 {
 .text-white {
     color: #ffffff !important;
 }
-
+.text-black {
+    color: #333333 !important;
+}
 .sfumatura {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -35,6 +38,12 @@ a {
 
 .cambiacolore {
     background-color: white !important;
+}
+.bi-arrow-right-short::before {
+    transition: 0.4s;
+}
+.bi-arrow-right-short:hover::before {
+    scale: 0.9;
 }
 .bi-cart::before {
     transform: scaleX(-1) !important;
@@ -54,7 +63,16 @@ a {
 }
 
 .border {
-    border-radius: 15px;
+    border-radius: 8px;
+}
+.borderTop {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.borderBottom {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 /* Navbar */
@@ -316,7 +334,13 @@ a {
     background-color: #006867;
 }
 /* Swiper Category */
-
+.imgCategoryCerchio {
+    transition: 0.4s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+.imgCategoryCerchio:hover {
+    scale: 0.9;
+}
 .swiper2 img {
     height: 180px !important;
     width: 180px !important;
@@ -377,16 +401,6 @@ a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.borderTop {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-.borderBottom {
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-}
-
 /* Section Arrow */
 .sectionsArrow {
     height: 40px;
@@ -424,7 +438,16 @@ a {
     border-radius: 5px;
     padding: 15px 200px;
 }
-
+/* Lavora con noi welcome */
+.callToActionWork {
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+.hiringImg {
+    height: 250px !important;
+    width: 250px !important;
+    padding: 0;
+}
 /* Cards */
 .bg_card {
     background-color: #84a98c;
@@ -488,6 +511,20 @@ a {
     min-width: 135px !important;
     min-height: 38px !important;
     transition: 0.4s;
+}
+.btnTrash {
+    width: 120px !important;
+    height: 35px !important;
+    display: flex;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    border: 0px;
+    transition: 0.4s;
+}
+.btnTrash:hover {
+    background-color: #bb2d3b !important;
 }
 .btnCustom2 {
     --bs-btn-padding-x: 0.75rem;
@@ -961,10 +998,14 @@ a {
 }
 
 /* classe nel form create da rivedere */
-.img-preview{
+.img-preview {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 120px;
     width: 120px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
 }

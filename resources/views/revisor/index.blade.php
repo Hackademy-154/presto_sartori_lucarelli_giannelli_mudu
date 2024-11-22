@@ -51,10 +51,18 @@
                             <!-- 6 img per l'articolo -->
                             <div class="contImgDettaglio d-flex flex-column justify-content-evenly">
                                 @if ($article_to_check->images->count())
+<<<<<<< HEAD
                                     @foreach ($article_to_check->images as $key=>$image)
                                     <div class="img-dettaglio">
                                         <img src="{{ $image->getUrl(800,800) }}" class="imgShow" alt="Immagine {{$key+1}} dell'articolo '{{$article_to_check->title}}'">
                                     </div>
+=======
+                                    @foreach ($article_to_check->images as $key => $image)
+                                        <div class="img-dettaglio">
+                                            <img src="{{ Storage::url($image->path) }}" class="imgShow"
+                                                alt="Immagine {{ $key + 1 }} dell'articolo '{{ $article_to_check->title }}'">
+                                        </div>
+>>>>>>> 6ee95b7 (fix vari front-end)
                                     @endforeach
                                 @else
                                     @for ($i = 0; $i < 6; $i++)
@@ -66,19 +74,24 @@
                                 @endif
                             </div>
                             <div class="col-12 col-md-6 img-container">
+<<<<<<< HEAD
                                 <img class="imgShow" src="{{$image->getUrl(800, 800)}}" alt="">
+=======
+                                <img src="{{ $article_to_check->images->isNotEmpty() ? Storage::url($article_to_check->images->first()->path) : 'https://picsum.photos/350' }}"
+                                    alt="">
+>>>>>>> 6ee95b7 (fix vari front-end)
                             </div>
                             <div class="col-12 col-md-4 ms-4 d-flex flex-column justify-content-center">
                                 <div class="d-flex flex-column justify-content-between text-dark">
-                                    <h4 class="mt-2 mb-1 fst-italic">Titolo: <span
+                                    <h4 class="mt-2 mb-1 fst-italic"> <span
                                             class="fw-bold">{{ $article_to_check->title }}</span></h4>
                                     <hr class="my-2">
-                                    <h6 class="fst-italic ">Categoria: <span
+                                    <h6 class="fst-italic "><span
                                             class="fw-bold">#{{ $article_to_check->category->name }}</span> </h6>
                                     <hr class="my-2">
                                     <div class="scrollspy-example text-black divDescriptionCardRev mb-3"
                                         data-bs-spy="scroll" data-bs-smooth-scroll="true" tabindex="0">
-                                        <h6 class="fst-italic">Descrizione:</h6>
+                                        <h6 class="fst-italic"></h6>
                                         <span class="fw-bold">{{ $article_to_check->description }}</span>
                                     </div>
                                     <hr class="my-2">
@@ -86,7 +99,7 @@
                                             class="fw-bold">{{ $article_to_check->price }}
                                             €</span> </h6>
                                     <hr class="my-2">
-                                    <h6 class="fst-italic mb-3">Autore: <span
+                                    <h6 class="fst-italic mb-3">Pubblicato da: <span
                                             class="fw-bold">{{ $article_to_check->user->name }}</span> </h6>
                                 </div>
                                 <div class="d-flex justify-content-between align-items-start ">
