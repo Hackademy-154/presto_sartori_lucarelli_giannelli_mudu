@@ -114,7 +114,10 @@
                     <a class="nav-link pe-3 ps-0 py-0" data-bs-toggle="offcanvas" href="#offcanvasExample"
                         role="button" aria-controls="offcanvasExample">
                         <i class="bi bi-cart text-white fs-4 p-0"></i>
+                        <div class="bg-danger cartCount text-center text-white" style="height: 20px; width: 20px; border-radius: 50%;">
                     </a>
+                        
+                    </div>
                 </li>
             </ul>
         </div>
