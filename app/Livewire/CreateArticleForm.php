@@ -33,7 +33,8 @@ class CreateArticleForm extends Component
     public function save(){
 
         $this->validate();
-
+        
+        if(count($this->images)>0 && count($this->images)<7){
         $this->article = Article::create([
             'title' => $this->title,
             'user_id' => Auth::id(),
@@ -41,15 +42,18 @@ class CreateArticleForm extends Component
             'description' => $this->description,
             'price' => $this->price,
         ]);
-        if(count($this->images)>0){
             foreach($this->images as $image){
                 $this->article->images()->create([
                     'path' => $image->store('images', 'public')
                 ]);
             }
+            session()->flash('success', 'Annuncio inserito');
+            $this->reset();
         }
-        session()->flash('success', 'Annuncio inserito');
-        $this->reset();
+        else{
+            session()->flash('nosuccess', 'Inserisci un massimo di sei immagini');
+        }
+        
     }
 
     // protected function clearForm()

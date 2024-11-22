@@ -7,6 +7,7 @@
             {{ session('success') }}
         </div>
     @endif
+    
     <div class="mb-3 text-start d-flex flex-column">
         <label for="title" class="text-start fs-6 fw-bold">{{__('ui.title')}}</label>
         <input type="text" class=" p-1  @error('title') is-invalid @enderror" id="title" wire:model.blur="title"
@@ -56,7 +57,7 @@
     <div class="row">
         <div class="col-12">
             <p>Photo preview:</p>
-            <div class="row border border-4 border-success rounded shadow py-4">
+            <div class="row border border-4 border-dark-subtle rounded shadow py-4">
                 @foreach ($images as $key=>$image)
                 <div class="col-6 d-flex flex-column align-items-center my-3">
                     <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}});"></div>
@@ -66,6 +67,11 @@
             </div>
         </div>
     </div>
+    @endif
+    @if (session('nosuccess'))
+        <div class="mt-3 alert alert-danger text-center">
+            {{ session('nosuccess') }}
+        </div>
     @endif
     <div class="mb-3 pt-2 d-flex justify-content-between">
         <a class="btn btn-secondary w-25 mt-3" href="{{ route('homepage') }}">{{__('ui.btnBack')}}</a>
