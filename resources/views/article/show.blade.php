@@ -11,7 +11,7 @@
                 @if ($article->images->count())
                                     @foreach ($article->images as $key=>$image)
                                     <div class="img-dettaglio">
-                                        <img src="{{ Storage::url($image->path) }}" class="imgShow" alt="Immagine {{$key+1}} dell'articolo '{{$article->title}}'">
+                                        <img src="{{ $image->getUrl(800, 800) }}" class="imgShow" alt="Immagine {{$key+1}} dell'articolo '{{$article->title}}'">
                                     </div>
                                     @endforeach
                                 @else

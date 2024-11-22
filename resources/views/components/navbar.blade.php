@@ -61,7 +61,7 @@
                     @guest
                         <a class="nav-link dropdown-toggle textColor1" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            {{ __('ui.hello') }}{{ __('ui.login') }}
+                            {{ __('ui.hello') }} {{ __('ui.login') }}
                         </a>
                         <ul class="dropdown-menu dropdownUser">
                             <div class="col-12">
@@ -80,7 +80,7 @@
                         <a class="nav-link dropdown-toggle textColor1 d-flex align-items-center" href="#"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <span
-                                class="revisor-name text-white">{{ __('ui.hello') }}{{ ucWords(Auth::user()->name) }}</span>
+                                class="revisor-name text-white">{{ __('ui.hello') }} {{ ucWords(Auth::user()->name) }}</span>
                             @if (\App\Models\Article::toBeRevisedCount() != null && Auth::user()->is_revisor)
                                 <i class="bi bi-bell-fill  badge position-absolute   translate-middle   ">
                                 </i>
