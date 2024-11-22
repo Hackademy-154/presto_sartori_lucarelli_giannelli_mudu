@@ -50,15 +50,23 @@
                             class="col-12 col-md-10 pb-3 mt-4  d-flex justify-content-start align-items-center cardShow ps-0">
                             <!-- 6 img per l'articolo -->
                             <div class="contImgDettaglio d-flex flex-column justify-content-evenly">
-                                @for ($i = 0; $i < 6; $i++)
+                                @if ($article_to_check->images->count())
+                                    @foreach ($article_to_check->images as $key=>$image)
                                     <div class="img-dettaglio">
-                                        <img class="imgShow" src="https://picsum.photos/35{{ $i }}"
-                                            alt="img provvisorie">
+                                        <img src="{{ Storage::url($image->path) }}" class="imgShow" alt="Immagine {{$key+1}} dell'articolo '{{$article_to_check->title}}'">
                                     </div>
-                                @endfor
+                                    @endforeach
+                                @else
+                                    @for ($i = 0; $i < 6; $i++)
+                                        <div class="img-dettaglio">
+                                            <img class="imgShow" src="https://picsum.photos/35{{ $i }}"
+                                                alt="img provvisorie">
+                                        </div>
+                                    @endfor
+                                @endif
                             </div>
                             <div class="col-12 col-md-6 img-container">
-                                <img src="https://picsum.photos/350" alt="">
+                                <img src="{{Storage::url($article->images->first()->path)}}" alt="">
                             </div>
                             <div class="col-12 col-md-4 ms-4 d-flex flex-column justify-content-center">
                                 <div class="d-flex flex-column justify-content-between text-dark">

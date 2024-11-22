@@ -8,10 +8,9 @@
         <div class="row justify-content-around py-5 pt-5">
             <div class="col-12 pt-5">
             @foreach ($articles as $article)
-            <x-cardArticle :article="$article"></x-cardArticle>
+            <x-cardArticleIndex :article="$article" :category="$article->category"></x-cardArticleIndex>
         @endforeach
             </div>
         </div>
     </div>
-
 </x-layout>

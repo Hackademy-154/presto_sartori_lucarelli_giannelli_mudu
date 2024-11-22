@@ -3,10 +3,11 @@
 namespace App\Models;
 
 use App\Models\User;
+use App\Models\Image;
 use App\Models\Category;
+use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Laravel\Scout\Searchable;
 
 class Article extends Model
 {
@@ -36,5 +37,8 @@ class Article extends Model
             'description'=>$this->description,
             'category'=>$this->category
         ];
+    }
+    public function images(){
+        return $this->hasMany(Image::class);
     }
 }

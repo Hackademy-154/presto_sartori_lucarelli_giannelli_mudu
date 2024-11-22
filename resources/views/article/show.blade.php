@@ -8,25 +8,23 @@
         <div class="row justify-content-center align-items-center">
             <div class="col-12 col-md-10 d-flex justify-content-start align-items-center cardShow ps-0 pb-3 ">
                 <div class="contImgDettaglio d-flex flex-column justify-content-evenly">
-                    <div class="img-dettaglio">
-                        <img class="imgShow" src="{{ Storage::url('image/slide_abbigliamento.png') }}" alt="">
-                    </div>
-                    <div class="img-dettaglio">
-                        <img class="imgShow" src="{{ Storage::url('image/slide_sport.jpeg') }}" alt="">
-                    </div>
-                    <div class="img-dettaglio">
-                        <img class="imgShow" src="{{ Storage::url('image/slide_casa&giardinaggio.webp') }}"
-                            alt="">
-                    </div>
-                    <div class="img-dettaglio">
-                        <img class="imgShow" src="{{ Storage::url('image/slide_libri&riviste.webp') }}" alt="">
-                    </div>
-                    <div class="img-dettaglio">
-                        <img class="imgShow" src="{{ Storage::url('image/slide_sport.jpeg') }}" alt="">
-                    </div>
+                @if ($article->images->count())
+                                    @foreach ($article->images as $key=>$image)
+                                    <div class="img-dettaglio">
+                                        <img src="{{ Storage::url($image->path) }}" class="imgShow" alt="Immagine {{$key+1}} dell'articolo '{{$article->title}}'">
+                                    </div>
+                                    @endforeach
+                                @else
+                                    @for ($i = 0; $i < 6; $i++)
+                                        <div class="img-dettaglio">
+                                            <img class="imgShow" src="https://picsum.photos/35{{ $i }}"
+                                                alt="img provvisorie">
+                                        </div>
+                                    @endfor
+                                @endif
                 </div>
                 <div class="col-12 col-md-6 img-container">
-                    <img class="imgShow" src="{{ Storage::url('image/slide_abbigliamento.png') }}" alt="">
+                    <img class="imgShow" src="{{ Storage::url($article->images->first()->path) }}" alt="">
                 </div>
                 <div class="col-12 col-md-4 ms-4 d-flex flex-column justify-content-between cardCart">
                     <div class="d-flex flex-column justify-content-between text-dark">

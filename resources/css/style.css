@@ -933,3 +933,12 @@ a {
     font-size: 25px;
     color: red;
 }
+
+/* classe nel form create da rivedere */
+.img-preview{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120px;
+    width: 120px;
+}

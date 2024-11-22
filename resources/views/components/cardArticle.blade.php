@@ -1,4 +1,5 @@
-<div class="col-3 col-md-4 my-3 card"><img src="{{ Storage::url('image/ps5.jpg') }}">
+<div class="col-3 col-md-4 my-3 card">
+    <img src="{{$article->images->isNotEmpty() ? Storage::url($article->images->first()->path) : Storage::url('image/default.png') }}">
     <div class="info">
         <h5>{{ ucfirst($article->title)  }}</h5>
         <p class="text-white">{{ $article->price }}€</p>
