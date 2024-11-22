@@ -1,10 +1,7 @@
 <div class="col-3 cardIndexContainer cardCart m-3 p-1" id="">
-<<<<<<< HEAD
 
-    <img src="{{$article->images->isNotEmpty() ? Storage::url($article->images->first()->path) : Storage::url('image/default.png') }} " class="indexImg" alt="" id="cardImg">
-=======
-    <img src="{{ Storage::url('image/slide_sport.jpeg') }} " class="indexImg" alt="" id="cardImg">
->>>>>>> a5e4f89 (modificata vista per categoria aggiunto swiper per immagini)
+    <img src="{{ $article->images->isNotEmpty() ? Storage::url($article->images->first()->path) : Storage::url('image/default.png') }} "
+        class="indexImg" alt="" id="cardImg">
     <div class="px-3 pt-2 d-flex justify-content-between align-items-center">
         <h4 class="text-truncate" style="max-width: 250px;" id="cardTitle">{{ ucfirst($article->title) }}</h4>
         <h6 class="text-dark fs-5 my-0" id="cardPrice">{{ $article->price }}€</h6>

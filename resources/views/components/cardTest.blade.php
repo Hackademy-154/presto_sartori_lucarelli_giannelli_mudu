@@ -5,7 +5,8 @@
                 @foreach ($categories as $category)
                     <div class="swiper-slide ">
 
-                        <img src={{ '/media/category_pic/' . $category->id . '.jpg' }} class=" img-fluid sfumatura">
+                        <img src="{{ $article->images->isNotEmpty() ? Storage::url($article->images->first()->path) : Storage::url('image/default.png') }} "
+                            class="indexImg" alt="" id="cardImg">
                     </div>
                 @endforeach
             </div>
