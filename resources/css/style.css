@@ -731,7 +731,11 @@ a {
 .img-dettaglio:hover {
     border: 1px solid rgb(241, 241, 241);
 }
-
+.imgShow{
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
 .img-container {
     height: 450px;
     width: 600px;

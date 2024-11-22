@@ -66,7 +66,7 @@
                                 @endif
                             </div>
                             <div class="col-12 col-md-6 img-container">
-                                <img src="{{$article_to_check->images->isNotEmpty() ? Storage::url($article_to_check->images->first()->path) :  'https://picsum.photos/350'}}" alt="">
+                                <img class="imgShow" src="{{$image->getUrl(800, 800)}}" alt="">
                             </div>
                             <div class="col-12 col-md-4 ms-4 d-flex flex-column justify-content-center">
                                 <div class="d-flex flex-column justify-content-between text-dark">

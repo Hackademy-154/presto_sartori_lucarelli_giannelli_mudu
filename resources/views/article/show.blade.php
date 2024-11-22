@@ -24,7 +24,7 @@
                                 @endif
                 </div>
                 <div class="col-12 col-md-6 img-container">
-                    <img class="imgShow" src="{{ Storage::url($article->images->first()->path) }}" alt="">
+                    <img class="imgShow" src="{{ $image->getUrl(800, 800) }}" alt="">
                 </div>
                 <div class="col-12 col-md-4 ms-4 d-flex flex-column justify-content-between cardCart">
                     <div class="d-flex flex-column justify-content-between text-dark">
