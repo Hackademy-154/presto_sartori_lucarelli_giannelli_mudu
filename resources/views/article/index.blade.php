@@ -1,13 +1,50 @@
 <x-layout>
     <div class="container min-vh-100">
         <div class="row pt-5 justify-content-center">
-            <div class="col-12 d-flex flex-column justify-content-center align-items-center my-3 incipit">
-                <h3 class="text-white fs-1 fw-bold">
-                    ESPLORA SENZA FILTRI
-                </h3>
-                <h3 class="text-white fs-1 fw-bold">
-                    FRA TUTTI I PRODOTTI DISPONIBILI
-                </h3>
+            <div class="col-12 p-5 d-flex flex-column justify-content-center align-items-center my-3 incipit">
+
+                <h2 class="mb-4">ORDINA ARTICOLI PER</h2>
+
+                <div class="d-flex justify-content-evenly align-items-center mx-auto">
+
+                    <div class=" d-flex flex-column justify-content-center align-items-start criteriContainer">
+                        <h6 class="mx-3">PREZZO</h6>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="inlineRadio1">crescente</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2">decrescente</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="criterio d-flex flex-column justify-content-center align-items-center mx-5 criteriContainer">
+
+                        <label for="customRange2" class="form-label">FASCIA DI PREZZO</label>
+                        <input type="range" class="form-range" min="0" max="5" id="customRange2">
+                    </div>
+
+                    <div class="criterio d-flex flex-column justify-content-center align-items-start criteriContainer">
+                        <h6 class="mx-3">STATO</h6>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="inlineRadio1">Nuovo</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2">Usato</label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
             </div>
         </div>
         <div class="row justify-content-evenly align-items-center py-5 ">
