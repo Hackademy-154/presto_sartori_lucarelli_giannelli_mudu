@@ -22,7 +22,7 @@ class PublicController extends Controller
             $query2 = $request->input('query');
         } else {
             $category = Category::find($request->input('query2'));
-            $query2 = $category ? $category->name : ' ';
+            $query2 = $category ? $category->name : '';
         }
 
         return view('article.searched', ['articles'=>$articles, 'query'=>$query2]);

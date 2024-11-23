@@ -19,12 +19,14 @@ class RevisorController extends Controller
 
     public function accept(Article $article){
         $article->setAccepted(true);
-        return redirect()->back()->with('message', "Hai accettato l'articolo ''$article->title''");
+        $message = __("ui.articleAccepted" , ['title' => "$article->title"]);
+        return redirect()->back()->with('message', "$message");
     }
 
     public function reject(Article $article){
         $article->setAccepted(false);
-        return redirect()->back()->with('message', "Hai rifiutato l'articolo ''$article->title''");
+        $message = __("ui.articleRejected" , ['title' => "$article->title"]);
+        return redirect()->back()->with('message', "$message");
     }
     public function becomeRevisor(Request $request){
         $messageUser = $request->messageUser;
@@ -41,6 +43,7 @@ class RevisorController extends Controller
     public function undoSetArticle(){
         $article = Article::orderBy('updated_at', 'desc')->first();
         $article->setAccepted(null);
-        return redirect()->back()->with('messageUndo', "Hai annullato la revisione dell'articolo ''$article->title''");
+        $message = __("ui.undoSetArticle" , ['title' => "$article->title"]);
+        return redirect()->back()->with('messageUndo', "$message");
     }
 }

@@ -41,10 +41,10 @@
                             <span class="fw-bold" id="cardDescription">{{ ucfirst($article->description) }}</span>
                         </div>
                         <hr class="my-2">
-                        <h6 class="fst-italic mb-2">Prezzo: <span class="fw-bold" id="cardPrice">{{ $article->price }}
+                        <h6 class="fst-italic mb-2">{{ __('ui.price') }} <span class="fw-bold" id="cardPrice">{{ $article->price }}
                                 €</span> </h6>
                         <hr class="my-2">
-                        <h6 class="fst-italic mb-3">Autore: <span
+                        <h6 class="fst-italic mb-3">{{ __('ui.author') }} <span
                                 class="fw-bold">{{ ucfirst($article->user->name) }}</span>
                         </h6>
                     </div>

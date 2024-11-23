@@ -54,12 +54,15 @@ return [
     'faq' => 'FAQ',
     
     'title' => 'Titolo',
-    'placeholder1' => 'Titolo articolo...',
+    'placeholder1' => 'Inserire titolo',
     'description' => 'Descrizione',
-    'placeholder2' => "Piccola descrizione dell'articolo...",
+    'placeholder2' => 'Inserire descrizione',
     'price' => 'Prezzo',
     'placeholder3' => '12.5 €',
+    'errorPrice' => 'Inserire prezzo',
     'selectCategory' => 'Seleziona Categoria',
+    'remove' => 'Rimuovi',
+    'imgPreview' => 'Anteprima immagine',
     'btnBack' => 'Indietro',
     'btnAdd' => 'Inserisci',
 
@@ -80,4 +83,19 @@ return [
     'textJoinUs' => 'Credi nel cambiamento? Siamo sempre alla ricerca di nuovi talenti. Unisciti al nostro team e fai la differenza!',
     'btnJoinUs' => 'Candidati ora!',
 
+    'author' => "Inserito da",
+
+    'noReview' => 'Nessun articolo da revisionare',
+    'btnHP' => 'Torna alla homepage',
+    'articleSuccessMessage' => 'Annuncio inserito',
+    'dashboardRevisor' => 'Dashboard del Revisore',
+    'reject' => 'Rifiuta',
+    'accept' => 'Accetta',
+    'articleAccepted' => "Hai accettato l'articolo ':title'.",
+    'articleRejected' => "Hai rifiutato l'articolo ':title'.",
+    'undoSetArticle' => "Hai annullato la revisione dell'articolo ':title'.",
+    'undoChange' => 'Clicca per annullare la modifica',
+
+    'noResults' => 'Nessun articolo corrispondente alla tua ricerca.',
+    'resultsFor' => 'Risultati per la ricerca',
 ];

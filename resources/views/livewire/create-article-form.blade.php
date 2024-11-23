@@ -4,7 +4,7 @@
     </h3>
     @if (session('success'))
         <div class="alert alert-success text-center">
-            {{ session('success') }}
+            {{ __("ui.articleSuccessMessage") }}
         </div>
     @endif
 
@@ -13,7 +13,7 @@
         <input type="text" class=" p-1  @error('title') is-invalid @enderror" id="title" wire:model.blur="title"
             placeholder="{{ __('ui.placeholder1') }}">
         @error('title')
-            <p class="fst-italic text-danger mb-0">{{ $message }}</p>
+            <p class="fst-italic text-danger mb-0">{{ __('ui.placeholder1') }}</p>
         @enderror
     </div>
     <div class="mb-3 text-start d-flex flex-column">
@@ -21,7 +21,7 @@
         <textarea cols="30" rows="5" class="p-1  px-1 @error('description') is-invalid @enderror" id="description"
             wire:model.blur="description" placeholder="{{ __('ui.placeholder2') }}"></textarea>
         @error('description')
-            <p class="fst-italic text-danger mb-0">{{ $message }}</p>
+            <p class="fst-italic text-danger mb-0">{{ __('ui.placeholder2') }}</p>
         @enderror
     </div>
     <div class="mb-3 text-start d-flex flex-column">
@@ -29,7 +29,7 @@
         <input type="text" class="p-1   @error('price') is-invalid @enderror" id="price" wire:model.blur="price"
             placeholder="{{ __('ui.placeholder3') }}">
         @error('price')
-            <p class="fst-italic text-danger mb-0">{{ $message }}</p>
+            <p class="fst-italic text-danger mb-0">{{ __('ui.errorPrice') }}</p>
         @enderror
     </div>
     <div class="mb-3 text-start d-flex flex-column">
@@ -42,7 +42,7 @@
             @endforeach
         </select>
         @error('category')
-            <p class="fst-italic text-danger mb-0">{{ $message }}</p>
+            <p class="fst-italic text-danger mb-0">{{ __('ui.selectCategory') }}</p>
         @enderror
     </div>
     <div class="mb-3">
@@ -58,7 +58,7 @@
     @if (!empty($images))
         <div class="row">
             <div class="col-12 sfumaturaa">
-                <p class=" fw-bold text-black">Photo preview:</p>
+                <p class=" fw-bold text-black">{{ __('ui.imgPreview') }}:</p>
                 <hr>
                 <div class="row  rounded  ">
                     @foreach ($images as $key => $image)
@@ -66,7 +66,7 @@
                             <div class="img-preview mx-auto shadow "
                                 style="background-image: url({{ $image->temporaryUrl() }});"></div>
                             <button type="button" class="shadow btnTrash bg-danger text-white w-25  "
-                                wire:click="removeImage({{ $key }})">Rimuovi</button>
+                                wire:click="removeImage({{ $key }})">{{ __('ui.remove') }}</button>
                         </div>
                     @endforeach
                 </div>

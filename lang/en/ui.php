@@ -37,7 +37,7 @@ return [
     'cart'  => 'Cart',
     'btnRevisor' => 'Revisor area',
     'logout' => 'Logout',
-    'search' => 'Search Article',
+    'search' => 'Search Article ...',
     'contactUs' => 'Contact us',
     'faq' => 'FAQ',
     
@@ -47,7 +47,10 @@ return [
     'placeholder2' => 'Insert description',
     'price' => 'Price',
     'placeholder3' => '12.5€',
+    'errorPrice' => 'Enter price',
     'selectCategory' => 'Select category',
+    'remove' => 'Remove',
+    'imgPreview' => 'Image Preview',
     'btnBack' => 'Back',
     'btnAdd' => 'Add',
 
@@ -69,4 +72,20 @@ return [
     'joinUs' => 'Join us',
     'textJoinUs' => 'Do you believe in change? We are always looking for new talent. Join our team and make a difference!',
     'btnJoinUs' => 'Join us now!',
+
+    'author' => 'Entered by',
+
+    'noReview' => 'No articles to review',
+    'btnHP' => 'Go back to the homepage',
+    'articleSuccessMessage' => 'Article added',
+    'dashboardRevisor' => "Revisor's Dashboard",
+    'reject' => 'Reject',
+    'accept' => 'Accept',
+    'articleAccepted' => "You have accepted the article ':title'.",
+    'articleRejected' => "You have rejected the article ':title'.",
+    'undoSetArticle' => "You have canceled the article review ':title'.",
+    'undoChange' => 'Click to cancel the change',
+
+    'noResults' => 'No articles match your search.',
+    'resultsFor' => 'Search results for',
 ];

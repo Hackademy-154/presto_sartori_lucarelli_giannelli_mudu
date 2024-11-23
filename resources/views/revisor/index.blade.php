@@ -3,7 +3,7 @@
         <div class="row spazioMinimo  justify-content-center align-items-start">
             <div class="col-12 d-flex flex-column justify-content-center align-items-center">
                 @if (!$article_to_check)
-                    <h1 class="mb-4 fw-bold">Nessun articolo da revisionare</h1>
+                    <h1 class="mb-4 fw-bold">{{ __("ui.noReview") }}.</h1>
                 @endif
                 @if (session()->has('message'))
                     <div
@@ -20,7 +20,7 @@
                                     @csrf
                                     @method('PATCH')
                                     <div class="btnCustom d-flex justify-content-center align-items-center ">
-                                        <p class="m-0 alert p-0 me-3">Clicca per annullare la modifica</p>
+                                        <p class="m-0 alert p-0 me-3">{{ __("ui.undoChange")}}</p>
                                         <button
                                             class="btnCustomIcon ms-1 d-flex justify-content-center align-items-center">
                                             <i class="bi mt-1  bi-arrow-clockwise fs-4 fw-bold text-white"></i>
@@ -32,13 +32,13 @@
                     </div>
                 @endif
                 @if (!$article_to_check)
-                    <a href="{{ route('homepage') }}" class="btn btn-success">Torna alla homepage</a>
+                    <a href="{{ route('homepage') }}" class="btn btn-success">{{__("ui.btnHP")}}</a>
                 @endif
                 <!-- controllo per verificare se c'è un articolo da revisionare -->
                 @if ($article_to_check)
                     <!-- ci sono articoli da rev -->
                     <div class="row justify-content-center align-items-center ">
-                        <h1 class="text-dark text-center  fw-bold">Dashboard del Revisore</h1>
+                        <h1 class="text-dark text-center  fw-bold">{{ __('ui.dashboardRevisor')}}</h1>
                         @if (session()->has('messageUndo'))
                             <div class="row justify-content-center">
                                 <div class="col-12 mb-3 alert alert-warning text-center shadow rounded">
@@ -72,22 +72,23 @@
                             <div class="col-12 col-md-4 ms-4 d-flex flex-column justify-content-center">
                                 <div class="d-flex flex-column justify-content-between text-dark">
                                     <h4 class="mt-2 mb-1 fst-italic"> <span
-                                            class="fw-bold">{{ $article_to_check->title }}</span></h4>
+                                            class="fw-bold">{{ ucFirst($article_to_check->title) }}</span></h4>
                                     <hr class="my-2">
-                                    <h6 class="fst-italic "><span
-                                            class="fw-bold">#{{ $article_to_check->category->name }}</span> </h6>
+                                    <h6 class="fst-italic">
+                                        <span class="fw-bold">#{{ ucfirst(__("ui." . $article_to_check->category->name)) }}</span>
+                                    </h6>
                                     <hr class="my-2">
                                     <div class="scrollspy-example text-black divDescriptionCardRev mb-3"
                                         data-bs-spy="scroll" data-bs-smooth-scroll="true" tabindex="0">
                                         <h6 class="fst-italic"></h6>
-                                        <span class="fw-bold">{{ $article_to_check->description }}</span>
+                                        <span class="fw-bold">{{ ucfirst($article_to_check->description)  }}</span>
                                     </div>
                                     <hr class="my-2">
-                                    <h6 class="fst-italic mb-2">Prezzo: <span
+                                    <h6 class="fst-italic mb-2">{{__("ui.price")}}: <span
                                             class="fw-bold">{{ $article_to_check->price }}
                                             €</span> </h6>
                                     <hr class="my-2">
-                                    <h6 class="fst-italic mb-3">Pubblicato da: <span
+                                    <h6 class="fst-italic mb-3">{{__("ui.author")}}: <span
                                             class="fw-bold">{{ $article_to_check->user->name }}</span> </h6>
                                 </div>
                                 <div class="d-flex justify-content-between align-items-start ">
@@ -96,7 +97,7 @@
                                             method="POST">
                                             @csrf
                                             @method('PATCH')
-                                            <button class="btn btn-danger  ">Rifiuta</button>
+                                            <button class="btn btn-danger  ">{{__("ui.reject")}}</button>
                                         </form>
                                     </div>
                                     <div class="d-flex">
@@ -104,7 +105,7 @@
                                             method="POST">
                                             @csrf
                                             @method('PATCH')
-                                            <button class="btn btn-success w-100 ">Accetta</button>
+                                            <button class="btn btn-success w-100 ">{{__("ui.accept")}}</button>
                                         </form>
                                     </div>
                                 </div>
