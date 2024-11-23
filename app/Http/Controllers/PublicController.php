@@ -14,9 +14,17 @@ class PublicController extends Controller
     }
 
     public function searchArticles(Request $request){
+        
         $query = $request->input('query') ? $request->input('query') : $request->input('query2');
         $articles = Article::search($query)->where('is_accepted', true)->paginate(10);
-        $query2 = $request->input('query') ? $request->input('query') : Category::find($request->input('query2'))->name;
+
+        if ($request->input('query')) {
+            $query2 = $request->input('query');
+        } else {
+            $category = Category::find($request->input('query2'));
+            $query2 = $category ? $category->name : ' ';
+        }
+
         return view('article.searched', ['articles'=>$articles, 'query'=>$query2]);
     }
 
