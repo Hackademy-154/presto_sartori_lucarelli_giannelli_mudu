@@ -79,8 +79,8 @@
                     @else
                         <a class="nav-link dropdown-toggle textColor1 d-flex align-items-center" href="#"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <span
-                                class="revisor-name text-white">{{ __('ui.hello') }} {{ ucWords(Auth::user()->name) }}</span>
+                            <span class="revisor-name text-white">{{ __('ui.hello') }}
+                                {{ ucWords(Auth::user()->name) }}</span>
                             @if (\App\Models\Article::toBeRevisedCount() != null && Auth::user()->is_revisor)
                                 <i class="bi bi-bell-fill  badge position-absolute   translate-middle   ">
                                 </i>
@@ -115,9 +115,8 @@
                         role="button" aria-controls="offcanvasExample">
                         <i class="bi bi-cart text-white fs-4 p-0"></i>
                     </a>
-                    <span class="bg-danger cartCount text-center text-white" id="cartCount" style="height: 20px; width: 20px; border-radius: 50%;">
-                        0
-                    </span>
+                    <span class="bg-danger cartCount text-center text-white " id="cartCount"
+                        style="height: 20px; width: 20px; border-radius: 50%;">0</span>
                 </li>
             </ul>
         </div>
