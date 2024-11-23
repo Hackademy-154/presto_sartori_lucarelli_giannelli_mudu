@@ -275,24 +275,30 @@ a {
 }
 /* INDEX PAGE SHOW */
 .incipit {
-    height: 350px;
-    width: 90%;
+    height: 250px;
+    width: 100%;
     border-radius: 30px;
     border: 2px solid white;
+    background-color: white;
     box-shadow: 15px 15px 30px #a9a9a9, -15px -15px 30px #ffffff;
 }
 
-.criteriContainer {
+.criterio{
     height: 100px;
-    width: 300px;
+    width: 350px;
     padding: 20px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 15px;
-    box-shadow: 15px 15px 30px #a9a9a9, -15px -15px 30px #ffffff;
 }
-.criteriContainer:hover {
-    scale: 1.01;
+.criterioCentrale{
+    height: 100px;
+    width: 500px;
+    padding: 70px;
+    border-right: 0.5px solid #C7C8C9;
+    border-left: 0.5px solid #C7C8C9;
 }
+
+
+
+
 
 /* SIDE TRASH  */
 .trashItemContainer {

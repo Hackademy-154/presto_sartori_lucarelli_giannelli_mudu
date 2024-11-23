@@ -5,11 +5,11 @@
 
                 <h2 class="mb-4">ORDINA ARTICOLI PER</h2>
 
-                <div class="d-flex justify-content-evenly align-items-center mx-auto">
+                <div class="d-flex justify-content-evenly align-items-center">
 
-                    <div class=" d-flex flex-column justify-content-center align-items-start criteriContainer">
+                    <div class=" d-flex flex-column justify-content-center align-items-start criterio">
                         <h6 class="mx-3">PREZZO</h6>
-                        <div class="d-flex justify-content-center align-items-center">
+                        <div class="d-flex justify-content-center align-items-center ">
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                                 <label class="form-check-label" for="inlineRadio1">crescente</label>
@@ -21,13 +21,13 @@
                         </div>
                     </div>
 
-                    <div class="criterio d-flex flex-column justify-content-center align-items-center mx-5 criteriContainer">
+                    <div class="criterio d-flex flex-column justify-content-center align-items-center mx-5 criterioCentrale">
 
                         <label for="customRange2" class="form-label">FASCIA DI PREZZO</label>
                         <input type="range" class="form-range" min="0" max="5" id="customRange2">
                     </div>
 
-                    <div class="criterio d-flex flex-column justify-content-center align-items-start criteriContainer">
+                    <div class="criterio d-flex flex-column justify-content-center align-items-start criterio">
                         <h6 class="mx-3">STATO</h6>
                         <div class="d-flex justify-content-center align-items-center">
                             <div class="form-check form-check-inline">
