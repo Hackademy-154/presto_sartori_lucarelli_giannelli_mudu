@@ -46,8 +46,8 @@
         @enderror
     </div>
     <div class="mb-3">
-        <input type="file" wire:model.live="temporary_images" multiple
-            class=" w-100 @error('temporary_images.*') is-invalid @enderror" placeholder="Img/">
+        <input name="" type="file" wire:model.live="temporary_images" multiple
+            class=" w-100 @error('temporary_images.*') is-invalid @enderror" placeholder="Img/" id="">
         @error('temporary_images.*')
             <p class="fst-italic text-danger mb-0">{{ $message }}</p>
         @enderror

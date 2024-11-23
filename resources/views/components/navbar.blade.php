@@ -7,8 +7,8 @@
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="d-flex  searchBar mx-4">
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <div class="d-flex  searchBar mx-4 order-2 order-lg-1">
                 <form action="{{ route('article.search') }}" class="d-flex ms-auto searchInput ms-3" role="search"
                     method="GET">
                     <div class="d-flex p-0 z">
@@ -33,8 +33,8 @@
                     </div>
                 </form>
             </div>
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex">
-                <li class="nav-item dropdown ">
+            <ul class="navbar-nav ms-0 ms-lg-auto mb-2 mb-lg-0 d-flex order-1 order-lg-2">
+                <li class="nav-item dropdown d-flex order-2 order-lg-1 align-items-start flex-column flex-lg-row lalo">
                     <a class="nav-link dropdown-toggle textColor1" id="navbarDropdowner" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false"
                         style="
@@ -57,7 +57,8 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item dropdown d-flex justify-content-center align-items-center">
+                <li
+                    class="nav-item dropdown d-flex justify-content-start order-1 order-lg-2 align-items-start align-items-lg-center flex-column flex-lg-row">
                     @guest
                         <a class="nav-link dropdown-toggle textColor1" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -77,14 +78,15 @@
                             <li><a class="dropdown-item" href="#">{{ __('ui.faq') }}</a></li>
                         </ul>
                     @else
-                        <a class="nav-link dropdown-toggle textColor1 d-flex align-items-center" href="#"
+                        <a class="nav-link dropdown-toggle login textColor1 d-flex align-items-center" href="#"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="revisor-name text-white">{{ __('ui.hello') }}
-                                {{ ucWords(Auth::user()->name) }}</span>
-                            @if (\App\Models\Article::toBeRevisedCount() != null && Auth::user()->is_revisor)
-                                <i class="bi bi-bell-fill  badge position-absolute   translate-middle   ">
-                                </i>
-                            @endif
+                                {{ ucWords(Auth::user()->name) }}
+                                @if (\App\Models\Article::toBeRevisedCount() != null && Auth::user()->is_revisor)
+                                    <i class="bi bi-bell-fill  badge  position-absolute   translate-middle   ">
+                                    </i>
+                                @endif
+                            </span>
                         </a>
                         <ul class="dropdown-menu dropdownUserLoggato">
                             <!-- revisore -->
@@ -109,9 +111,8 @@
                         </ul>
                     @endguest
                 </li>
-
-                <li class="nav-item ms-2 me-4 d-flex justify-content-center align-items-center">
-                    <a class="nav-link pe-3  py-0" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                <li class="nav-item ms-2 me-4 d-flex justify-content-end order-3 align-items-center">
+                    <a class="nav-link pe-3 ps-0 py-0" data-bs-toggle="offcanvas" href="#offcanvasExample"
                         role="button" aria-controls="offcanvasExample">
 
                         <i class="bi bi-cart text-white fs-4 " id="carrelloIcona"></i>

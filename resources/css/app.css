@@ -1,3 +1,11 @@
 @import "bootstrap";
 @import "bootstrap-icons";
 @import "./style.css";
+@import "./navbar.css";
+@import "./footer.css";
+@import "./login_register.css";
+@import "./cards.css";
+@import "./swipers.css";
+@import "./show.css";
+@import "./revisor.css";
+@import "./buttons.css";

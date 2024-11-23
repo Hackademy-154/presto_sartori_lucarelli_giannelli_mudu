@@ -1,0 +1,14 @@
+/* Footer */
+.bg_footer1 {
+    background-color: #253137;
+    color: white !important;
+}
+
+.bg_footer2 {
+    background-color: #2f3e46;
+    color: white !important;
+}
+
+.footerPadding {
+    margin-top: 248px !important;
+}

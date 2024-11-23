@@ -1,5 +1,8 @@
 // Card Show
 const allHoverImages = document.querySelectorAll(".imgShow");
+const input = document.querySelectorAll("input[type=file]");
+input.value = "foo";
+console.log(input);
 
 if (allHoverImages.length > 0) {
     const imgContainer = document.querySelector(".img-container");

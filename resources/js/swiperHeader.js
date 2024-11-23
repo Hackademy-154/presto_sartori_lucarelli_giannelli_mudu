@@ -25,17 +25,33 @@ var swiper2 = new Swiper(".swiper2", {
         delay: 3000,
     },
     speed: 800,
-    slidesPerView: 5,
-    initialSlide: 2,
     loop: true,
     centeredSlides: true,
-    spaceBetween: 30,
     grabCursor: true,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
     },
+    breakpoints: {
+        1024: {
+            slidesPerView: 5,
+            spaceBetween: 50,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+        },
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+        },
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+    },
 });
+
 // Swiper Index
 document.querySelectorAll(".swiper3").forEach((swiperEl, index) => {
     new Swiper(swiperEl, {

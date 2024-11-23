@@ -1,0 +1,309 @@
+.bg_navbar1 {
+    background-color: #006867 !important;
+    color: #ffffff !important;
+    z-index: 100;
+}
+
+.bg_navbar2 {
+    background-color: #b0bec5;
+    padding-top: 67px;
+}
+
+.bi-bell-fill {
+    animation: shaking 0.8s infinite ease-in-out;
+    color: orange;
+    top: 5px;
+    right: -7px;
+}
+
+@keyframes shaking {
+    0% {
+        rotate: 0deg;
+    }
+
+    10% {
+        rotate: 10deg;
+    }
+
+    30% {
+        rotate: -10deg;
+    }
+
+    45% {
+        rotate: 5deg;
+    }
+
+    55% {
+        rotate: -5deg;
+    }
+
+    60% {
+        rotate: 0deg;
+    }
+}
+
+.dropdown-toggle::after {
+    margin-left: 8px;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+    margin: 0;
+    /* border-radius: 100px; */
+}
+
+.dropdown-menu {
+    width: 400px;
+}
+
+.dropdownLanguage {
+    width: 60px !important;
+    left: -5px !important;
+}
+
+.dropdown-menu.dropdownLanguage {
+    --bs-dropdown-min-width: 50px;
+}
+
+#selectedFlag > form > .btn2 {
+    background-color: transparent;
+    padding: 0px;
+    width: 32px;
+}
+
+#selectedFlag > form > .btn2:hover {
+    background-color: transparent;
+}
+
+.bandierine {
+    display: flex;
+    justify-content: center;
+    width: 58.67px !important;
+}
+
+.btn2 {
+    width: 58.67px;
+    border: 0px;
+    transition: 0.4s;
+    background-color: transparent;
+}
+
+.btn2:hover {
+    background-color: #333333;
+}
+
+.btn2 > img {
+    transition: 0.4s;
+}
+
+.btn2 > img:hover {
+    scale: 1.1;
+}
+
+.dropdown-menu[data-bs-popper] {
+    left: -250px;
+}
+
+.dropdownUserLoggato {
+    width: 200px !important;
+    left: -5px !important;
+}
+
+.dropdownUser {
+    width: 200px !important;
+    left: -10px !important;
+}
+
+/* SIDE TRASH  */
+.trashItemContainer {
+    border-radius: 20px;
+    background: rgb(229, 229, 229);
+}
+
+.trashItem2 {
+    width: 100%;
+}
+
+.bi-trash3-fill {
+    cursor: pointer;
+    font-size: 25px;
+    color: red;
+}
+
+/* Searchbar */
+
+.searchBar {
+    width: 100%;
+    height: 45px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-wrap: nowrap;
+    outline: none;
+}
+
+.x {
+    place-self: center;
+}
+
+.y {
+    flex: 1;
+}
+
+.xx {
+    width: fit-content;
+}
+
+.searchBar .searchInput {
+    height: 100%;
+    width: 100%;
+    border: none;
+    padding-right: 7px;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    border-radius: 0;
+}
+.textSearch {
+    color: #333 !important;
+}
+
+.searchBar .buttonSearch {
+    background-color: #068282;
+    color: #fff;
+    width: 35px !important;
+    height: 35px !important;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.searchBar .buttonSearch:hover {
+    background-color: #006867;
+}
+.bi-arrow-right-short::before {
+    transition: 0.4s;
+}
+.bi-arrow-right-short:hover::before {
+    scale: 0.9;
+}
+.bi-cart::before,
+.bi-cart-fill::before {
+    transform: scaleX(-1) !important;
+    transition: 0.4s;
+}
+.bi-cart:hover::before,
+.bi-cart-fill:hover::before {
+    scale: 0.9;
+}
+/* Dispositivi Medi "md" */
+
+@media screen and (max-width: 991.98px) {
+    .navbar-nav {
+        width: 100% !important;
+    }
+    .navbar-collapse {
+        display: flex;
+        flex-direction: column;
+    }
+    i.bi-bell-fill {
+        position: relative !important;
+        top: -5px;
+        left: -1px;
+    }
+    .login.dropdown-toggle::after {
+        margin-left: -25px !important;
+    }
+
+    .bi-cart::before,
+    .bi-cart-fill::before {
+        position: absolute;
+        top: 82px;
+    }
+    .dropdownUserLoggato {
+        width: 300px !important;
+        left: -5px !important;
+    }
+
+    .dropdownUser {
+        width: 200px !important;
+        left: -10px !important;
+    }
+
+    .dropdownLanguage {
+        width: 60px !important;
+        left: -5px !important;
+    }
+
+    .dropdown-menu.dropdownLanguage {
+        --bs-dropdown-min-width: 180px;
+    }
+
+    .dropdown-menu.dropdownLanguage.show {
+        display: flex;
+        position: relative;
+        left: 0px !important;
+    }
+}
+
+/* Dispositivi Piccoli "sm" */
+@media screen and (max-width: 575.98px) {
+    .navbar-nav {
+        width: 100% !important;
+    }
+    .navbar-collapse {
+        display: flex;
+        flex-direction: column;
+    }
+    i.bi-bell-fill {
+        position: relative !important;
+        top: -5px;
+        left: -1px;
+    }
+    .login.dropdown-toggle::after {
+        margin-left: -25px !important;
+    }
+
+    .bi-cart::before,
+    .bi-cart-fill::before {
+        position: absolute;
+        top: 82px;
+    }
+    .dropdownUserLoggato {
+        width: 300px !important;
+        left: -5px !important;
+    }
+
+    .dropdownUser {
+        width: 200px !important;
+        left: -10px !important;
+    }
+
+    .dropdownLanguage {
+        width: 60px !important;
+        left: -5px !important;
+    }
+
+    .dropdown-menu.dropdownLanguage {
+        --bs-dropdown-min-width: 180px;
+    }
+
+    .dropdown-menu.dropdownLanguage.show {
+        display: flex;
+        position: relative;
+        top: 0px;
+        left: 0px !important;
+    }
+    #navbarDropdowner {
+        position: static !important;
+        top: -45px !important;
+        right: 440px !important;
+    }
+}
