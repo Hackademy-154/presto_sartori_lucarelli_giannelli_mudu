@@ -113,7 +113,7 @@
                 <li class="nav-item ms-2 me-4 d-flex justify-content-center align-items-center">
                     <a class="nav-link pe-3 ps-0 py-0" data-bs-toggle="offcanvas" href="#offcanvasExample"
                         role="button" aria-controls="offcanvasExample">
-                        <i class="bi bi-cart text-white fs-4 p-0"></i>
+                        <i class="bi bi-cart text-white fs-4 p-0" id="carrelloIcona"></i>
                     </a>
                     <span class="bg-danger cartCount text-center text-white " id="cartCount"
                         style="height: 20px; width: 20px; border-radius: 50%;">0</span>

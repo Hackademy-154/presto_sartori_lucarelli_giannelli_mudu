@@ -45,11 +45,16 @@ a {
 .bi-arrow-right-short:hover::before {
     scale: 0.9;
 }
-.bi-cart::before {
+.bi-cart::before,
+.bi-cart-fill::before {
     transform: scaleX(-1) !important;
     transition: 0.4s;
 }
 .bi-cart:hover::before {
+    scale: 0.9;
+}
+
+.bi-cart-fill:hover::before {
     scale: 0.9;
 }
 /* Varie */
@@ -768,7 +773,7 @@ a {
 .img-dettaglio:hover {
     border: 1px solid rgb(241, 241, 241);
 }
-.imgShow{
+.imgShow {
     max-height: 100%;
     max-width: 100%;
     object-fit: contain;

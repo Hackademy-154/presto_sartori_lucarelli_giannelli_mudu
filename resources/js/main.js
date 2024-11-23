@@ -25,9 +25,14 @@ if (allHoverImages.length > 0) {
 // Carrello
 document.addEventListener("DOMContentLoaded", () => {
     let cartCount = document.querySelector("#cartCount");
+    let carrelloIcona = document.querySelector("#carrelloIcona");
+
     if (cartCount.textContent === "0") {
         cartCount.classList.add("d-none");
+        carrelloIcona.classList.remove("bi-cart-fill");
+        carrelloIcona.classList.add("bi-cart");
     }
+
     let wrapper = document.querySelector("#sidebarCart");
     let cardCart = document.querySelectorAll(".cardCart");
     cardCart = Array.from(cardCart);
@@ -38,8 +43,12 @@ document.addEventListener("DOMContentLoaded", () => {
         cartCount.textContent = cardElements.length;
         if (cartCount.textContent === "0") {
             cartCount.classList.add("d-none");
+            carrelloIcona.classList.remove("bi-cart-fill");
+            carrelloIcona.classList.add("bi-cart");
         } else {
             cartCount.classList.remove("d-none");
+            carrelloIcona.classList.remove("bi-cart");
+            carrelloIcona.classList.add("bi-cart-fill");
         }
     }
 
