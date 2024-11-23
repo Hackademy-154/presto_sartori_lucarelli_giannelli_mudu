@@ -111,12 +111,14 @@
                 </li>
 
                 <li class="nav-item ms-2 me-4 d-flex justify-content-center align-items-center">
-                    <a class="nav-link pe-3 ps-0 py-0" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                    <a class="nav-link pe-3  py-0" data-bs-toggle="offcanvas" href="#offcanvasExample"
                         role="button" aria-controls="offcanvasExample">
-                        <i class="bi bi-cart text-white fs-4 p-0" id="carrelloIcona"></i>
+
+                        <i class="bi bi-cart text-white fs-4 " id="carrelloIcona"></i>
+
+                        <span class="bg-danger cartCount text-center text-white " id="cartCount"
+                            style="height: 20px; width: 20px; border-radius: 50%;">0</span>
                     </a>
-                    <span class="bg-danger cartCount text-center text-white " id="cartCount"
-                        style="height: 20px; width: 20px; border-radius: 50%;">0</span>
                 </li>
             </ul>
         </div>
@@ -130,8 +132,6 @@
     </div>
     <div class="offcanvas-body">
         <div id="sidebarCart">
-
-
         </div>
     </div>
 </div>

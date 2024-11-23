@@ -1014,3 +1014,14 @@ a {
     border-bottom-left-radius: 0px !important;
     border-bottom-right-radius: 0px !important;
 }
+
+
+#carrelloIcona{
+    position: relative;
+}
+
+#cartCount{
+    position: absolute;
+    top: 17px;
+    right: 67px;
+}
