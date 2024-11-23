@@ -11,7 +11,7 @@
                 @if ($article->images->count())
                                     @foreach ($article->images as $key=>$image)
                                     <div class="img-dettaglio">
-                                        <img src="{{ $image->getUrl(800, 800) }}" class="imgShow" alt="Immagine {{$key+1}} dell'articolo '{{$article->title}}'">
+                                        <img src="{{ $image->getUrl(1000, 1000) }}" class="imgShow" alt="Immagine {{$key+1}} dell'articolo '{{$article->title}}'">
                                     </div>
                                     @endforeach
                                 @else
@@ -24,7 +24,7 @@
                                 @endif
                 </div>
                 <div class="col-12 col-md-6 img-container">
-                    <img class="imgShow" src="{{ $image->getUrl(800, 800) }}" alt="">
+                    <img class="imgShow" src="{{ $image->getUrl(1000, 1000) }}" alt="">
                 </div>
                 <div class="col-12 col-md-4 ms-4 d-flex flex-column justify-content-between cardCart">
                     <div class="d-flex flex-column justify-content-between text-dark">

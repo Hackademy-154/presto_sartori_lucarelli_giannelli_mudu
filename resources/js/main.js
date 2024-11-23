@@ -23,6 +23,9 @@ if (allHoverImages.length > 0) {
     }
 }
 // Carrello
+document.addEventListener("DOMContentLoaded", () => {
+    
+
 let offcanvasExample = document.querySelector("#offcanvasExample");
 
 let wrapper = document.querySelector("#sidebarCart");
@@ -30,6 +33,11 @@ let cardCart = document.querySelectorAll(".cardCart");
 cardCart = Array.from(cardCart);
 
 let cardElements = [];
+function updateCardCount() {
+    let cardCount = document.querySelector("#cardCount");
+console.log(cardCount);
+    cardCount.textContent = cardElements.length;  
+}
 
 cardCart.forEach((el) => {
     let cardTitle = el.querySelector("#cardTitle");
@@ -57,6 +65,7 @@ cardCart.forEach((el) => {
             });
             if (!doppione) {
                 cardElements.push(cardElementsNew);
+            updateCardCount();
             }
 
             let deleteCardElement;
@@ -89,6 +98,7 @@ cardCart.forEach((el) => {
                         icona.classList.add("bi-cart-plus");
                         cardElements.splice(i, 1);
                         createCards();
+                        updateCardCount();
                     });
                 });
             }
@@ -114,6 +124,8 @@ cardCart.forEach((el) => {
             `;
                 wrapper.appendChild(div);
             });
+            updateCardCount();
         }
     });
+});
 });

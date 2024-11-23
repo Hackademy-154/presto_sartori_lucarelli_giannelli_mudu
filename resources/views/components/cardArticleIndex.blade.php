@@ -4,7 +4,7 @@
             <div class="swiper-wrapper">
                 @foreach ($article->images as $key => $image)
                     <div class="swiper-slide ">
-                        <img src="{{$image->getUrl(800,800)}}"
+                        <img src="{{$image->getUrl(1000,1000)}}"
                             class="img-fluid" alt="" id="cardImg">
                     </div>
                 @endforeach
