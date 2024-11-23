@@ -1,9 +1,8 @@
 <x-layout>
     <div class="container min-vh-100">
         <div class="row pt-5 justify-content-center">
-            <div class="col-12 p-5 d-flex flex-column justify-content-center align-items-center my-3 incipit">
-
-                <h2 class="mb-4">ORDINA ARTICOLI PER</h2>
+            <h2 class="mb-4">ORDINA ARTICOLI PER</h2>
+            <div class="col-12 p-3 d-flex flex-column justify-content-center align-items-center my-3 incipit">
 
                 <div class="d-flex justify-content-evenly align-items-center">
 
@@ -21,7 +20,7 @@
                         </div>
                     </div>
 
-                    <div class="criterio d-flex flex-column justify-content-center align-items-center mx-5 criterioCentrale">
+                    <div class="d-flex flex-column justify-content-center align-items-center mx-4 criterioCentrale">
 
                         <label for="customRange2" class="form-label">FASCIA DI PREZZO</label>
                         <input type="range" class="form-range" min="0" max="5" id="customRange2">

@@ -273,25 +273,26 @@ a {
     color: green;
     -webkit-text-stroke: 0.6px;
 }
-/* INDEX PAGE SHOW */
+
+/* INDEX */
 .incipit {
-    height: 250px;
     width: 100%;
-    border-radius: 30px;
+    border-radius: 10px;
     border: 2px solid white;
     background-color: white;
     box-shadow: 15px 15px 30px #a9a9a9, -15px -15px 30px #ffffff;
 }
 
 .criterio{
-    height: 100px;
+    height: 60px;
     width: 350px;
-    padding: 20px;
+    padding: 0px;
 }
 .criterioCentrale{
-    height: 100px;
+    height: 60px;
     width: 500px;
-    padding: 70px;
+    padding-right: 70px;
+    padding-left: 70px;
     border-right: 0.5px solid #C7C8C9;
     border-left: 0.5px solid #C7C8C9;
 }

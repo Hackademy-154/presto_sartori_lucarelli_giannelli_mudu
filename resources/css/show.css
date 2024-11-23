@@ -54,11 +54,4 @@
     scrollbar-width: thin;
     scrollbar-color: #d2691e transparent;
 }
-.incipit {
-    height: 350px;
-    width: 90%;
-    border-radius: 30px;
-    border: 2px solid white;
-    background: #a64ffd;
-    box-shadow: 15px 15px 30px #a9a9a9, -15px -15px 30px #ffffff;
-}
+
