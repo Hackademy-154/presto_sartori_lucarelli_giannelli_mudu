@@ -57,76 +57,7 @@
                         harum corrupti dicta, aliquam sequi voluptate quas.
                     </p>
                 </section>
-                <section class="">
-                    <div class="row ">
-                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                            <h5 class="text-uppercase text-white">Links</h5>
-                            <ul class="list-unstyled mb-0">
-                                <li>
-                                    <h6>
-                                        <a class="text-white " href="{{ route('form.revisor') }}">Lavora con
-                                            noi</a>
-                                    </h6>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                            <h5 class="text-uppercase text-white">Links</h5>
-
-                            <ul class="list-unstyled mb-0">
-                                <li>
-                                    <a class="text-body text-white" href="#!">Link 1</a>
-                                </li>
-                                <li>
-                                    <a class="text-body text-white" href="#!">Link 2</a>
-                                </li>
-                                <li>
-                                    <a class="text-body text-white" href="#!">Link 3</a>
-                                </li>
-                                <li>
-                                    <a class="text-body text-white" href="#!">Link 4</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0 text-white">
-                            <h5 class="text-uppercase">Links</h5>
-
-                            <ul class="list-unstyled mb-0">
-                                <li>
-                                    <a class="text-body text-white" href="#!">Link 1</a>
-                                </li>
-                                <li>
-                                    <a class="text-body text-white" href="#!">Link 2</a>
-                                </li>
-                                <li>
-                                    <a class="text-body text-white" href="#!">Link 3</a>
-                                </li>
-                                <li>
-                                    <a class="text-body text-white" href="#!">Link 4</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0 text-white">
-                            <h5 class="text-uppercase">Links</h5>
-
-                            <ul class="list-unstyled mb-0">
-                                <li>
-                                    <a class="text-body text-white" href="#!">Link 1</a>
-                                </li>
-                                <li>
-                                    <a class="text-body text-white" href="#!">Link 2</a>
-                                </li>
-                                <li>
-                                    <a class="text-body text-white" href="#!">Link 3</a>
-                                </li>
-                                <li>
-                                    <a class="text-body text-white" href="#!">Link 4</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </section>
+                
             </div>
         </div>
     </div>
