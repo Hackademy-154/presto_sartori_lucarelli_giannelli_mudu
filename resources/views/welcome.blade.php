@@ -26,9 +26,11 @@
                                 </div>
                             </div>
                             <div
-                                class="col-12 col-md-6 d-flex imgHeader ps-0 justify-content-center justify-content-lg-start align-items-center  d-none d-md-block order-1 order-lg-1">
-                                <img style="height: 420px;" class="img-fluid   ps-0"
-                                    src="{{ Storage::url('image/header.png') }}" alt="">
+                                class="col-12 col-md-6 d-flex imgHeader ps-0 justify-content-start justify-content-lg-start align-items-center  d-none d-md-block order-1 order-lg-1">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <img style="height: 420px;" class="img-fluid   ps-0"
+                                        src="{{ Storage::url('image/header.png') }}" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>

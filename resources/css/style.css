@@ -130,114 +130,8 @@ a {
     width: 250px !important;
     padding: 0;
 }
-
-/* Media Query */
-/* // X-Small devices (portrait phones, less than 576px)
-
-// Small devices (landscape phones, less than 768px)
-@media (max-width: 767.98px) { ... }
-
-// Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) { ... }
-
-// Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) { ... }
-
-// X-Large devices (large desktops, less than 1400px)
-@media (max-width: 1399.98px) { ... }*/
-@media (max-width: 991.98px) {
-    .spazioNav3 {
-        padding-top: 0px;
-    }
-    .spazioNav2 {
-        padding-top: 81px;
-    }
-    .borderTop {
-        border-top-left-radius: 0px !important;
-        border-top-right-radius: 0px !important;
-    }
-}
-
-@media screen and (max-width: 575.98px) {
-    .cardShow {
-        background-color: #e6e6e6;
-        width: 400px;
-        height: 800px;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px #000000;
-        max-height: 800px;
-        display: flex;
-        flex-direction: column !important;
-    }
-
-    .contImgDettaglio {
-        display: flex;
-        flex-direction: row !important;
-        height: 70px;
-        width: 400px;
-        margin-right: 0px !important;
-    }
-
-    .img-dettaglio {
-        height: 70px;
-        width: 70px;
-        border-radius: 10px;
-    }
-
-    .img-dettaglio img {
-        height: 100%;
-        width: 100%;
-        aspect-ratio: 1/1;
-        border-radius: 10px;
-    }
-
-    .img-dettaglio:hover {
-        border: 1px solid rgb(241, 241, 241);
-    }
-
-    .img-container {
-        display: flex;
-        flex-direction: row !important;
-        justify-content: center;
-        width: 350px;
-        height: 400px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        margin-left: 35px;
-        border-radius: 10px;
-    }
-
-    .img-container img {
-        height: 100%;
-        width: 100%;
-        border-radius: 10px;
-    }
-
-    .divDescriptionCardShow {
-        height: 110px;
-        width: 100%;
-        overflow-y: scroll;
-        scrollbar-width: thin;
-        scrollbar-color: transparent transparent;
-    }
-    .spazioNav3 {
-        padding-top: 0px;
-    }
-    .spazioNav2 {
-        padding-top: 81px;
-    }
-    .borderTop {
-        border-top-left-radius: 0px !important;
-        border-top-right-radius: 0px !important;
-    }
-}
-
 /* INDEX CARD */
-.cardnew {
-    max-height: 325px !important;
-    width: 100% !important;
-    background-color: #ffffff;
-}
+
 .cardIndexContainer {
     width: 350px;
     height: 350px;
@@ -283,23 +177,18 @@ a {
     box-shadow: 15px 15px 30px #a9a9a9, -15px -15px 30px #ffffff;
 }
 
-.criterio{
+.criterio {
     height: 60px;
     width: 350px;
     padding: 0px;
 }
-.criterioCentrale{
+.criterioCentrale {
     height: 60px;
-    width: 500px;
     padding-right: 70px;
     padding-left: 70px;
-    border-right: 0.5px solid #C7C8C9;
-    border-left: 0.5px solid #C7C8C9;
+    border-right: 0.5px solid #c7c8c9;
+    border-left: 0.5px solid #c7c8c9;
 }
-
-
-
-
 
 /* SIDE TRASH  */
 .trashItemContainer {
@@ -334,8 +223,158 @@ a {
     position: relative;
 }
 
-#cartCount {
-    position: absolute;
-    top: 17px;
-    right: 67px;
+/* Media Query */
+/* // X-Small devices (portrait phones, less than 576px)
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { ... }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { ... }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { ... }
+
+// X-Large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) { ... }*/
+@media (max-width: 1000.98px) {
+    .spazioNav3 {
+        padding-top: 0px;
+    }
+    .spazioNav2 {
+        padding-top: 81px;
+    }
+    .borderTop {
+        border-top-left-radius: 0px !important;
+        border-top-right-radius: 0px !important;
+    }
+    .cardShow {
+        max-height: 100% !important;
+        width: 100% !important;
+    }
+
+    .contImgDettaglio {
+        display: flex;
+        flex-direction: row !important;
+        width: 100% !important;
+        margin-right: 0px !important;
+        height: 100% !important;
+    }
+
+    .img-dettaglio {
+        height: 100px !important;
+        width: 100px !important;
+        border-radius: 10px;
+        border: 0px !important;
+    }
+
+    .img-dettaglio img {
+        height: 100%;
+        width: 100%;
+        aspect-ratio: 1/1;
+        border-radius: 10px;
+    }
+
+    .img-dettaglio:hover {
+        border: 1px solid rgb(241, 241, 241);
+    }
+
+    .img-container {
+        display: flex;
+        flex-direction: row !important;
+        justify-content: center;
+        width: 100% !important;
+        border-radius: 10px;
+        margin: 30px 0px;
+    }
+
+    .img-container img {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .divDescriptionCardShow {
+        height: 110px;
+        width: 100%;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent;
+    }
+    .mobile {
+        max-width: 390px;
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    .cardShow {
+        background-color: #e6e6e6;
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px #000000;
+        max-height: 100% !important;
+        width: 100% !important;
+    }
+    .mobile {
+        max-width: 50%;
+        height: 170px;
+    }
+    .contImgDettaglio {
+        display: flex;
+        flex-direction: row !important;
+        width: 100% !important;
+        margin-right: 0px !important;
+        height: 100% !important;
+    }
+
+    .img-dettaglio {
+        height: 70px;
+        width: 70px;
+        border-radius: 10px;
+    }
+
+    .img-dettaglio img {
+        height: 100%;
+        width: 100%;
+        aspect-ratio: 1/1;
+        border-radius: 10px;
+    }
+
+    .img-dettaglio:hover {
+        border: 1px solid rgb(241, 241, 241);
+    }
+
+    .img-container {
+        display: flex;
+        flex-direction: row !important;
+        justify-content: center;
+        width: 100% !important;
+        height: 100% !important;
+        border-radius: 10px;
+        margin: 30px 0px;
+    }
+
+    .img-container img {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .divDescriptionCardShow {
+        height: 110px;
+        width: 100%;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent;
+    }
+    .spazioNav3 {
+        padding-top: 0px;
+    }
+    .spazioNav2 {
+        padding-top: 81px;
+    }
+    .borderTop {
+        border-top-left-radius: 0px !important;
+        border-top-right-radius: 0px !important;
+    }
 }

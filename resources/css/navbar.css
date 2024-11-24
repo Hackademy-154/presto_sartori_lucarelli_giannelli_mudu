@@ -184,6 +184,11 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
+#cartCount {
+    position: absolute;
+    top: 17px;
+    right: 41px;
+}
 
 .searchBar .buttonSearch:hover {
     background-color: #006867;
@@ -221,11 +226,16 @@
     .login.dropdown-toggle::after {
         margin-left: -25px !important;
     }
+    #cartCount {
+        position: absolute !important;
+        top: 70px;
+        right: 20px;
+    }
 
     .bi-cart::before,
     .bi-cart-fill::before {
         position: absolute;
-        top: 82px;
+        top: -79px;
     }
     .dropdownUserLoggato {
         width: 300px !important;
@@ -270,11 +280,16 @@
     .login.dropdown-toggle::after {
         margin-left: -25px !important;
     }
+    #cartCount {
+        position: absolute !important;
+        top: 70px;
+        right: 20px;
+    }
 
     .bi-cart::before,
     .bi-cart-fill::before {
         position: absolute;
-        top: 82px;
+        top: -80px;
     }
     .dropdownUserLoggato {
         width: 300px !important;

@@ -6,27 +6,31 @@
             </div>
         </div>
         <div class="row justify-content-center align-items-center">
-            <div class="col-12 col-md-10 d-flex justify-content-start align-items-center cardShow ps-0 pb-3 ">
-                <div class="contImgDettaglio d-flex flex-column justify-content-evenly">
-                @if ($article->images->count())
-                                    @foreach ($article->images as $key=>$image)
-                                    <div class="img-dettaglio">
-                                        <img src="{{ $image->getUrl(1000, 1000) }}" class="imgShow" alt="Immagine {{$key+1}} dell'articolo '{{$article->title}}'">
-                                    </div>
-                                    @endforeach
-                                @else
-                                    @for ($i = 0; $i < 6; $i++)
-                                        <div class="img-dettaglio">
-                                            <img class="imgShow" src="https://picsum.photos/35{{ $i }}"
-                                                alt="img provvisorie">
-                                        </div>
-                                    @endfor
-                                @endif
+            <div
+                class="row justify-content-center justify-content-lg-evenly align-items-center flex-column flex-lg-row cardShow py-4 py-md-3 mt-4">
+                <hr class="d-lg-none">
+                <div class="col-12 col-lg-2 contImgDettaglio d-flex flex-column justify-content-evenly">
+                    @if ($article->images->count())
+                        @foreach ($article->images as $key => $image)
+                            <div class="img-dettaglio">
+                                <img src="{{ $image->getUrl(1000, 1000) }}" class="imgShow"
+                                    alt="Immagine {{ $key + 1 }} dell'articolo '{{ $article->title }}'">
+                            </div>
+                        @endforeach
+                    @else
+                        @for ($i = 0; $i < 6; $i++)
+                            <div class="img-dettaglio">
+                                <img class="imgShow" src="https://picsum.photos/35{{ $i }}"
+                                    alt="img provvisorie">
+                            </div>
+                        @endfor
+                    @endif
                 </div>
-                <div class="col-12 col-md-6 img-container">
+                <hr class="mt-3 mb-0 d-lg-none">
+                <div class="col-12 col-lg-5 img-container text-center">
                     <img class="imgShow" src="{{ $image->getUrl(1000, 1000) }}" alt="">
                 </div>
-                <div class="col-12 col-md-4 ms-4 d-flex flex-column justify-content-between cardCart">
+                <div class="col-12 col-lg-5 ms-lg-4 d-flex flex-column justify-content-between cardCart">
                     <div class="d-flex flex-column justify-content-between text-dark">
                         <h4 class="mt-2 mb-1 fst-italic">Titolo: <span class="fw-bold"
                                 id="cardTitle">{{ ucfirst($article->title) }}</span></h4>
@@ -41,7 +45,8 @@
                             <span class="fw-bold" id="cardDescription">{{ ucfirst($article->description) }}</span>
                         </div>
                         <hr class="my-2">
-                        <h6 class="fst-italic mb-2">{{ __('ui.price') }} <span class="fw-bold" id="cardPrice">{{ $article->price }}
+                        <h6 class="fst-italic mb-2">{{ __('ui.price') }} <span class="fw-bold"
+                                id="cardPrice">{{ $article->price }}
                                 €</span> </h6>
                         <hr class="my-2">
                         <h6 class="fst-italic mb-3">{{ __('ui.author') }} <span

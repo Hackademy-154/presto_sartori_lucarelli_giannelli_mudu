@@ -33,18 +33,15 @@
 }
 .imgShow {
     max-height: 100%;
-    max-width: 100%;
     object-fit: contain;
 }
 .img-container {
     height: 450px;
-    width: 600px;
     border-radius: 10px;
 }
 
 .img-container img {
     height: 100%;
-    width: 100%;
     border-radius: 10px;
 }
 .divDescriptionCardShow {
@@ -54,4 +51,3 @@
     scrollbar-width: thin;
     scrollbar-color: #d2691e transparent;
 }
-

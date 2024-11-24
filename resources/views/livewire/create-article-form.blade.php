@@ -1,10 +1,10 @@
-<form class="shadow  p-5  bg-tertiary rounded-3 text-center pb-2 pt-4 my-5 w-100 " wire:submit="save">
+<form class="shadow  p-3 p-md-5   bg-tertiary rounded-3 text-center pb-2 pt-4 my-0 my-md-5 w-100 " wire:submit="save">
 
     <h3 class="  m-0 fw-bold my-3 mb-2 pb-2 fs-2"> {{ __('ui.addAds') }}
     </h3>
     @if (session('success'))
         <div class="alert alert-success text-center">
-            {{ __("ui.articleSuccessMessage") }}
+            {{ __('ui.articleSuccessMessage') }}
         </div>
     @endif
 
@@ -80,7 +80,7 @@
             {{ session('nosuccess') }}
         </div>
     @endif
-    <div class="mb-3 pt-2 d-flex justify-content-between">
+    <div class=" pt-2 d-flex justify-content-between">
         <a class="btn btn-secondary w-25 mt-1" href="{{ route('homepage') }}">{{ __('ui.btnBack') }}</a>
         <button type="submit" class="btn btn-success w-25 mt-1">{{ __('ui.btnAdd') }}</button>
     </div>
