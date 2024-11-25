@@ -76,6 +76,7 @@ class ArticleController extends Controller
     public function byCategory(Category $category)
     {
         $articles = $category->articles()->where('is_accepted', true)->get();
-        return view('article.byCategory', compact('articles', 'category'));
+        $latestArticles = $articles->take(4)->pluck("id")->toArray();
+        return view('article.byCategory', compact('articles', 'category','latestArticles'));
     }
 }
