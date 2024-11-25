@@ -1,7 +1,7 @@
 .bg_navbar1 {
     background-color: #006867 !important;
     color: #ffffff !important;
-    z-index: 100;
+    z-index: 101;
 }
 
 .bg_navbar2 {
@@ -116,10 +116,6 @@
 }
 
 /* SIDE TRASH  */
-.trashItemContainer {
-    border-radius: 20px;
-    background: rgb(229, 229, 229);
-}
 
 .trashItem2 {
     width: 100%;
@@ -224,7 +220,7 @@
         left: -1px;
     }
     .login.dropdown-toggle::after {
-        margin-left: -25px !important;
+        margin-left: 8px !important;
     }
     #cartCount {
         position: absolute !important;
@@ -278,7 +274,7 @@
         left: -1px;
     }
     .login.dropdown-toggle::after {
-        margin-left: -25px !important;
+        margin-left: 8px !important;
     }
     #cartCount {
         position: absolute !important;

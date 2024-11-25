@@ -53,7 +53,7 @@
         </div>
         <div class="row justify-content-evenly align-items-center py-5 ">
             @foreach ($articles as $article)
-                <x-cardArticleIndex :article="$article" :category="$article->category"></x-cardArticleIndex>
+                <x-cardArticleIndex :article="$article" :category="$article->category" :isNew="in_array($article->id, $latestArticles)"></x-cardArticleIndex>
             @endforeach
         </div>
 

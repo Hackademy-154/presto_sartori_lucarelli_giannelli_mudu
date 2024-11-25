@@ -155,7 +155,7 @@
             <hr class="w-100">
 
             @foreach ($articles as $article)
-                <x-cardArticle :article="$article"></x-cardArticle>
+                <x-cardArticle :article="$article" :isNew="in_array($article->id, $latestArticles)"></x-cardArticle>
             @endforeach
 
         </div>

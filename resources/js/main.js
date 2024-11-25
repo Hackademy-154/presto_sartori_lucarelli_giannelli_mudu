@@ -92,13 +92,13 @@ document.addEventListener("DOMContentLoaded", () => {
                         let div = document.createElement("div");
 
                         div.innerHTML = `
-                            <div class="d-flex flex-column justify-content-between align-items-start p-3 my-2 trashItemContainer">
+                            <div class="d-flex flex-column justify-content-between align-items-start p-3 my-2 trashItemContainer ">
                                 <div class="dflex justify-content-between align-items-center">
                                     <h5 class="text-dark">${el.title}</h5>
                                     <h5 class="text-dark">${el.price}</h5>
                                 </div>
-                                <div class="d-flex justify-content-between align-content-center trashItem2">
-                                    <p class="text-dark">${el.category}</p>
+                                <div class="d-flex justify-content-between align-items-center trashItem2">
+                                    <p class="text-dark my-0">#${el.category}</p>
                                     <i class="bi bi-trash3-fill" id=""></i>
                                 </div>
                             </div>

@@ -100,14 +100,16 @@
                             <li><a href="{{ route('article.create') }}" class="dropdown-item">{{ __('ui.btnAddAds') }}</a>
                             </li>
                             <li>
-                                <hr class="dropdown-divider">
+                                <hr class="my-1">
                             </li>
+                            <li><a class="dropdown-item" href="{{ route('form.revisor') }}">{{ __('ui.contactUs') }}</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">{{ __('ui.faq') }}</a></li>
+                            <hr class="my-1">
                             <form action="{{ route('logout') }}" method="POST">
                                 @csrf
                                 <button class="dropdown-item" type=" submit">{{ __('ui.logout') }}</button>
                             </form>
-                            <li><a class="dropdown-item" href="#">{{ __('ui.contactUs') }}</a></li>
-                            <li><a class="dropdown-item" href="#">{{ __('ui.faq') }}</a></li>
                         </ul>
                     @endguest
                 </li>

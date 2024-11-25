@@ -17,7 +17,7 @@
         </div>
         <div class="row height-custom justify-content-center align-items-center py-5">
             @forelse($articles as $article)
-                <x-cardArticleIndex :article="$article" :category="$article->category"></x-cardArticleIndex>
+                <x-cardArticleIndex :article="$article" :category="$article->category" :isNew="in_array($article->id, $latestArticles)"></x-cardArticleIndex>
 
             @empty
                 <div class="col-12">

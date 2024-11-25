@@ -10,10 +10,12 @@ class PublicController extends Controller
 {
     public function homepage()  {
         $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->take(4)->get();
-        return view('welcome', compact('articles'));
+        $latestArticles = $articles->take(4)->pluck("id")->toArray();
+        return view('welcome', compact('articles','latestArticles'));
     }
 
     public function searchArticles(Request $request){
+        
         if($request->input('query')){
             $query = $request->input('query');
             $art = Article::search($query)->where('is_accepted', true);
@@ -26,7 +28,8 @@ class PublicController extends Controller
             $query = Category::find($request->input('query2'))->name;
             $articles = Article::where('category_id', $request->input('query2'))->paginate(10);
         }
-        return view('article.searched', ['articles'=>$articles, 'query'=>$query]);
+        $latestArticles = $articles->take(4)->pluck("id")->toArray();
+        return view('article.searched', ['articles'=>$articles, 'query'=>$query, 'latestArticles'=>$latestArticles]);
     }
 
     public function setLanguage($lang){
