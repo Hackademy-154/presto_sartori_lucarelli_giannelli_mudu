@@ -10,7 +10,7 @@ class PublicController extends Controller
 {
     public function homepage()  {
         $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->take(4)->get();
-        $latestArticles = $articles->take(4)->pluck("id")->toArray();
+        $latestArticles = Article::orderBy('created_at','desc')->take(4)->pluck("id")->toArray();
         return view('welcome', compact('articles','latestArticles'));
     }
 
@@ -18,7 +18,7 @@ class PublicController extends Controller
         
         if($request->input('query')){
             $query = $request->input('query');
-            $art = Article::search($query)->where('is_accepted', true);
+            $art = Article::search($query)->where('is_accepted', true)->orderBy('created_at','desc');
             if($request->input('query2') != 0){
                 $articles = $art->where('category_id', $request->input('query2'))->paginate(10);
             }else {
@@ -26,9 +26,9 @@ class PublicController extends Controller
             }
         }else {
             $query = Category::find($request->input('query2'))->name;
-            $articles = Article::where('category_id', $request->input('query2'))->paginate(10);
+            $articles = Article::where('category_id', $request->input('query2'))->orderBy('created_at','desc')->paginate(10);
         }
-        $latestArticles = $articles->take(4)->pluck("id")->toArray();
+        $latestArticles = Article::orderBy('created_at','desc')->take(4)->pluck("id")->toArray();
         return view('article.searched', ['articles'=>$articles, 'query'=>$query, 'latestArticles'=>$latestArticles]);
     }
 

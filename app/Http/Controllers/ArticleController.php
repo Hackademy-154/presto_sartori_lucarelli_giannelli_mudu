@@ -21,7 +21,7 @@ class ArticleController extends Controller
     public function index()
     {
         $articles= Article::where('is_accepted', true)->orderBy('created_at', 'desc')->get();
-        $latestArticles = $articles->take(4)->pluck("id")->toArray();
+        $latestArticles = Article::orderBy('created_at','desc')->take(4)->pluck("id")->toArray();
         $categories = Category::all();
         return view('article.index', compact('articles', 'categories','latestArticles'));
     }
@@ -75,8 +75,9 @@ class ArticleController extends Controller
     }
     public function byCategory(Category $category)
     {
-        $articles = $category->articles()->where('is_accepted', true)->get();
-        $latestArticles = $articles->take(4)->pluck("id")->toArray();
+        $articles = $category->articles()->where('is_accepted', true)->orderBy('created_at','desc')->get();
+    
+        $latestArticles = Article::orderBy('created_at','desc')->take(4)->pluck("id")->toArray();
         return view('article.byCategory', compact('articles', 'category','latestArticles'));
     }
 }
