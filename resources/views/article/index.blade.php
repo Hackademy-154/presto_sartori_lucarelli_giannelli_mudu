@@ -68,11 +68,7 @@
         </div>
         <div class="row justify-content-evenly align-items-center py-5" id="wrapperIndex">
             @foreach ($articles as $article)
-<<<<<<< HEAD
                 <x-cardArticleIndex :article="$article" :category="$article->category" :isNew="in_array($article->id, $latestArticles)"></x-cardArticleIndex>
-=======
-            <x-cardArticleIndex :article="$article" :category="$article->category"></x-cardArticleIndex>
->>>>>>> 6626951 (aggiustato filtro in index)
             @endforeach
         </div>
 
