@@ -18,21 +18,20 @@
                     @endif
                 </div>
                 <div class="col-12 d-flex text-start pt-1  bg-tertiary rounded-3 px-2 sfumaturaa flex-column">
-                    <h3 class="m-0 fw-bold my-3 pb-2 fs-2 text-center ">Cerchiamo revisore di annunci!</h3>
+                    <h3 class="m-0 fw-bold my-3 pb-2 fs-2 text-center ">{{ __('ui.hiringTitle')}}</h3>
                     <ul class="px-4">
                         <li>
-                            Il tuo compito sarà analizzare e correggere annunci per garantirne qualità e
-                            precisione.
+                        {{ __('ui.jobRequired1')}}
                         </li>
                         <li>
-                            Presta attenzione a dettagli come ortografia, grammatica e coerenza.
+                        {{ __('ui.jobRequired2')}}
 
                         </li>
                         <li>
-                            Aiutaci a mantenere un alto standard per i contenuti pubblicati.
+                        {{ __('ui.jobRequired3')}}
 
                         </li>
-                        <li>Compila il modulo in modo accurato per permetterci di valutare la tua candidatura.
+                        <li>{{ __('ui.jobRequired4')}}
                         </li>
                     </ul>
                 </div>
@@ -42,13 +41,13 @@
                     <div class="row align-items-center">
 
                         <div class="col-12 d-flex flex-column justify-content-start">
-                            <label for="messageUser" class="text-start fs-5 fw-bold mb-2">Inserisci messaggio</label>
+                            <label for="messageUser" class="text-start fs-5 fw-bold mb-2">{{ __('ui.addMessage')}}</label>
                             <textarea name="messageUser" id="messageUser" cols="30" rows="7"></textarea>
                         </div>
 
                         <div class="col-12 d-flex  text-center justify-content-between align-items-center">
-                            <a class="btn btn-secondary w-25 mt-3" href="{{ route('homepage') }}">Indietro</a>
-                            <button type="submit" class="btn btn-success w-25 mt-3">Invia</button>
+                            <a class="btn btn-secondary w-25 mt-3" href="{{ route('homepage') }}">{{ __('ui.btnBack')}}</a>
+                            <button type="submit" class="btn btn-success w-25 mt-3">{{ __('ui.btnSend')}}</button>
                         </div>
 
                     </div>

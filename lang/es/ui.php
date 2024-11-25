@@ -95,4 +95,12 @@ return [
 
     'noResults' => 'Ningún artículo coincide con tu búsqueda.',
     'resultsFor' => 'Resultados de la búsqueda',
+
+    'hiringTitle' => 'Estamos contratando para un revisor de anuncios',
+    'jobRequired1' => 'Su trabajo será analizar y corregir anuncios para garantizar la calidad y precisión.',
+    'jobRequired2' => 'Preste atención a detalles como la ortografía, la gramática y la coherencia.',
+    'jobRequired3' => 'Ayúdenos a mantener un alto nivel de contenido publicado.',
+    'jobRequired4' => 'Por favor, complete el formulario cuidadosamente para permitirnos evaluar su solicitud.',
+    'addMessage' => 'Escribe un mensaje a continuación',
+    'btnSend' => 'Enviar'
 ];

@@ -20,7 +20,7 @@
                 <form action="{{ route('register') }}" method="POST">
                     @csrf
                     <div class="d-flex flex-column pb-1">
-                        <label class="fw-bold" for="name">{{ __('ui.name') }}</label>
+                        <label class="fw-bold" for="name">{{ __('ui.name') }}:</label>
                         <input type="text" name="name" class=" p-1 @error('name') is-invalid @enderror">
                         @error('name')
                             <div class="text-danger fst-italic">{{ __('ui.nameError') }}</div>

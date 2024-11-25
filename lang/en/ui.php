@@ -57,6 +57,13 @@ return [
     'titleIndex' => 'Articles of the category',
     'login' => 'Login',  
     'register' => 'Register',
+    'messLogin' => 'Don\'t have an account?',
+    'name' => 'Name',
+    'confirm' => 'Confirm',
+    'messRegister' => 'Already registered?',
+    'nameError' => 'Name is required',
+    'emailError' => 'Email is required',
+    'passwordError' => 'Password is required',
 
     'slogan3' => 'Publish and Earn!',
     'text3' => 'Add your item today and start monetizing. Don\'t wait, your audience is waiting for you!',
@@ -88,4 +95,12 @@ return [
 
     'noResults' => 'No articles match your search.',
     'resultsFor' => 'Search results for',
+
+    'hiringTitle' => 'We are hiring for an ad reviewer',
+    'jobRequired1' => 'Your job will be to analyze and correct ads to ensure quality and accuracy.',
+    'jobRequired2' => 'Pay attention to details like spelling, grammar, and consistency.',
+    'jobRequired3' => 'Help us maintain a high standard of published content.',
+    'jobRequired4' => 'Please, fill out the form carefully to allow us to evaluate your application.',
+    'addMessage' => 'Write a message below',
+    'btnSend' => 'Send',
 ];
