@@ -14,7 +14,7 @@
                     <div class="d-flex p-0 z">
                         <select id="category" wire:model.blur="category" name="query2" class="form-control xx"
                             style=" box-shadow: none;">
-                            <option class="textSearch" label>{{ __('ui.categories') }}</option>
+                            <option class="textSearch" label value="0">{{ __('ui.categories') }}</option>
                             @foreach ($categories as $category)
                                 <option class="textSearch" value="{{ $category->id }}">
                                     {{ ucFirst(__("ui.$category->name")) }}

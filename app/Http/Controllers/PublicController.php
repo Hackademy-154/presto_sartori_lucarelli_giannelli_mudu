@@ -14,18 +14,19 @@ class PublicController extends Controller
     }
 
     public function searchArticles(Request $request){
-        
-        $query = $request->input('query') ? $request->input('query') : $request->input('query2');
-        $articles = Article::search($query)->where('is_accepted', true)->paginate(10);
-
-        if ($request->input('query')) {
-            $query2 = $request->input('query');
-        } else {
-            $category = Category::find($request->input('query2'));
-            $query2 = $category ? $category->name : '';
+        if($request->input('query')){
+            $query = $request->input('query');
+            $art = Article::search($query)->where('is_accepted', true);
+            if($request->input('query2') != 0){
+                $articles = $art->where('category_id', $request->input('query2'))->paginate(10);
+            }else {
+                $articles = $art->paginate(10);
+            }
+        }else {
+            $query = Category::find($request->input('query2'))->name;
+            $articles = Article::where('category_id', $request->input('query2'))->paginate(10);
         }
-
-        return view('article.searched', ['articles'=>$articles, 'query'=>$query2]);
+        return view('article.searched', ['articles'=>$articles, 'query'=>$query]);
     }
 
     public function setLanguage($lang){
