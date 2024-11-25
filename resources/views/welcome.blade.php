@@ -120,7 +120,7 @@
                     @foreach ($categories as $category)
                         <div class="swiper-slide ">
                             <a href="{{ route('article.byCategory', compact('category')) }}">
-                                <img src={{ '/media/category_pic/' . $category->id . '.jpg' }}
+                                <img src={{ '/media/category_pic/' . $category->id . '.png' }}
                                     class="imgCategoryCerchio sfumatura">
                                 <h5 class="text-dark mt-3 fw-bold">{{ ucFirst(__("ui.$category->name")) }}</h5>
                             </a>

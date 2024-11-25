@@ -148,3 +148,40 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+
+
+let priceAsc = document.querySelector('#priceAsc');
+let priceDesc = document.querySelector('#priceDesc');
+let nameAsc = document.querySelector('#nameAsc');
+let nameDesc = document.querySelector('#nameDesc');
+let timeAsc = document.querySelector('#timeAsc');
+let timeDesc = document.querySelector('#timeDesc');
+let cardsIndex = document.querySelectorAll('.cardnew');
+let buttons = document.querySelectorAll('input[name="inlineRadioOptions"]');
+let wrapperIndex = document.querySelector('#wrapperIndex');
+
+document.addEventListener('DOMContentLoaded', () => {
+   
+    buttons.forEach(button => {
+        let newArray = [];
+        
+        button.addEventListener('change', () => {
+            cardsIndex = Array.from(cardsIndex);
+            if (button.value === 'priceAsc') {
+                console.log( cardsIndex.sort((a, b) => a.cardPrice - b.cardPrice));
+            } else if (button.value === 'priceDesc') {
+                console.log( cardsIndex.sort((a, b) => b.cardPrice - a.cardPrice));
+            } else if (button.value === 'nameAsc') {
+                console.log( cardsIndex.sort((a, b) => a.title.localeCompare(b.title)));
+            } else if (button.value === 'nameDesc') {
+                console.log( cardsIndex.sort((a, b) => b.title.localeCompare(a.title)));
+            } else if (button.value === 'timeAsc') {
+                console.log( cardsIndex.sort((a, b) => a.created_at - b.created_at));
+            } else if (button.value === 'timeDesc') {
+                console.log( cardsIndex.sort((a, b) => b.created_at - a.created_at));
+            }
+            
+        })
+    })
+})

@@ -15,6 +15,7 @@
         </div>
         <div class="col-9 d-flex ps-1 ps-lg-3 flex-column justify-content-evenly cardCart mobile pe-0 ">
             <div class="col-12 d-flex flex-column justify-content-between text-dark">
+<<<<<<< HEAD
                 <div class="d-flex  align-items-center col-12 ">
 
 
@@ -25,6 +26,12 @@
 
                 </div>
                 <hr class="my-1 mt-2 d-none d-md-block">
+=======
+                <h4 class="mt-2 mb-1 fst-italic"><span class="fw-bold w-100 d-block"
+                        id="cardTitle">{{ ucfirst($article->title) }}</span>
+                </h4>
+                <hr class="my-1 d-none d-md-block">
+>>>>>>> 6626951 (aggiustato filtro in index)
                 <div class="scrollspy-example text-black divDescriptionCardRev2 mb-3 d-none d-md-block"
                     data-bs-spy="scroll" data-bs-smooth-scroll="true" tabindex="0">
                     <h6 class="fst-italic"></h6>
