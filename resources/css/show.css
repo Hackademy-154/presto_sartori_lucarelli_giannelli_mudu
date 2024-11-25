@@ -36,12 +36,14 @@
     object-fit: contain;
 }
 .img-container {
+    max-width: 450px;
     height: 450px;
     border-radius: 10px;
 }
 
 .img-container img {
     height: 100%;
+    max-width: 450px;
     border-radius: 10px;
 }
 .divDescriptionCardShow {
