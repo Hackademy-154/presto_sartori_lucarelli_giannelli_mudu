@@ -170,31 +170,12 @@ a {
 
 /* INDEX */
 .incipit {
-    border-radius: 10px;
+    z-index: 10;
+
     border: 2px solid white;
     background-color: white;
     box-shadow: 15px 15px 30px #a9a9a9, -15px -15px 30px #ffffff;
 }
-
-@media screen and (max-width: 600px) {
-    .criteriContainer {
-      height: 500px;
-    }
-  }
-
-@media screen and (max-width: 992px) {
-    .criterio {
-        height: 150px;
-        width: 100%;
-    }
-  }
-
-
-
-
-
-
-
 
 /* SIDE TRASH  */
 .trashItemContainer {
@@ -313,9 +294,16 @@ a {
     .mobile {
         max-width: 390px;
     }
+    .criterio {
+    }
 }
 
 @media screen and (max-width: 575.98px) {
+    .criteriContainer {
+    }
+    .criterio {
+        width: 100%;
+    }
     .cardShow {
         background-color: #e6e6e6;
         width: 100%;

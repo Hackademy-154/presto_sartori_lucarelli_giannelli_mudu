@@ -39,10 +39,9 @@
                             <div
                                 class="col-12 col-md-6 d-flex flex-column justify-content-center text-md p-0 p-lg-5 headerSX order-2 order-lg-1">
                                 <div class="title " data-swiper-parallax="-300">
-                                    <h1 class="fw-bold text-center text-md-start">{{ __('ui.addAds') }}</h1>
                                 </div>
                                 <div class="subtitle" data-swiper-parallax="-200">
-                                    <h3 class=" pb-3 text-center text-md-start">{{ __('ui.slogan2') }}</h3>
+                                    <h1 class=" fw-bold  mb-4   textGrey">{{ __('ui.slogan3') }}</h1>
                                 </div>
                                 <div class="text" data-swiper-parallax="-100">
                                     <p class="text-center text-md-start">
@@ -51,7 +50,7 @@
                                 </div>
                                 <div class="d-flex justify-content-center justify-content-md-start">
                                     <a href="{{ route('article.create') }}"
-                                        class=" buttonCharacter mt-2 fs-5 text-center ">{{ __('ui.btnAddAds') }}</a>
+                                        class=" buttonCharacter mt-2 fs-5 text-center ">{{ __('ui.btnSellNow') }}</a>
                                 </div>
                             </div>
                             <div
@@ -135,7 +134,8 @@
         <div class="row justify-content-center align-items-center sfumaturaa ">
             <div
                 class="col-12 d-flex flex-column justify-content-start align-items-center callToActionWork pb-4 px-4 py-4">
-                <h2 class="text-center fw-bold  mb-2   textGrey">{{ __('ui.slogan3') }}</h2>
+                <h2 class="fw-bold text-center text-md-start">{{ __('ui.addAds') }}</h2>
+
                 <p class=" mt-0 text-muted text-center text-lg-start fst-italic sfumaturaa my-4 mb-3">
                     {{ __('ui.text3') }}
                 </p>

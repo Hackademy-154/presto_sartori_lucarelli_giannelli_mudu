@@ -53,9 +53,6 @@
                                 class="fw-bold">{{ ucfirst($article->user->name) }}</span>
                         </h6>
                     </div>
-
-
-
                     <div class=" d-flex justify-content-between" id="show">
                         <a class="btn btn-secondary w-25 d-flex justify-content-center align-items-center"
                             href="{{ route('homepage') }}">Indietro</a>

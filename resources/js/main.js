@@ -1,11 +1,9 @@
 // Card Show
-const allHoverImages = document.querySelectorAll(".imgShow");
-const input = document.querySelectorAll("input[type=file]");
-input.value = "foo";
-console.log(input);
+let allHoverImages = document.querySelectorAll(".imgShow");
+let input = document.querySelectorAll("input[type=file]");
 
 if (allHoverImages.length > 0) {
-    const imgContainer = document.querySelector(".img-container");
+    let imgContainer = document.querySelector(".img-container");
 
     window.addEventListener("DOMContentLoaded", () => {
         allHoverImages[0].parentElement.classList.add("active");
@@ -89,6 +87,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 function createCards() {
                     wrapper.innerHTML = ``;
                     cardElements.forEach((el) => {
+                        console.log(el);
+
                         let div = document.createElement("div");
 
                         div.innerHTML = `
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <h5 class="text-dark">${el.price}</h5>
                                 </div>
                                 <div class="d-flex justify-content-between align-items-center trashItem2">
-                                    <p class="text-dark my-0">#${el.category}</p>
+                                    <p class="text-dark my-0">${el.category}</p>
                                     <i class="bi bi-trash3-fill" id=""></i>
                                 </div>
                             </div>
@@ -147,41 +147,64 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
-});
 
+    // Filtro Sort Index
+    let buttons = document.querySelectorAll('input[name="inlineRadioOptions"]');
+    let wrapperIndex = document.querySelector("#wrapperIndex");
 
+    buttons.forEach((button) => {
+        button.addEventListener("change", () => {
+            let cardsIndex = Array.from(document.querySelectorAll(".cardnew"));
+            let newArray = [];
 
-let priceAsc = document.querySelector('#priceAsc');
-let priceDesc = document.querySelector('#priceDesc');
-let nameAsc = document.querySelector('#nameAsc');
-let nameDesc = document.querySelector('#nameDesc');
-let timeAsc = document.querySelector('#timeAsc');
-let timeDesc = document.querySelector('#timeDesc');
-let cardsIndex = document.querySelectorAll('.cardnew');
-let buttons = document.querySelectorAll('input[name="inlineRadioOptions"]');
-let wrapperIndex = document.querySelector('#wrapperIndex');
-
-document.addEventListener('DOMContentLoaded', () => {
-   
-    buttons.forEach(button => {
-        let newArray = [];
-        
-        button.addEventListener('change', () => {
-            cardsIndex = Array.from(cardsIndex);
-            if (button.value === 'priceAsc') {
-                console.log( cardsIndex.sort((a, b) => a.cardPrice - b.cardPrice));
-            } else if (button.value === 'priceDesc') {
-                console.log( cardsIndex.sort((a, b) => b.cardPrice - a.cardPrice));
-            } else if (button.value === 'nameAsc') {
-                console.log( cardsIndex.sort((a, b) => a.title.localeCompare(b.title)));
-            } else if (button.value === 'nameDesc') {
-                console.log( cardsIndex.sort((a, b) => b.title.localeCompare(a.title)));
-            } else if (button.value === 'timeAsc') {
-                console.log( cardsIndex.sort((a, b) => a.created_at - b.created_at));
-            } else if (button.value === 'timeDesc') {
-                console.log( cardsIndex.sort((a, b) => b.created_at - a.created_at));
+            if (button.value === "priceAsc") {
+                newArray = cardsIndex.sort((a, b) => {
+                    let priceA = parseFloat(
+                        a.querySelector("#cardPrice").textContent
+                    );
+                    let priceB = parseFloat(
+                        b.querySelector("#cardPrice").textContent
+                    );
+                    return priceA - priceB;
+                });
+            } else if (button.value === "priceDesc") {
+                newArray = cardsIndex.sort((a, b) => {
+                    let priceA = parseFloat(
+                        a.querySelector("#cardPrice").textContent
+                    );
+                    let priceB = parseFloat(
+                        b.querySelector("#cardPrice").textContent
+                    );
+                    return priceB - priceA;
+                });
+            } else if (button.value === "nameAsc") {
+                newArray = cardsIndex.sort((a, b) => {
+                    let nameA = a.querySelector("#cardTitle").textContent;
+                    let nameB = b.querySelector("#cardTitle").textContent;
+                    return nameA.localeCompare(nameB);
+                });
+            } else if (button.value === "nameDesc") {
+                newArray = cardsIndex.sort((a, b) => {
+                    let nameA = a.querySelector("#cardTitle").textContent;
+                    let nameB = b.querySelector("#cardTitle").textContent;
+                    return nameB.localeCompare(nameA);
+                });
+            } else if (button.value === "timeAsc") {
+                newArray = cardsIndex.sort((a, b) => {
+                    let timeA = a.querySelector("#cardTime").textContent;
+                    let timeB = b.querySelector("#cardTime").textContent;
+                    return timeB.localeCompare(timeA);
+                });
+            } else if (button.value === "timeDesc") {
+                newArray = cardsIndex.sort((a, b) => {
+                    let timeA = a.querySelector("#cardTime").textContent;
+                    let timeB = b.querySelector("#cardTime").textContent;
+                    return timeA.localeCompare(timeB);
+                });
             }
-            
-        })
-    })
-})
+
+            wrapperIndex.innerHTML = "";
+            newArray.forEach((card) => wrapperIndex.appendChild(card));
+        });
+    });
+});

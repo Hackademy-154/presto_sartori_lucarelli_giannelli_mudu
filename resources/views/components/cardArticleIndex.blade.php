@@ -29,8 +29,9 @@
                 </div>
                 <hr class="my-1">
                 <div class="d-flex justify-content-between my-2 ">
-                    <h6 class="fst-italic d-none d-lg-block mb-0  me-2">
-                        <span class="fw-bold categoryBadge">#{{ ucfirst(__('ui.' . $category->name)) }}</span>
+                    <h6 class="fst-italic d-none d-lg-block mb-0  me-2 lolo">
+                        <a href="{{ route('article.byCategory', compact('category')) }}" class="fw-bold categoryBadge"
+                            id="cardCategory">#{{ ucfirst(__('ui.' . $category->name)) }}</a>
                     </h6>
                     <h6 class="fst-italic  mb-0">{{ __('ui.price') }}: <span class="fw-bold"
                             id="cardPrice">{{ $article->price }}
@@ -41,8 +42,9 @@
                         class="fw-bold">{{ ucfirst($article->user->name) }}</span>
                 </h6>
                 <div class="d-none">
-                    <h6 class="text-dark px-3 m-0 " id="cardCategory">{{ ucfirst($article->category->name) }}</h6>
+                    <h6 class="text-dark px-3 m-0 " id="cardTime">{{ $article->created_at }}</h6>
                 </div>
+
             </div>
             <div class="col-12 d-flex justify-content-end">
                 <a href="{{ route('article.show', compact('article')) }}"

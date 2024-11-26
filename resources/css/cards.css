@@ -111,8 +111,17 @@
 }
 .categoryBadge {
     padding: 5px 10px;
-    background-color: #eaeaea;
+    background-color: #eaeaea !important;
     box-shadow: 1px 1px 3px #adadad;
+    text-decoration: none;
+    color: black !important;
+}
+
+.lolo {
+    transition: 0.4s;
+}
+.lolo:hover {
+    scale: 0.95;
 }
 .indexImg {
     width: 100%;
