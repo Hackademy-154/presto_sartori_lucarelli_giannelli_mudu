@@ -34,6 +34,29 @@
     max-height: 100%;
     object-fit: contain;
 }
+.cardShowRevisor {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    max-height: max-content;
+    min-width: max-content !important;
+}
+.imgShowRevisor {
+    height: 210px !important;
+    width: 100% !important;
+}
+.img-dettaglioRevisor {
+    height: 210px !important;
+    width: 210px !important;
+}
+
+.img-dettaglioRevisor img {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+}
+
 .img-container {
     max-width: 450px;
     height: 450px;
