@@ -12,20 +12,20 @@
         <div class="col-12 d-flex align-items-center  w-100">
             <a class="colorPetrolio fw-bold" href="{{ route('homepage') }}">Home <span class="mx-0 mx-md-1">></span></a>
             @if ($query)
-                <a class="colorPetrolio fw-bold" href="{{ route('article.index') }}"> Articoli <span
+                <a class="colorPetrolio fw-bold" href="{{ route('article.index') }}"> {{ __('ui.articles')}} <span
                         class="mx-0 mx-md-1">></span></a>
                 <a class="colorPetrolio fw-bold" href=""> {{ ucfirst($query) }} <span
                         class="mx-0 mx-md-1">></span></a>
             @elseif (isset($category) && $category)
                 <a class="colorPetrolio fw-bold" href="{{ route('article.byCategory', compact('category')) }}">
-                    {{ ucfirst(__('ui.' . $category->name)) }} <span class="mx-0 mx-md-1">></span></a>
+                {{ ucfirst(__('ui.' . $category->name)) }} <span class="mx-0 mx-md-1">></span></a>
                 <a class="colorPetrolio fw-bold" href="{{ route('article.index') }}"> Articoli <span
                         class="mx-0 mx-md-1">></span></a>
                 <a class="colorPetrolio fw-bold" href="">{{ ucfirst($query) }}<span
                         class="mx-0 mx-md-1">></span></a>
             @else
             @endif
-            <h6 class="fw-bold mb-0">{{ count($articles) }} risultati</h6>
+            <h6 class="fw-bold mb-0">{{ count($articles) }} {{ __('ui.results')}}</h6>
         </div>
     </div>
     <div class="row justify-content-center">

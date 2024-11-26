@@ -102,5 +102,11 @@ return [
     'jobRequired3' => 'Ayúdenos a mantener un alto nivel de contenido publicado.',
     'jobRequired4' => 'Por favor, complete el formulario cuidadosamente para permitirnos evaluar su solicitud.',
     'addMessage' => 'Escribe un mensaje a continuación',
-    'btnSend' => 'Enviar'
+    'btnSend' => 'Enviar',
+
+    'detail' => 'Detalle',
+    'newAd' => 'Nuevo anuncio',
+    'articles' => 'Artículos',
+    'results' => 'resultados',
+    'file' => 'Eligir archivo',
 ];

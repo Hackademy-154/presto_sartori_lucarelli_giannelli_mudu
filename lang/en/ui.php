@@ -65,7 +65,7 @@ return [
     'emailError' => 'Email is required',
     'passwordError' => 'Password is required',
 
-    'slogan3' => 'Publish and Earn!',
+    'slogan3' => 'Publish & Earn!',
     'text3' => 'Add your item today and start monetizing. Don\'t wait, your audience is waiting for you!',
     'btnSellNow' => 'Sell now',
     'aboutUs' => 'About us',
@@ -103,4 +103,10 @@ return [
     'jobRequired4' => 'Please, fill out the form carefully to allow us to evaluate your application.',
     'addMessage' => 'Write a message below',
     'btnSend' => 'Send',
+
+    'detail' => 'Detail',
+    'newAd' => 'New Advertisement',
+    'articles' => 'Articles',
+    'results' => 'results',
+    'file' => 'Choose File',
 ];

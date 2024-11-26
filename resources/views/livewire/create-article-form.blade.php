@@ -46,7 +46,7 @@
         @enderror
     </div>
     <div class="mb-3 custom-file-button d-flex align-items-center">
-        <label for="fileButton" class="labelFile me-2">Scegli File</label>
+        <label for="fileButton" class="labelFile me-2">{{ __('ui.file')}}</label>
         <input name="fileButton" type="file" wire:model.live="temporary_images" multiple
             class="sp w-100 @error('temporary_images.*') is-invalid @enderror" placeholder="Img/" id="">
         @error('temporary_images.*')

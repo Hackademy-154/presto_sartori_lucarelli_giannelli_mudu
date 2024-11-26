@@ -3,11 +3,11 @@
         src="{{ $article->images->isNotEmpty() ? $article->images->first()->getUrl(1000, 1000) : Storage::url('image/default.png') }}">
     <div class="info">
         @if ($isNew)
-            <span class="badge newArticleWelcome">Nuovo Annuncio</span>
+            <span class="badge newArticleWelcome">{{ __("ui.newAd")}}</span>
         @endif
         <h5>{{ ucfirst($article->title) }}</h5>
         <p class="text-white">{{ $article->price }}€</p>
-        <p class="text-white ">{{ ucFirst($article->category->name) }}</p>
+        <p class="text-white ">#{{ ucFirst(__("ui." . $article->category->name)) }}</p>
 
         <a href="{{ route('article.show', compact('article')) }}" class="btn button">{{ __('ui.btnShow') }}</a>
     </div>
