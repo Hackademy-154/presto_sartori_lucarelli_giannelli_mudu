@@ -212,21 +212,41 @@ a {
 #carrelloIcona {
     position: relative;
 }
+.custom-file-button {
+    input[type="file"] {
+        margin-left: -2px !important;
 
+        &::-webkit-file-upload-button {
+            display: none;
+        }
+        &::file-selector-button {
+            display: none;
+        }
+    }
+
+    &:hover {
+        label {
+            background-color: #dde0e3;
+            cursor: pointer;
+        }
+    }
+}
+.labelFile {
+    padding: 2px 10px;
+    min-width: max-content !important;
+    border: 1px solid black;
+    z-index: 2;
+    background-color: #ffffff;
+}
+.sp {
+    background: transparent;
+    position: absolute;
+    width: 424px !important;
+    padding-left: 105px;
+    z-index: 3;
+    overflow: hidden;
+}
 /* Media Query */
-/* // X-Small devices (portrait phones, less than 576px)
-
-// Small devices (landscape phones, less than 768px)
-@media (max-width: 767.98px) { ... }
-
-// Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) { ... }
-
-// Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) { ... }
-
-// X-Large devices (large desktops, less than 1400px)
-@media (max-width: 1399.98px) { ... }*/
 @media (max-width: 1000.98px) {
     .spazioNav3 {
         padding-top: 0px;
@@ -294,12 +314,16 @@ a {
     .mobile {
         max-width: 390px;
     }
-    .criterio {
-    }
 }
 
 @media screen and (max-width: 575.98px) {
-    .criteriContainer {
+    .sp {
+        background: transparent;
+        position: absolute;
+        width: 324px !important;
+        padding-left: 105px;
+        z-index: 3;
+        overflow: hidden;
     }
     .criterio {
         width: 100%;
