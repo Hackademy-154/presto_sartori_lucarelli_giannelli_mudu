@@ -4,6 +4,7 @@
             <div class="col-12 pt-5">
                 <h1 class="text-center">{{ __('ui.category') }}: <span>"{{ ucFirst(__("ui.$category->name")) }}"</span>
                 </h1>
+                
             </div>
         </div>
         <div class="row pt-5 justify-content-center">
@@ -69,6 +70,11 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h3>Ci sono {{ count($articles) }} articoli</h3>
             </div>
         </div>
         <div class="row justify-content-around py-5 pt-5">

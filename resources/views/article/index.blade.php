@@ -65,6 +65,11 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-12">
+                <h3>Ci sono {{ count($articles) }} articoli</h3>
+            </div>
+        </div>
         <div class="row justify-content-evenly align-items-center py-5" id="wrapperIndex">
             @foreach ($articles as $article)
                 <x-cardArticleIndex :article="$article" :category="$article->category" :isNew="in_array($article->id, $latestArticles)"></x-cardArticleIndex>
