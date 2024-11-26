@@ -52,27 +52,69 @@
                         class="row justify-content-center justify-content-lg-evenly align-items-center flex-column flex-lg-row cardShow py-4 py-md-3 mt-4">
                         <hr class="d-lg-none">
                         <!-- 6 img per l'articolo -->
-                        <div class="col-12 col-md-2 p-0 contImgDettaglio d-flex flex-lg-column justify-content-evenly ">
+                        <div class="col-12 col-md-12 p-0 contImgDettaglio d-flex flex-lg-column justify-content-evenly ">
                             @if ($article_to_check->images->count())
                                 @foreach ($article_to_check->images as $key => $image)
+                                <div>
+                                        <div class="card-body">
+                                            <h5>Labels</h5>
+                                            @if($image->labels)
+                                                @foreach ($image->labels as $label)
+                                                    #{{ $label }},
+                                                @endforeach
+                                            @else
+                                                <p class="fst-italic">No labels</p>
+                                            @endif
+                                        </div>
+                                     </div>
+                                    <div>
+                                        <h5>Ratings</h5>
+                                        <div class="row" >
+                                            <div class="col-2" >
+                                                <div class="{{$image->adult}}"></div>
+                                            </div>
+                                            <div class="col-10">adult</div>
+                                        </div>
+                                        <div class="row" >
+                                            <div class="col-2" >
+                                                <div class="{{$image->violence}}"></div>
+                                            </div>
+                                            <div class="col-10">violence</div>
+                                        </div>
+                                        <div class="row" >
+                                            <div class="col-2" >
+                                                <div class="{{$image->spoof}}"></div>
+                                            </div>
+                                            <div class="col-10">spoof</div>
+                                        </div>
+                                        <div class="row" >
+                                            <div class="col-2" >
+                                                <div class="{{$image->racy}}"></div>
+                                            </div>
+                                            <div class="col-10">racy</div>
+                                        </div>
+                                        <div class="row" >
+                                            <div class="col-2" >
+                                                <div class="{{$image->medical}}"></div>
+                                            </div>
+                                            <div class="col-10">medical</div>
+                                        </div>
+                                        
+                                    </div>
                                     <div class="img-dettaglio ">
                                         <img src="{{ $image->getUrl(1000, 1000) }}" class="imgShow"
                                             alt="Immagine {{ $key + 1 }} dell'articolo '{{ $article_to_check->title }}'">
                                     </div>
+                                    <!-- inizio Googlequalcosa -->
+                                     
                                 @endforeach
-                            @else
-                                @for ($i = 0; $i < 6; $i++)
-                                    <div class="img-dettaglio">
-                                        <img class="imgShow" src="https://picsum.photos/35{{ $i }}"
-                                            alt="img provvisorie">
-                                    </div>
-                                @endfor
+                            
                             @endif
                         </div>
                         <hr class="mt-3 mb-0 d-lg-none">
-                        <div class="col-12 col-md-5 img-container text-center">
+                        <!-- <div class="col-12 col-md-5 img-container text-center">
                             <img class="imgShow" src="{{ $image->getUrl(1000, 1000) }}" alt="">
-                        </div>
+                        </div> -->
                         <div class="col-12 col-lg-5 ms-0 ms-lg-4 d-flex flex-column justify-content-center">
                             <div class="d-flex flex-column justify-content-between text-dark">
                                 <h4 class="mt-2 mb-1 fst-italic"> <span
