@@ -39,9 +39,10 @@
                             <div
                                 class="col-12 col-md-6 d-flex flex-column justify-content-center text-md p-0 p-lg-5 headerSX order-2 order-lg-1">
                                 <div class="title " data-swiper-parallax="-300">
+                                    <h1 class="fw-bold text-center text-md-start">{{ __('ui.slogan3') }}</h1>
                                 </div>
                                 <div class="subtitle" data-swiper-parallax="-200">
-                                    <h1 class=" fw-bold  mb-4   textGrey">{{ __('ui.slogan3') }}</h1>
+                                    <h3 class=" pb-3 text-center text-md-start">{{ __('ui.text3') }}</h3>
                                 </div>
                                 <div class="text" data-swiper-parallax="-100">
                                     <p class="text-center text-md-start">
@@ -56,7 +57,7 @@
                             <div
                                 class="col-12 col-md-6 ps-0 imgHeader2 d-flex justify-content-center justify-content-lg-start align-items-center d-none d-md-block order-1 order-lg-2">
                                 <img style="height: 420px;" class="img-fluid  ps-0 "
-                                    src="{{ Storage::url('image/header2.png') }}" alt="">
+                                    src="{{ Storage::url('image/header3.png') }}" alt="">
                             </div>
                         </div>
                     </div>
@@ -117,30 +118,14 @@
             <div class="col-12 swiper2 d-flex">
                 <div class="swiper-wrapper">
                     @foreach ($categories as $category)
-                        <div class="swiper-slide ">
-                            <a href="{{ route('article.byCategory', compact('category')) }}">
-                                <img src={{ '/media/category_pic/' . $category->id . '.png' }}
-                                    class="imgCategoryCerchio sfumatura">
-                                <h5 class="text-dark mt-3 fw-bold">{{ ucFirst(__("ui.$category->name")) }}</h5>
-                            </a>
-                        </div>
+                    <div class="swiper-slide ">
+                        <a href="{{ route('article.byCategory', compact('category')) }}">
+                            <img src={{ '/media/category_pic/' . $category->id . '.png' }} class="imgCategoryCerchio sfumatura">  
+                            <h5 class="text-dark mt-3 fw-bold">{{ ucFirst(__("ui.$category->name")) }}</h5>
+                        </a>
+                    </div>
                     @endforeach
                 </div>
-            </div>
-        </div>
-    </div>
-    {{-- Pubblica e guadagna --}}
-    <div class="container   mt-4 ">
-        <div class="row justify-content-center align-items-center sfumaturaa ">
-            <div
-                class="col-12 d-flex flex-column justify-content-start align-items-center callToActionWork pb-4 px-4 py-4">
-                <h2 class="fw-bold text-center text-md-start">{{ __('ui.addAds') }}</h2>
-
-                <p class=" mt-0 text-muted text-center text-lg-start fst-italic sfumaturaa my-4 mb-3">
-                    {{ __('ui.text3') }}
-                </p>
-                <a class="text-white buttonCustom btn mt-0"
-                    href="{{ route('article.create') }}">{{ __('ui.btnSellNow') }}</a>
             </div>
         </div>
     </div>
@@ -155,7 +140,7 @@
             <hr class="w-100">
 
             @foreach ($articles as $article)
-                <x-cardArticle :article="$article" :isNew="in_array($article->id, $latestArticles)"></x-cardArticle>
+            <x-cardArticle :article="$article" :isNew="in_array($article->id, $latestArticles)"></x-cardArticle>
             @endforeach
 
         </div>
