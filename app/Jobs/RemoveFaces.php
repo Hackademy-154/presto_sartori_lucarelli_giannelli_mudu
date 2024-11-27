@@ -4,14 +4,15 @@ namespace App\Jobs;
 
 use App\Models\Image;
 use Spatie\Image\Enums\Fit;
-use Spatie\Image\Image as SpatieImage;
+use Illuminate\Bus\Queueable;
 use Spatie\Image\Enums\AlignPosition;
 use Illuminate\Queue\SerializesModels;
+use Spatie\Image\Image as SpatieImage;
 use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Google\Cloud\Vision\V1\ImageAnnotatorClient;
+
 
 class RemoveFaces implements ShouldQueue
 {
@@ -59,7 +60,7 @@ class RemoveFaces implements ShouldQueue
             $image = $spatie->load($srcPath);
 
             $image->watermark(
-                base_path('../../public/media/smile.png'),
+                base_path('resources/img/smile.png'),
                 AlignPosition::TopLeft,
                 paddingX: $bounds[0][0],
                 paddingY: $bounds[0][1],
