@@ -10,7 +10,7 @@ class PublicController extends Controller
 {
     public function homepage()  {
         $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->take(4)->get();
-        $latestArticles = Article::orderBy('created_at','desc')->take(4)->pluck("id")->toArray();
+        $latestArticles = Article::where('is_accepted', true)->orderBy('created_at','desc')->take(4)->pluck("id")->toArray();
         return view('welcome', compact('articles','latestArticles'));
     }
 
@@ -32,7 +32,7 @@ class PublicController extends Controller
             $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(10);
         }
 
-        $latestArticles = Article::orderBy('created_at','desc')->take(4)->pluck("id")->toArray();
+        $latestArticles = Article::where('is_accepted', true)->orderBy('created_at','desc')->take(4)->pluck("id")->toArray();
         
         return view('article.searched', ['articles'=>$articles, 'query'=>$query, 'latestArticles'=>$latestArticles]);
     }
