@@ -34,11 +34,11 @@
                 <h1 class="text-center fw-bold mb-4">{{ __('ui.dashboardRevisor') }}</h1>
                 <div class="row justify-content-center ">
                     <div class="col-12 w-100 col-lg-8 p-3 d-flex flex-column cambiacolore">
-                        <div class="row gy-4">
+                        <div class="row my-4 justify-content-evenly">
                             @foreach ($article_to_check->images as $key => $image)
-                                <div class="col-md-6">
+                                <div class="col-md-6 d-flex flex-column" style="width: 434px;">
                                     <div class="shadow">
-                                        <img src="{{ $image->getUrl(1000, 1000) }}" class="card-img-top" alt="Immagine {{ $key + 1 }}">
+                                        <img src="{{ $image->getUrl(1000, 1000) }}" class="img-fluid" alt="Immagine {{ $key + 1 }}">
                                         <div class="">
                                             <p class="mb-1 text-center">
                                                 <span class="badge   {{ $image->adult }}"><span class="ms-1">Adult</span></span>

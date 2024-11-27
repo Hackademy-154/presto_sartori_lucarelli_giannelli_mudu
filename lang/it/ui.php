@@ -7,7 +7,7 @@ return [
     'emailError' => 'Indirizzo email non valido',
     'passwordError' => 'Password non valida',
     'register' => 'Registrati',
-    'name' => 'Nome:',
+    'name' => 'Nome',
     'confirm' => 'Conferma',
     'messRegister' => 'Sei già registrato?',
     'nameError' => 'Nome obbligatorio',

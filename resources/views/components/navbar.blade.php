@@ -67,8 +67,7 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">{{ __('ui.contactUs') }}</a></li>
-                            <li><a class="dropdown-item" href="#">{{ __('ui.faq') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('form.revisor') }}">{{ __('ui.contactUs') }}</a></li>
                         </ul>
                     @else
                         <a class="nav-link dropdown-toggle login textColor1 d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown"
@@ -95,13 +94,12 @@
                                 <hr class="my-1">
                             </li>
                             <li><a class="dropdown-item" href="{{ route('form.revisor') }}">{{ __('ui.contactUs') }}</a>
-                            </li>
-                            <li><a class="dropdown-item" href="#">{{ __('ui.faq') }}</a></li>
-                            <hr class="my-1">
-                            <form action="{{ route('logout') }}" method="POST">
-                                @csrf
-                                <button class="dropdown-item" type=" submit">{{ __('ui.logout') }}</button>
-                            </form>
+
+                                <hr class="my-1">
+                                <form action="{{ route('logout') }}" method="POST">
+                                    @csrf
+                                    <button class="dropdown-item" type=" submit">{{ __('ui.logout') }}</button>
+                                </form>
                         </ul>
                     @endguest
                 </li>
@@ -127,3 +125,4 @@
         </div>
     </div>
 </div>
+

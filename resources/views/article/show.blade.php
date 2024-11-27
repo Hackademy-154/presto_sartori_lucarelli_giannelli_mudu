@@ -6,7 +6,7 @@
             </div>
         </div>
         <div class="row justify-content-center align-items-center">
-            <div class="row justify-content-center justify-content-lg-evenly align-items-center flex-column flex-lg-row cardShow sfumatura py-4 py-md-3 mt-4">
+            <div class="row justify-content-center justify-content-lg-around align-items-center flex-column flex-lg-row cardShow sfumatura py-4 py-md-3 mt-4">
                 <hr class="d-lg-none">
                 <div class="col-12 col-lg-2 contImgDettaglio d-flex flex-column justify-content-evenly">
                     @if ($article->images->count())
@@ -56,51 +56,43 @@
                 </div>
             </div>
         </div>
-
         <div class="container">
-
             <div class="row">
                 <hr class="mt-5">
                 <div class="col-12 text-start my-4">
                     <h5>
-                        </span> Guarda tutti gli articoli di <span>{{ ucfirst($article->user->name) }}</span>
+                        </span> Altri articoli inseriti da: <span>{{ ucfirst($article->user->name) }}</span>
                     </h5>
                 </div>
-
-                <div class="row justify-content-evenly align-items-center">
-
+                <div class="row justify-content-start align-items-center">
                     @foreach ($article->user->articles as $userArticle)
-                    @if ($userArticle->is_accepted)
-                        <div class="col-12 col-md-3 m-3">
-                            <div class="cardRichiamo sfumatura" style="width: 18rem;">
-                                
-                                
-                                @if ($userArticle->images->isNotEmpty())
-                                    <img src="{{ $userArticle->images->first()->getUrl(1000, 1000) }}" class="card-img-top" alt="{{ $userArticle->title }}">
-                                @else
-                                    <img src="/path/to/default-image.jpg" class="card-img-top" alt="Default image">
-                                @endif
-                                <div class="card-body mt-2">
-                                    <h5 class="card-title">{{ ucfirst($userArticle->title) }}</h5>
-                                    <hr class="my-2">
-                                    <p class="fst-italic d-none d-lg-block my-1">
-                                        <a href="" class="text-dark" id="cardCategory">#{{ ucfirst(__($userArticle->category->name)) }}</a>
-                                    </p>
-
-                                    <p class="mb-0">{{ $userArticle->price }} €</p>
-                                    <div class="d-flex justify-content-center align-items-center">
-                                        <a href="{{ route('article.show', $userArticle->id) }}" class="btn btn-warning">{{ __('ui.btnShow') }}</a>
+                        @if ($userArticle->is_accepted)
+                            <div class="col-12 col-md-6 col-lg-3 m-3 m-md-0">
+                                <div class="cardRichiamo sfumatura" style="width: 18rem;">
+                                    @if ($userArticle->images->isNotEmpty())
+                                        <img src="{{ $userArticle->images->first()->getUrl(1000, 1000) }}" class="card-img-top"
+                                            alt="{{ $userArticle->title }}">
+                                    @else
+                                        <img src="/path/to/default-image.jpg" class="card-img-top" alt="Default image">
+                                    @endif
+                                    <div class="card-body mt-2">
+                                        <h5 class="card-title">{{ ucfirst($userArticle->title) }}</h5>
+                                        <hr class="my-2">
+                                        <p class="fst-italic d-none d-lg-block my-1">
+                                        <p href="" class="text-dark" id="">#{{ ucfirst(__($userArticle->category->name)) }}</p>
+                                        </p>
+                                        <p class="mb-0">{{ $userArticle->price }} €</p>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <a href="{{ route('article.show', $userArticle->id) }}" class="btn btn-warning">{{ __('ui.btnShow') }}</a>
+                                        </div>
                                     </div>
-
                                 </div>
                             </div>
-                        </div>
                         @endif
                     @endforeach
                 </div>
             </div>
         </div>
     </div>
-
 </x-layout>
 
