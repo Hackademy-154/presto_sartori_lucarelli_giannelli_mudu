@@ -38,8 +38,7 @@
     background-color: #ffffff;
     padding: 10px;
     border-radius: 10px;
-    max-height: max-content;
-    min-width: max-content !important;
+    min-width: fit-content !important;
 }
 .imgShowRevisor {
     height: 210px !important;
