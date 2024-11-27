@@ -36,18 +36,6 @@
                     <div class="col-12 w-100 col-lg-8 p-3 d-flex flex-column cambiacolore">
                         <div class="row gy-4">
                             @foreach ($article_to_check->images as $key => $image)
-                                {{-- <div>
-                                            <div class="card-body">
-                                                <h5>Labels</h5>
-                                                @if ($image->labels)
-                                                    @foreach ($image->labels as $label)
-                                                        #{{ $label }},
-                                                    @endforeach
-                                                @else
-                                                    <p class="fst-italic">No labels</p>
-                                                @endif
-                                            </div>
-                                        </div> --}}
                                 <div class="col-md-6">
                                     <div class="shadow">
                                         <img src="{{ $image->getUrl(1000, 1000) }}" class="card-img-top" alt="Immagine {{ $key + 1 }}">
