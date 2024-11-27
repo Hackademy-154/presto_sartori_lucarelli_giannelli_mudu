@@ -2,8 +2,7 @@
     <div class="container sfumaturaa mb-4 spazioNav3">
         {{-- Swiper Header --}}
         <div class="row borderTop pt-0 ">
-            <div class=" col-12 swiper mySwiper borderTop"
-                style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff">
+            <div class=" col-12 swiper mySwiper borderTop" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="row h-100 align-items-center">
@@ -28,16 +27,14 @@
                             <div
                                 class="col-12 col-md-6 d-flex imgHeader ps-0 justify-content-start justify-content-lg-start align-items-center  d-none d-md-block order-1 order-lg-1">
                                 <div class="d-flex justify-content-center align-items-center">
-                                    <img style="height: 420px;" class="img-fluid   ps-0"
-                                        src="{{ Storage::url('image/header.png') }}" alt="">
+                                    <img style="height: 420px;" class="img-fluid   ps-0" src="{{ Storage::url('image/header.png') }}" alt="">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide ">
                         <div class="row h-100 align-items-center">
-                            <div
-                                class="col-12 col-md-6 d-flex flex-column justify-content-center text-md p-0 p-lg-5 headerSX order-2 order-lg-1">
+                            <div class="col-12 col-md-6 d-flex flex-column justify-content-center text-md p-0 p-lg-5 headerSX order-2 order-lg-1">
                                 <div class="title " data-swiper-parallax="-300">
                                     <h1 class="fw-bold text-center text-md-start">{{ __('ui.slogan3') }}</h1>
                                 </div>
@@ -50,14 +47,12 @@
                                     </p>
                                 </div>
                                 <div class="d-flex justify-content-center justify-content-md-start">
-                                    <a href="{{ route('article.create') }}"
-                                        class=" buttonCharacter mt-2 fs-5 text-center ">{{ __('ui.btnSellNow') }}</a>
+                                    <a href="{{ route('article.create') }}" class=" buttonCharacter mt-2 fs-5 text-center ">{{ __('ui.btnSellNow') }}</a>
                                 </div>
                             </div>
                             <div
                                 class="col-12 col-md-6 ps-0 imgHeader2 d-flex justify-content-center justify-content-lg-start align-items-center d-none d-md-block order-1 order-lg-2">
-                                <img style="height: 420px;" class="img-fluid  ps-0 "
-                                    src="{{ Storage::url('image/header3.png') }}" alt="">
+                                <img style="height: 420px;" class="img-fluid  ps-0 " src="{{ Storage::url('image/header3.png') }}" alt="">
                             </div>
                         </div>
                     </div>
@@ -110,20 +105,19 @@
     <div class="container text-center cambiacolore sfumaturaa mt-3 mb-4 border mt-4">
         <div class="row justify-content-center ">
             <div class="col-12 d-flex justify-content-start align-items-center mb-4 mt-2 sectionsArrow ps-4 pt-3">
-                <h2 class="m-0 textGrey fw-bold ">{{ __('ui.categories') }}</h2><a class="colorPetrolio mt-1"
-                    href="{{ route('article.index') }}"><i
+                <h2 class="m-0 textGrey fw-bold ">{{ __('ui.categories') }}</h2><a class="colorPetrolio mt-1" href="{{ route('article.index') }}"><i
                         class="bi colorPetrolio fw-bold bi-arrow-right-short fs-1 mt-1"></i></a>
             </div>
             <hr class="w-100">
             <div class="col-12 swiper2 d-flex">
                 <div class="swiper-wrapper">
                     @foreach ($categories as $category)
-                    <div class="swiper-slide ">
-                        <a href="{{ route('article.byCategory', compact('category')) }}">
-                            <img src={{ '/media/category_pic/' . $category->id . '.png' }} class="imgCategoryCerchio sfumatura">  
-                            <h5 class="text-dark mt-3 fw-bold">{{ ucFirst(__("ui.$category->name")) }}</h5>
-                        </a>
-                    </div>
+                        <div class="swiper-slide ">
+                            <a href="{{ route('article.byCategory', compact('category')) }}">
+                                <img src={{ '/media/category_pic/' . $category->id . '.png' }} class="imgCategoryCerchio sfumatura">
+                                <h5 class="text-dark mt-3 fw-bold">{{ ucFirst(__("ui.$category->name")) }}</h5>
+                            </a>
+                        </div>
                     @endforeach
                 </div>
             </div>
@@ -133,14 +127,13 @@
     <div class="container cambiacolore sfumaturaa mt-4 border py-3">
         <div class="row justify-content-center">
             <div class="col-12 d-flex justify-content-start align-items-center mb-4 mt-2 sectionsArrow ps-4 pt-3">
-                <h2 class="m-0 textGrey fw-bold ">{{ __('ui.allArticles') }}</h2><a class="mt-1 colorPetrolio"
-                    href="{{ route('article.index') }}"><i
+                <h2 class="m-0 textGrey fw-bold ">{{ __('ui.allArticles') }}</h2><a class="mt-1 colorPetrolio" href="{{ route('article.index') }}"><i
                         class="bi colorPetrolio fw-bold bi-arrow-right-short fs-1 mt-1"></i></a>
             </div>
             <hr class="w-100">
 
             @foreach ($articles as $article)
-            <x-cardArticle :article="$article" :isNew="in_array($article->id, $latestArticles)"></x-cardArticle>
+                <x-cardArticle :article="$article" :isNew="in_array($article->id, $latestArticles)"></x-cardArticle>
             @endforeach
 
         </div>
@@ -160,8 +153,7 @@
             </div>
             <div class="col-md-6 col-lg-3 d-flex flex-column">
                 <h3 class="fw-bold text-black text-center text-md-start">{{ __('ui.mission') }}</h3>
-                <img src="/media/hiring4.jpeg " class="img-fluid rounded shadow d-block d-md-none my-2 mb-3"
-                    alt="Il nostro team al lavoro">
+                <img src="/media/hiring4.jpeg " class="img-fluid rounded shadow d-block d-md-none my-2 mb-3" alt="Il nostro team al lavoro">
 
                 <p class="text-muted text-center text-md-start">{{ __('ui.textMission') }}</p>
             </div>
@@ -191,8 +183,7 @@
             <div class="col-12 textGrey">
                 <h3 class="fw-bold textGrey">{{ __('ui.joinUs') }}</h3>
                 <p class="text-muted">{{ __('ui.textJoinUs') }}</p>
-                <a href="{{ route('form.revisor') }}"
-                    class="text-white buttonCustom btn mt-0 ">{{ __('ui.btnJoinUs') }}</a>
+                <a href="{{ route('form.revisor') }}" class="text-white buttonCustom btn mt-0 ">{{ __('ui.btnJoinUs') }}</a>
             </div>
         </div>
     </div>

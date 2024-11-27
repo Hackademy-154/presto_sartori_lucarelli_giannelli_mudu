@@ -1,19 +1,16 @@
 <nav class="navbar position-fixed navbar-expand-lg bg_navbar1 vw-100 d-flex flex-column">
     <div class="container-fluid ff">
-        <a class="navbar-brand me-1 textColor1" href="{{ route('homepage') }}"><img
-                src="{{ Storage::url('image/logo.png') }}" class="logo ms-3" alt=""></a>
+        <a class="navbar-brand me-1 textColor1" href="{{ route('homepage') }}"><img src="{{ Storage::url('image/logo.png') }}" class="logo ms-3" alt=""></a>
         <a class="navbar-brand textColor1" href="{{ route('homepage') }}">PRESTO.IT</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
             <div class="d-flex  searchBar mx-4 order-2 order-lg-1">
-                <form action="{{ route('article.search') }}" class="d-flex ms-auto searchInput ms-3" role="search"
-                    method="GET">
+                <form action="{{ route('article.search') }}" class="d-flex ms-auto searchInput ms-3" role="search" method="GET">
                     <div class="d-flex p-0 z">
-                        <select id="category" wire:model.blur="category" name="query2" class="form-control xx"
-                            style=" box-shadow: none;">
+                        <select id="category" wire:model.blur="category" name="query2" class="form-control xx" style=" box-shadow: none;">
                             <option class="textSearch" label value="0">{{ __('ui.categories') }}</option>
                             @foreach ($categories as $category)
                                 <option class="textSearch" value="{{ $category->id }}">
@@ -23,8 +20,7 @@
                         </select>
                     </div>
                     <div class="ms-2 p-0 y">
-                        <input class="searchInput" type="search" name="query" placeholder="{{ __('ui.search') }}"
-                            aria-label="search">
+                        <input class="searchInput" type="search" name="query" placeholder="{{ __('ui.search') }}" aria-label="search">
                     </div>
                     <div class="x">
                         <button class="buttonSearch" type="submit" id="basic-addon2">
@@ -35,8 +31,7 @@
             </div>
             <ul class="navbar-nav ms-0 ms-lg-auto mb-2 mb-lg-0 d-flex order-1 order-lg-2">
                 <li class="nav-item dropdown d-flex order-2 order-lg-1 align-items-start flex-column flex-lg-row lalo">
-                    <a class="nav-link dropdown-toggle textColor1" id="navbarDropdowner" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false"
+                    <a class="nav-link dropdown-toggle textColor1" id="navbarDropdowner" role="button" data-bs-toggle="dropdown" aria-expanded="false"
                         style="
                         display: flex;
                         align-items: center;
@@ -57,11 +52,9 @@
                         </li>
                     </ul>
                 </li>
-                <li
-                    class="nav-item dropdown d-flex justify-content-start order-1 order-lg-2 align-items-start align-items-lg-center flex-column flex-lg-row">
+                <li class="nav-item dropdown d-flex justify-content-start order-1 order-lg-2 align-items-start align-items-lg-center flex-column flex-lg-row">
                     @guest
-                        <a class="nav-link dropdown-toggle textColor1" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle textColor1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             {{ __('ui.hello') }} {{ __('ui.login') }}
                         </a>
                         <ul class="dropdown-menu dropdownUser">
@@ -78,8 +71,8 @@
                             <li><a class="dropdown-item" href="#">{{ __('ui.faq') }}</a></li>
                         </ul>
                     @else
-                        <a class="nav-link dropdown-toggle login textColor1 d-flex align-items-center" href="#"
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle login textColor1 d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
                             <span class="revisor-name text-white">{{ __('ui.hello') }}
                                 {{ ucWords(Auth::user()->name) }}
                                 @if (\App\Models\Article::toBeRevisedCount() != null && Auth::user()->is_revisor)
@@ -93,8 +86,7 @@
                             @if (Auth::user()->is_revisor)
                                 <li>
                                     <a href="{{ route('revisor.index') }}" class="dropdown-item">{{ __('ui.btnRevisor') }}
-                                        <span
-                                            class="badge bg-danger">{{ \App\Models\Article::toBeRevisedCount() }}</span></a>
+                                        <span class="badge bg-danger">{{ \App\Models\Article::toBeRevisedCount() }}</span></a>
                                 </li>
                             @endif
                             <li><a href="{{ route('article.create') }}" class="dropdown-item">{{ __('ui.btnAddAds') }}</a>
@@ -114,12 +106,10 @@
                     @endguest
                 </li>
                 <li class="nav-item ms-2 me-4 d-flex justify-content-end order-3 align-items-center">
-                    <a class="nav-link pe-3 ps-0 py-0" data-bs-toggle="offcanvas" href="#offcanvasExample"
-                        role="button" aria-controls="offcanvasExample">
+                    <a class="nav-link pe-3 ps-0 py-0" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
                         <i class="bi bi-cart text-white fs-2" id="carrelloIcona"></i>
 
-                        <span class="bg-danger cartCount text-center text-white " id="cartCount"
-                            style="">0</span>
+                        <span class="bg-danger cartCount text-center text-white " id="cartCount" style="">0</span>
                     </a>
                 </li>
             </ul>

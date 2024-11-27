@@ -6,22 +6,18 @@
                     <h1 class="mb-4 fw-bold text-center">{{ __('ui.noReview') }}.</h1>
                 @endif
                 @if (session()->has('message'))
-                    <div
-                        class="col-12 text text-center mb-2 d-flex flex-column justify-content-center align-items-center">
+                    <div class="col-12 text text-center mb-2 d-flex flex-column justify-content-center align-items-center">
                         <div class="row justify-content-center d-flex flex-column w-100">
-                            <div
-                                class="col-12 mt-2 d-flex align-items-center justify-content-evenly alert alert-success text-center shadow rounded">
+                            <div class="col-12 mt-2 d-flex align-items-center justify-content-evenly alert alert-success text-center shadow rounded">
                                 {{ session('message') }}
                             </div>
-                            <div
-                                class="col-12  d-flex align-items-center p-2 justify-content-evenly alert alert-warning text-center shadow rounded">
+                            <div class="col-12  d-flex align-items-center p-2 justify-content-evenly alert alert-warning text-center shadow rounded">
                                 <form action="{{ route('undoSetArticle') }}" method="POST">
                                     @csrf
                                     @method('PATCH')
                                     <div class="btnCustom d-flex justify-content-center align-items-center ">
                                         <p class="m-0 alert p-0 me-3">{{ __('ui.undoChange') }}</p>
-                                        <button
-                                            class="btnCustomIcon ms-1 d-flex justify-content-center align-items-center">
+                                        <button class="btnCustomIcon ms-1 d-flex justify-content-center align-items-center">
                                             <i class="bi mt-1  bi-arrow-clockwise fs-4 fw-bold text-white"></i>
                                         </button>
                                     </div>
@@ -54,20 +50,14 @@
                                         </div> --}}
                                 <div class="col-md-6">
                                     <div class="shadow">
-                                        <img src="{{ $image->getUrl(1000, 1000) }}" class="card-img-top"
-                                            alt="Immagine {{ $key + 1 }}">
+                                        <img src="{{ $image->getUrl(1000, 1000) }}" class="card-img-top" alt="Immagine {{ $key + 1 }}">
                                         <div class="">
                                             <p class="mb-1 text-center">
-                                                <span class="badge   {{ $image->adult }}"><span
-                                                        class="ms-1">Adult</span></span>
-                                                <span class="badge   {{ $image->violence }}"><span
-                                                        class="ms-1">Violence</span></span>
-                                                <span class="badge   {{ $image->spoof }}"><span
-                                                        class="ms-1">Spoof</span></span>
-                                                <span class="badge   {{ $image->racy }}"><span
-                                                        class="ms-1">Racy</span></span>
-                                                <span class="badge   {{ $image->medical }}"><span
-                                                        class="ms-1">Medical</span></span>
+                                                <span class="badge   {{ $image->adult }}"><span class="ms-1">Adult</span></span>
+                                                <span class="badge   {{ $image->violence }}"><span class="ms-1">Violence</span></span>
+                                                <span class="badge   {{ $image->spoof }}"><span class="ms-1">Spoof</span></span>
+                                                <span class="badge   {{ $image->racy }}"><span class="ms-1">Racy</span></span>
+                                                <span class="badge   {{ $image->medical }}"><span class="ms-1">Medical</span></span>
                                             </p>
                                         </div>
                                     </div>
@@ -80,18 +70,16 @@
                         <div class="col-12 d-flex  p-3 flex-column justify-content-evenly cardCart ps-0 pe-0 ">
                             <div class="col-12 d-flex flex-column justify-content-between text-dark">
                                 <div class="d-flex  align-items-center col-12 ">
-                                    <h4 class="d-flex  my-0 fst-italic"><span class="fw-bold w-100 d-block"
-                                            id="cardTitle">
+                                    <h4 class="d-flex  my-0 fst-italic"><span class="fw-bold w-100 d-block" id="cardTitle">
                                             {{ ucfirst($article_to_check->title) }}
                                         </span>
                                     </h4>
                                 </div>
                                 <hr class="my-1 mt-2 ">
-                                <div class="scrollspy-example text-black divDescriptionCardRev2 mb-3 "
-                                    data-bs-spy="scroll" data-bs-smooth-scroll="true" tabindex="0">
+                                <div class="scrollspy-example text-black divDescriptionCardRev2 mb-3 " data-bs-spy="scroll" data-bs-smooth-scroll="true"
+                                    tabindex="0">
                                     <h6 class="fst-italic"></h6>
-                                    <span class="fw-bold"
-                                        id="cardDescription">{{ ucfirst($article_to_check->description) }}</span>
+                                    <span class="fw-bold" id="cardDescription">{{ ucfirst($article_to_check->description) }}</span>
                                 </div>
                                 <hr class="my-1">
                                 <div class="d-flex justify-content-between my-2 ">
@@ -99,13 +87,11 @@
                                         <a href="" class="fw-bold categoryBadge"
                                             id="cardCategory">#{{ ucfirst(__('ui.' . $article_to_check->category->name)) }}</a>
                                     </h6>
-                                    <h6 class="fst-italic  mb-0">{{ __('ui.price') }}: <span class="fw-bold"
-                                            id="cardPrice">{{ $article_to_check->price }}
+                                    <h6 class="fst-italic  mb-0">{{ __('ui.price') }}: <span class="fw-bold" id="cardPrice">{{ $article_to_check->price }}
                                             €</span> </h6>
                                 </div>
                                 <hr class="my-1 ">
-                                <h6 class="fst-italic mb-2 ">{{ __('ui.author') }}: <span
-                                        class="fw-bold">{{ ucfirst($article_to_check->user->name) }}</span>
+                                <h6 class="fst-italic mb-2 ">{{ __('ui.author') }}: <span class="fw-bold">{{ ucfirst($article_to_check->user->name) }}</span>
                                 </h6>
                                 <div class="d-none">
                                     <h6 class="text-dark px-3 m-0 " id="cardTime">{{ $article_to_check->created_at }}

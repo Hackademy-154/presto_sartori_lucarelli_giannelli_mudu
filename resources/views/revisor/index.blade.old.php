@@ -52,7 +52,8 @@
                         class="row justify-content-center w-100 align-items-center  flex-lg-row cardShowRevisor py-4 py-md-3 mt-4">
 
                         <!-- 6 img per l'articolo -->
-                        <div class="col-6 d-flex">
+                        <div 
+                        class="col-6 d-flex">
                             <div class="row justify-content-evenly align-items-center flex-column w-100">
                                 @if ($article_to_check->images->count())
                                     @foreach ($article_to_check->images as $key => $image)
@@ -68,7 +69,7 @@
                                                 @endif
                                             </div>
                                         </div> --}}
-                                        
+
 
                                         <div
                                             class="col-12 mb-2 img-dettaglioRevisor  d-flex justify-content-center align-items-center px-0 mx-2">

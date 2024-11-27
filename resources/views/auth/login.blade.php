@@ -5,17 +5,17 @@
                 <h2 class="fs-1 mb-2 text-center colorPetrolio fw-bold">{{ __('ui.login') }}</h2>
                 <div class="d-flex justify-content-center mb-2">
                     <!-- Facebook -->
-                    <a data-mdb-ripple-init class="btnCustom2 btn-outline btn-floating m-1" href="#!"
-                        role="button"><i class="fab bi-facebook fw-bold fs-4"></i></a>
+                    <a data-mdb-ripple-init class="btnCustom2 btn-outline btn-floating m-1" href="#!" role="button"><i
+                            class="fab bi-facebook fw-bold fs-4"></i></a>
                     <!-- Twitter -->
-                    <a data-mdb-ripple-init class="btnCustom2 btn-outline btn-floating m-1" href="#!"
-                        role="button"><i class="fab bi-twitter fw-bold fs-4"></i></a>
+                    <a data-mdb-ripple-init class="btnCustom2 btn-outline btn-floating m-1" href="#!" role="button"><i
+                            class="fab bi-twitter fw-bold fs-4"></i></a>
                     <!-- Google -->
-                    <a data-mdb-ripple-init class="btnCustom2 btn-outline btn-floating m-1" href="#!"
-                        role="button"><i class="fab bi-google fw-bold fs-4"></i></a>
+                    <a data-mdb-ripple-init class="btnCustom2 btn-outline btn-floating m-1" href="#!" role="button"><i
+                            class="fab bi-google fw-bold fs-4"></i></a>
                     <!-- Instagram -->
-                    <a data-mdb-ripple-init class="btnCustom2 btn-outline btn-floating m-1" href="#!"
-                        role="button"><i class="fab bi-instagram fw-bold fs-4"></i></a>
+                    <a data-mdb-ripple-init class="btnCustom2 btn-outline btn-floating m-1" href="#!" role="button"><i
+                            class="fab bi-instagram fw-bold fs-4"></i></a>
                 </div>
                 <form action="{{ route('login') }}" method="POST">
                     @csrf

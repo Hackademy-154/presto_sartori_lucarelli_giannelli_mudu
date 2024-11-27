@@ -5,17 +5,17 @@
                 <h2 class="fs-1 mb-3 text-center fw-bold">{{ __('ui.register') }}</h2>
                 <div class="d-flex justify-content-center">
                     <!-- Facebook -->
-                    <a data-mdb-ripple-init class="btnCustom2 btn-outline btn-floating m-1" href="#!"
-                        role="button"><i class="fab bi-facebook fw-bold fs-4"></i></a>
+                    <a data-mdb-ripple-init class="btnCustom2 btn-outline btn-floating m-1" href="#!" role="button"><i
+                            class="fab bi-facebook fw-bold fs-4"></i></a>
                     <!-- Twitter -->
-                    <a data-mdb-ripple-init class="btnCustom2 btn-outline btn-floating m-1" href="#!"
-                        role="button"><i class="fab bi-twitter fw-bold fs-4"></i></a>
+                    <a data-mdb-ripple-init class="btnCustom2 btn-outline btn-floating m-1" href="#!" role="button"><i
+                            class="fab bi-twitter fw-bold fs-4"></i></a>
                     <!-- Google -->
-                    <a data-mdb-ripple-init class="btnCustom2 btn-outline btn-floating m-1" href="#!"
-                        role="button"><i class="fab bi-google fw-bold fs-4"></i></a>
+                    <a data-mdb-ripple-init class="btnCustom2 btn-outline btn-floating m-1" href="#!" role="button"><i
+                            class="fab bi-google fw-bold fs-4"></i></a>
                     <!-- Instagram -->
-                    <a data-mdb-ripple-init class="btnCustom2 btn-outline btn-floating m-1" href="#!"
-                        role="button"><i class="fab bi-instagram fw-bold fs-4"></i></a>
+                    <a data-mdb-ripple-init class="btnCustom2 btn-outline btn-floating m-1" href="#!" role="button"><i
+                            class="fab bi-instagram fw-bold fs-4"></i></a>
                 </div>
                 <form action="{{ route('register') }}" method="POST">
                     @csrf
@@ -42,8 +42,7 @@
                     </div>
                     <div class="d-flex flex-column ">
                         <label class="fw-bold"for="password_confirmation">{{ __('ui.confirm') }} Password:</label>
-                        <input type="password" name="password_confirmation"
-                            class=" p-1 @error('password') is-invalid @enderror">
+                        <input type="password" name="password_confirmation" class=" p-1 @error('password') is-invalid @enderror">
                         @error('password')
                             <div class="text-danger fst-italic">{{ __('ui.passwordError') }}</div>
                         @enderror

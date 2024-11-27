@@ -10,16 +10,15 @@
 
     <div class="mb-3 text-start d-flex flex-column">
         <label for="title" class="text-start fs-6 fw-bold">{{ __('ui.title') }}</label>
-        <input type="text" class=" p-1  @error('title') is-invalid @enderror" id="title" wire:model.blur="title"
-            placeholder="{{ __('ui.placeholder1') }}">
+        <input type="text" class=" p-1  @error('title') is-invalid @enderror" id="title" wire:model.blur="title" placeholder="{{ __('ui.placeholder1') }}">
         @error('title')
             <p class="fst-italic text-danger mb-0">{{ __('ui.placeholder1') }}</p>
         @enderror
     </div>
     <div class="mb-3 text-start d-flex flex-column">
         <label for="description" class="text-start fs-6 fw-bold">{{ __('ui.description') }}</label>
-        <textarea cols="30" rows="5" class="p-1  px-1 @error('description') is-invalid @enderror" id="description"
-            wire:model.blur="description" placeholder="{{ __('ui.placeholder2') }}"></textarea>
+        <textarea cols="30" rows="5" class="p-1  px-1 @error('description') is-invalid @enderror" id="description" wire:model.blur="description"
+            placeholder="{{ __('ui.placeholder2') }}"></textarea>
         @error('description')
             <p class="fst-italic text-danger mb-0">{{ __('ui.placeholder2') }}</p>
         @enderror
@@ -46,9 +45,9 @@
         @enderror
     </div>
     <div class="mb-3 custom-file-button d-flex align-items-center">
-        <label for="fileButton" class="labelFile me-2">{{ __('ui.file')}}</label>
-        <input name="fileButton" type="file" wire:model.live="temporary_images" multiple
-            class="sp w-100 @error('temporary_images.*') is-invalid @enderror" placeholder="Img/" id="">
+        <label for="fileButton" class="labelFile me-2">{{ __('ui.file') }}</label>
+        <input name="fileButton" type="file" wire:model.live="temporary_images" multiple class="sp w-100 @error('temporary_images.*') is-invalid @enderror"
+            placeholder="Img/" id="">
         @error('temporary_images.*')
             <p class="fst-italic text-danger mb-0">{{ $message }}</p>
         @enderror
@@ -64,8 +63,7 @@
                 <div class="row  rounded  ">
                     @foreach ($images as $key => $image)
                         <div class="col-4 d-flex flex-column align-items-center my-3 p-0">
-                            <div class="img-preview mx-auto shadow "
-                                style="background-image: url({{ $image->temporaryUrl() }});"></div>
+                            <div class="img-preview mx-auto shadow " style="background-image: url({{ $image->temporaryUrl() }});"></div>
                             <button type="button" class="shadow btnTrash bg-danger text-white w-25  "
                                 wire:click="removeImage({{ $key }})">{{ __('ui.remove') }}</button>
                         </div>
