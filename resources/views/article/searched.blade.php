@@ -5,28 +5,25 @@
         @else
             <div class="container">
     @endif
-    <div class="row py-5 justify-content-center align-items-center text-center ">
-
-    </div>
-    <div class="row  py-1">
-        <div class="col-12 d-flex align-items-center  w-100">
-            <a class="colorPetrolio fw-bold" href="{{ route('homepage') }}">Home <span class="mx-0 mx-md-1">></span></a>
-            @if ($query)
-                <a class="colorPetrolio fw-bold" href="{{ route('article.index') }}"> {{ __('ui.articles')}} <span
+    <div class="row py-5 justify-content-center">
+        <div class="row  py-1">
+            <div class="col-12 d-flex align-items-center  w-100">
+                <a class="colorPetrolio fw-bold" href="{{ route('homepage') }}">Home <span class="mx-0 mx-md-1">></span></a>
+                @if ($query)
+                    <a class="colorPetrolio fw-bold" href="{{ route('article.index') }}"> {{ __('ui.articles')}} <span
+                                class="mx-0 mx-md-1">></span></a>
+                    <a class="colorPetrolio fw-bold" href=""> {{ $category = \App\Models\Category::where('name', $query)->first() ? __('ui.' . $query) : ucfirst($query) }} <span
+                                class="mx-0 mx-md-1">></span></a>
+                    
+                @else
+                    <a class="colorPetrolio fw-bold" href="{{ route('article.index') }}"> {{ __('ui.articles')}} <span
                         class="mx-0 mx-md-1">></span></a>
-                <a class="colorPetrolio fw-bold" href=""> {{ $category = \App\Models\Category::where('name', $query)->first() ? __('ui.' . $query) : ucfirst($query) }} <span
+                        <span class="colorPetrolio fw-bold"> {{ __('ui.allArticles') }}  </span> <span
                         class="mx-0 mx-md-1">></span></a>
-            
-            @else
-                <a class="colorPetrolio fw-bold" href="{{ route('article.index') }}"> {{ __('ui.articles')}} <span
-                class="mx-0 mx-md-1">></span></a>
-                <span class="colorPetrolio fw-bold"> {{ __('ui.allArticles') }}  </span> <span
-                class="mx-0 mx-md-1">></span></a>
-            @endif
-            <h6 class="fw-bold mb-0"> {{ count($articles) }} {{ __('ui.results')}}</h6>
+                @endif
+                    <h6 class="fw-bold mb-0"> {{ count($articles) }} {{ __('ui.results')}}</h6>
+            </div>
         </div>
-    </div>
-    <div class="row justify-content-center">
         <div class="col-12 p-3 pt-3 pb-1 d-flex flex-md-row justify-content-center justify-content-md-end  align-items-center my-3 incipit">
             <div class=" row d-flex flex-column flex-md-row justify-content-center justify-content-md-evenly align-items-center w-100 criteriContainer">
                 <div class="col-4 d-flex flex-column justify-content-center align-items-center align-items-md-start criterio mx-0 px-lg-2">
@@ -48,9 +45,8 @@
                 </div>
                 <div class="col-4 d-flex flex-column justify-content-center align-items-center align-items-md-start criterio mx-0 px-lg-2">
                     <div class="row mb-2 w-100 d-flex justify-content-center ">
-                        <h6 class="mx-3  text-center text-white fw-bold py-1 bg_navbar1">{{ __('UI.alphOrder')}}</h6>
-                        <div
-                            class="col-5 mx-md-0 mx-lg-3 form-check form-check-inline d-flex justify-content-center text-center">
+                        <h6 class="mx-3  text-center text-white fw-bold py-1 bg_navbar1">{{ __('ui.alphOrder')}}</h6>
+                        <div class="col-5 mx-md-0 mx-lg-3 form-check form-check-inline d-flex justify-content-center text-center">
                             <input class="form-check-input text-center" type="radio" name="inlineRadioOptions"
                                 id="nameAsc" value="nameAsc">
                             <label class="form-check-label text-center ms-1" for="nameAsc">A-Z</label>
@@ -63,17 +59,14 @@
                 </div>
                 <div class="col-4 d-flex flex-column justify-content-center align-items-center align-items-md-start criterio mx-0 px-lg-2">
                     <div class="row mb-2 w-100 d-flex justify-content-center">
-                        <h6 class="mx-3 mx-md-0 mx-lg-3 text-center text-white fw-bold py-1 bg_navbar1">{{ __('UI.date')}}</h6>
-                        <div
-                            class="col-5 mx-md-0 mx-lg-3 form-check form-check-inline d-flex justify-content-center  text-center">
+                        <h6 class="mx-3 mx-md-0 mx-lg-3 text-center text-white fw-bold py-1 bg_navbar1">{{ __('ui.date')}}</h6>
+                        <div class="col-5 mx-md-0 mx-lg-3 form-check form-check-inline d-flex justify-content-center  text-center">
                             <input class="form-check-input text-center" type="radio" name="inlineRadioOptions"
                                 id="timeAsc" value="timeAsc">
                             <label class="form-check-label text-center ms-1" for="timeAsc">{{ __('ui.new')}}</label>
                         </div>
-                        <div
-                            class="col-5 mx-md-0 mx-lg-3 form-check form-check-inline d-flex  m-0 p-0 justify-content-center ">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="timeDesc"
-                                value="timeDesc">
+                        <div class="col-5 mx-md-0 mx-lg-3 form-check form-check-inline d-flex  m-0 p-0 justify-content-center ">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="timeDesc" value="timeDesc">
                             <label class="form-check-label ms-1" for="timeDesc">{{ __('ui.old')}}</label>
                         </div>
                     </div>
@@ -81,8 +74,7 @@
             </div>
         </div>
     </div>
-
-    <div class="row height-custom justify-content-center align-items-center py-5 pt-2 ">
+    <div class="row justify-content-evenly align-items-center py-5 pt-2" id="wrapperIndex">
         @forelse($articles as $article)
             <x-cardArticleIndex :article="$article" :category="$article->category" :isNew="in_array($article->id, $latestArticles)"></x-cardArticleIndex>
 
