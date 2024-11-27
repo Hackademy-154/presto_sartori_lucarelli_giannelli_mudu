@@ -61,10 +61,8 @@ class GoogleVisionLabelImage implements ShouldQueue
 
             $i->labels = $result;
             $i->save();
-            Log::info("Labels salvati per immagine ID {$this->article_image_id}: " . json_encode($result));
-        } else{
-            Log::warning("Nessuna etichetta trovata per immagine ID {$this->article_image_id}");
-        }
+            
+        } 
         $imageAnnotator->close();
     }
 }
