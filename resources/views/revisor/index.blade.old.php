@@ -68,6 +68,7 @@
                                                 @endif
                                             </div>
                                         </div> --}}
+                                        
 
                                         <div
                                             class="col-12 mb-2 img-dettaglioRevisor  d-flex justify-content-center align-items-center px-0 mx-2">
