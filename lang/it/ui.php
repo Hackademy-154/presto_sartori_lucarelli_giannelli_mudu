@@ -121,4 +121,5 @@ return [
     'new' => 'Recenti',
     'old' => 'Non recenti',
 
+    'articlesAddedBy' => 'Altri articoli inseriti da',
 ];

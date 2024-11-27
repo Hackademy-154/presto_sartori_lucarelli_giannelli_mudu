@@ -118,4 +118,5 @@ return [
     'new' => 'Recientes',
     'old' => 'No recientes',
 
+    'articlesAddedBy' => 'Otros artículos añadidos por',
 ];

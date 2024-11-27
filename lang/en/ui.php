@@ -117,4 +117,6 @@ return [
     'date' => 'DATE OF ENTRY',
     'new' => 'New',
     'old' => 'Older',
+
+    'articlesAddedBy' => 'Other articles added by',
 ];

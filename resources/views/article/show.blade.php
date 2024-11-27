@@ -61,7 +61,7 @@
                 <hr class="mt-5">
                 <div class="col-12 text-start my-4">
                     <h5>
-                        </span> Altri articoli inseriti da: <span>{{ ucfirst($article->user->name) }}</span>
+                        </span> {{ __('ui.articlesAddedBy')}}: <span>{{ ucfirst($article->user->name) }}</span>
                     </h5>
                 </div>
                 <div class="row justify-content-start align-items-center">
@@ -79,7 +79,7 @@
                                         <h5 class="card-title">{{ ucfirst($userArticle->title) }}</h5>
                                         <hr class="my-2">
                                         <p class="fst-italic d-none d-lg-block my-1">
-                                        <p href="" class="text-dark" id="">#{{ ucfirst(__($userArticle->category->name)) }}</p>
+                                        <p href="" class="text-dark" id="">#{{ ucfirst($userArticle->category->name) }}</p>
                                         </p>
                                         <p class="mb-0">{{ $userArticle->price }} €</p>
                                         <div class="d-flex justify-content-center align-items-center">
