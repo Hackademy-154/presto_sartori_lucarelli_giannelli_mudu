@@ -56,8 +56,8 @@ class CreateArticleForm extends Component
                 // dispatch(new GoogleVisionSafeSearch($newImage->id));
                 // dispatch(new GoogleVisionLabelImage($newImage->id));
                 RemoveFaces::withChain([
-                    new GoogleVisionSafeSearch($newImage->id),
-                    new GoogleVisionLabelImage($newImage->id),
+                    // new GoogleVisionSafeSearch($newImage->id),
+                    // new GoogleVisionLabelImage($newImage->id),
                     new ResizeImage($newImage->path, 1000, 1000 )
                 ])->dispatch($newImage->id);
             }
@@ -65,6 +65,7 @@ class CreateArticleForm extends Component
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
             session()->flash('success', 'Annuncio inserito');
             $this->reset();
+            return redirect()->to('/create/article');
         }
         else{
             session()->flash('nosuccess', 'Inserisci un massimo di sei immagini');
