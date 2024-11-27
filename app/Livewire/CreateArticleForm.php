@@ -56,9 +56,9 @@ class CreateArticleForm extends Component
                 // dispatch(new GoogleVisionSafeSearch($newImage->id));
                 // dispatch(new GoogleVisionLabelImage($newImage->id));
                 RemoveFaces::withChain([
-                    new ResizeImage($newImage->path, 1000, 1000 ),
                     new GoogleVisionSafeSearch($newImage->id),
-                    new GoogleVisionLabelImage($newImage->id)
+                    new GoogleVisionLabelImage($newImage->id),
+                    new ResizeImage($newImage->path, 1000, 1000 )
                 ])->dispatch($newImage->id);
             }
 
