@@ -1,8 +1,7 @@
 <x-layout>
-    <div class="container spazioNav2 margin-footer">
-        <div class="row spazioMinimo  justify-content-center align-items-center">
-            <div class="col-12 d-flex
-            flex-column justify-content-center align-items-center">
+    <div class="container spazioNav2 margin-footer2">
+        <div class="row justify-content-center align-items-start">
+            <div class="col-12 d-flex flex-column justify-content-center align-items-center">
                 @if (!$article_to_check)
                     <h1 class="mb-4 fw-bold text-center">{{ __('ui.noReview') }}.</h1>
                 @endif
@@ -30,28 +29,14 @@
                 @if (!$article_to_check)
                     <a href="{{ route('homepage') }}" class="btn btn-success w-75">{{ __('ui.btnHP') }}</a>
                 @endif
-                <!-- controllo per verificare se c'è un articolo da revisionare -->
-                @if ($article_to_check)
-                    <!-- ci sono articoli da rev -->
-
-
-                    <h1 class="text-dark text-center   fw-bold">{{ __('ui.dashboardRevisor') }}</h1>
-                    @if (session()->has('messageUndo'))
-                        <div class="row justify-content-center">
-                            <div class="col-12 mb-3 alert alert-warning text-center shadow rounded">
-                                {{ session('messageUndo') }}
-                            </div>
-                        </div>
-                    @endif
-                    <div
-                        class="row justify-content-center w-100 align-items-center  flex-lg-row cardShowRevisor py-4 py-md-3 mt-4">
-
-                        <!-- 6 img per l'articolo -->
-                        <div class="col-6 d-flex">
-                            <div class="row justify-content-evenly align-items-center flex-column w-100">
-                                @if ($article_to_check->images->count())
-                                    @foreach ($article_to_check->images as $key => $image)
-                                        {{-- <div>
+            </div>
+            @if ($article_to_check)
+                <h1 class="text-center fw-bold mb-4">{{ __('ui.dashboardRevisor') }}</h1>
+                <div class="row justify-content-center ">
+                    <div class="col-12 w-100 col-lg-8 p-3 d-flex flex-column cambiacolore">
+                        <div class="row gy-4">
+                            @foreach ($article_to_check->images as $key => $image)
+                                {{-- <div>
                                             <div class="card-body">
                                                 <h5>Labels</h5>
                                                 @if ($image->labels)
@@ -75,9 +60,9 @@
                                                 <span class="badge   {{ $image->medical }}"><span class="ms-1">Medical</span></span>
                                             </p>
                                         </div>
-                                    @endforeach
-                                @endif
-                            </div>
+                                    </div>
+                                </div>
+                            @endforeach
                         </div>
                         <hr>
                     </div>
@@ -112,42 +97,23 @@
                                     <h6 class="text-dark px-3 m-0 " id="cardTime">{{ $article_to_check->created_at }}
                                     </h6>
                                 </div>
-                                <hr class="my-2">
-                                <h6 class="fst-italic mb-2">{{ __('ui.price') }}: <span
-                                        class="fw-bold">{{ $article_to_check->price }}
-                                        €</span> </h6>
-                                <hr class="my-2">
-                                <h6 class="fst-italic mb-3">{{ __('ui.author') }}: <span
-                                        class="fw-bold">{{ $article_to_check->user->name }}</span> </h6>
                             </div>
-                            <div class="d-flex justify-content-between align-items-start ">
-                                <div class="d-flex">
-                                    <form action="{{ route('reject', ['article' => $article_to_check]) }}"
-                                        method="POST">
-                                        @csrf
-                                        @method('PATCH')
-                                        <button class="btn btn-danger  ">{{ __('ui.reject') }}</button>
-                                    </form>
-                                </div>
-                                <div class="d-flex">
-                                    <form action="{{ route('accept', ['article' => $article_to_check]) }}"
-                                        method="POST">
-                                        @csrf
-                                        @method('PATCH')
-                                        <button class="btn btn-success w-100 ">{{ __('ui.accept') }}</button>
-                                    </form>
-                                </div>
+                            <div class="col-12 d-flex justify-content-between mt-2">
+                                <form action="{{ route('reject', ['article' => $article_to_check]) }}" method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <button class="btn btn-danger w-100">{{ __('ui.reject') }}</button>
+                                </form>
+                                <form action="{{ route('accept', ['article' => $article_to_check]) }}" method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <button class="btn btn-success w-100">{{ __('ui.accept') }}</button>
+                                </form>
                             </div>
                         </div>
                     </div>
-            </div>
-            <hr class="mt-3 mb-0 d-lg-none">
-            <!-- <div class="col-12 col-md-5 img-container text-center">
-                            <img class="imgShow" src="{{ $image->getUrl(1000, 1000) }}" alt="">
-                        </div> -->
-
+                </div>
+            @endif
         </div>
-        @endif
-    </div>
     </div>
 </x-layout>
