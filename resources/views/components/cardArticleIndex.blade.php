@@ -1,6 +1,6 @@
 <div class="col-12 d-flex justify-content-center cardnew sfumatura  ps-lg-1 pe-0 p-0 p-md-2 pb-lg-2 my-2 ">
     @if ($isNew)
-        <span class="badge newArticle">Nuovo Annuncio</span>
+        <span class="badge newArticle">{{ __('ui.newAd')}}</span>
     @endif
     <div class="row justify-content-evenly py-1 justify-content-md-between justify-content-lg-center align-items-center w-100 px-1">
         <div class="swiper3 mySwiper3 p-0 col-3 d-flex justify-content-center align-items-center">

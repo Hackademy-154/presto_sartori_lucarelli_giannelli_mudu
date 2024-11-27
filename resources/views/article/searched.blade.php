@@ -12,16 +12,18 @@
         <div class="col-12 d-flex align-items-center  w-100">
             <a class="colorPetrolio fw-bold" href="{{ route('homepage') }}">Home <span class="mx-0 mx-md-1">></span></a>
             @if ($query)
-                <a class="colorPetrolio fw-bold" href="{{ route('article.index') }}"> {{ __('ui.articles') }} <span class="mx-0 mx-md-1">></span></a>
-                <a class="colorPetrolio fw-bold" href=""> {{ ucfirst($query) }} <span class="mx-0 mx-md-1">></span></a>
-            @elseif (isset($category) && $category)
-                <a class="colorPetrolio fw-bold" href="{{ route('article.byCategory', compact('category')) }}">
-                    {{ ucfirst(__('ui.' . $category->name)) }} <span class="mx-0 mx-md-1">></span></a>
-                <a class="colorPetrolio fw-bold" href="{{ route('article.index') }}"> Articoli <span class="mx-0 mx-md-1">></span></a>
-                <a class="colorPetrolio fw-bold" href="">{{ ucfirst($query) }}<span class="mx-0 mx-md-1">></span></a>
+                <a class="colorPetrolio fw-bold" href="{{ route('article.index') }}"> {{ __('ui.articles')}} <span
+                        class="mx-0 mx-md-1">></span></a>
+                <a class="colorPetrolio fw-bold" href=""> {{ $category = \App\Models\Category::where('name', $query)->first() ? __('ui.' . $query) : ucfirst($query) }} <span
+                        class="mx-0 mx-md-1">></span></a>
+            
             @else
+                <a class="colorPetrolio fw-bold" href="{{ route('article.index') }}"> {{ __('ui.articles')}} <span
+                class="mx-0 mx-md-1">></span></a>
+                <span class="colorPetrolio fw-bold"> {{ __('ui.allArticles') }}  </span> <span
+                class="mx-0 mx-md-1">></span></a>
             @endif
-            <h6 class="fw-bold mb-0">{{ count($articles) }} {{ __('ui.results') }}</h6>
+            <h6 class="fw-bold mb-0"> {{ count($articles) }} {{ __('ui.results')}}</h6>
         </div>
     </div>
     <div class="row justify-content-center">
@@ -29,25 +31,28 @@
             <div class=" row d-flex flex-column flex-md-row justify-content-center justify-content-md-evenly align-items-center w-100 criteriContainer">
                 <div class="col-4 d-flex flex-column justify-content-center align-items-center align-items-md-start criterio mx-0 px-lg-2">
                     <div class="row mb-2 w-100 d-flex justify-content-center">
-                        <h6 class="mx-3 mx-md-0 mx-lg-3 text-center text-white fw-bold py-1 bg_navbar1">ORDINE
-                            PREZZO
+                        <h6 class="mx-3 mx-md-0 mx-lg-3 text-center text-white fw-bold py-1 bg_navbar1"> {{ __('ui.priceOrder')}}
                         </h6>
-                        <div class="col-5 col-md-6 col-lg-5 mx-md-0 mx-lg-3  form-check form-check-inline d-flex justify-content-center text-center">
-                            <input class="form-check-input text-center" type="radio" name="inlineRadioOptions" id="priceAsc" value="priceAsc">
-                            <label class="form-check-label text-center ms-1" for="priceAsc">Crescente</label>
+                        <div
+                            class="col-5 col-md-6 col-lg-5 mx-md-0 mx-lg-3  form-check form-check-inline d-flex justify-content-center text-center">
+                            <input class="form-check-input text-center" type="radio" name="inlineRadioOptions"
+                                id="priceAsc" value="priceAsc">
+                            <label class="form-check-label text-center ms-1" for="priceAsc">{{ __('ui.asc')}}</label>
                         </div>
                         <div class="col-5 mx-md-0 mx-lg-3 form-check form-check-inline d-flex justify-content-center">
-                            <input class="form-check-input ms-2" type="radio" name="inlineRadioOptions" id="priceDesc" value="priceDesc">
-                            <label class="form-check-label ms-1" for="priceDesc">Decrescente</label>
+                            <input class="form-check-input ms-2" type="radio" name="inlineRadioOptions" id="priceDesc"
+                                value="priceDesc">
+                            <label class="form-check-label ms-1" for="priceDesc">{{ __('ui.desc')}}</label>
                         </div>
                     </div>
                 </div>
                 <div class="col-4 d-flex flex-column justify-content-center align-items-center align-items-md-start criterio mx-0 px-lg-2">
                     <div class="row mb-2 w-100 d-flex justify-content-center ">
-                        <h6 class="mx-3  text-center text-white fw-bold py-1 bg_navbar1">ORDINE
-                            ALFABETICO</h6>
-                        <div class="col-5 mx-md-0 mx-lg-3 form-check form-check-inline d-flex justify-content-center text-center">
-                            <input class="form-check-input text-center" type="radio" name="inlineRadioOptions" id="nameAsc" value="nameAsc">
+                        <h6 class="mx-3  text-center text-white fw-bold py-1 bg_navbar1">{{ __('UI.alphOrder')}}</h6>
+                        <div
+                            class="col-5 mx-md-0 mx-lg-3 form-check form-check-inline d-flex justify-content-center text-center">
+                            <input class="form-check-input text-center" type="radio" name="inlineRadioOptions"
+                                id="nameAsc" value="nameAsc">
                             <label class="form-check-label text-center ms-1" for="nameAsc">A-Z</label>
                         </div>
                         <div class="col-5 mx-md-0 mx-lg-3 form-check form-check-inline d-flex justify-content-center ">
@@ -58,15 +63,18 @@
                 </div>
                 <div class="col-4 d-flex flex-column justify-content-center align-items-center align-items-md-start criterio mx-0 px-lg-2">
                     <div class="row mb-2 w-100 d-flex justify-content-center">
-                        <h6 class="mx-3 mx-md-0 mx-lg-3 text-center text-white fw-bold py-1 bg_navbar1">DATA
-                            INSERIMENTO</h6>
-                        <div class="col-5 mx-md-0 mx-lg-3 form-check form-check-inline d-flex justify-content-center  text-center">
-                            <input class="form-check-input text-center" type="radio" name="inlineRadioOptions" id="timeAsc" value="timeAsc">
-                            <label class="form-check-label text-center ms-1" for="timeAsc">Recenti</label>
+                        <h6 class="mx-3 mx-md-0 mx-lg-3 text-center text-white fw-bold py-1 bg_navbar1">{{ __('UI.date')}}</h6>
+                        <div
+                            class="col-5 mx-md-0 mx-lg-3 form-check form-check-inline d-flex justify-content-center  text-center">
+                            <input class="form-check-input text-center" type="radio" name="inlineRadioOptions"
+                                id="timeAsc" value="timeAsc">
+                            <label class="form-check-label text-center ms-1" for="timeAsc">{{ __('ui.new')}}</label>
                         </div>
-                        <div class="col-5 mx-md-0 mx-lg-3 form-check form-check-inline d-flex  m-0 p-0 justify-content-center ">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="timeDesc" value="timeDesc">
-                            <label class="form-check-label ms-1" for="timeDesc">Vecchi</label>
+                        <div
+                            class="col-5 mx-md-0 mx-lg-3 form-check form-check-inline d-flex  m-0 p-0 justify-content-center ">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="timeDesc"
+                                value="timeDesc">
+                            <label class="form-check-label ms-1" for="timeDesc">{{ __('ui.old')}}</label>
                         </div>
                     </div>
                 </div>

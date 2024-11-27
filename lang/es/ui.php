@@ -109,4 +109,13 @@ return [
     'articles' => 'Artículos',
     'results' => 'resultados',
     'file' => 'Eligir archivo',
+
+    'priceOrder' => 'ORDEN DE PRECIO',
+    'asc' => 'Ascendente',
+    'desc' => 'Descendente',
+    'alphOrder' => 'ORDEN ALFABÉTICO',
+    'date' => 'FECHA DE INSERCIÓN',
+    'new' => 'Recientes',
+    'old' => 'No recientes',
+
 ];

@@ -24,11 +24,16 @@ class PublicController extends Controller
             }else {
                 $articles = $art->paginate(10);
             }
-        }else {
+        }elseif ($request->input('query2')) {
             $query = Category::find($request->input('query2'))->name;
             $articles = Article::where('category_id', $request->input('query2'))->orderBy('created_at','desc')->paginate(10);
+        } else {
+            $query = null;
+            $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(10);
         }
+
         $latestArticles = Article::orderBy('created_at','desc')->take(4)->pluck("id")->toArray();
+        
         return view('article.searched', ['articles'=>$articles, 'query'=>$query, 'latestArticles'=>$latestArticles]);
     }
 

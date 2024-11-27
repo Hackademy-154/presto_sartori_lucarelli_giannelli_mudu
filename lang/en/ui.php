@@ -109,4 +109,12 @@ return [
     'articles' => 'Articles',
     'results' => 'results',
     'file' => 'Choose File',
+
+    'priceOrder' => 'PRICE ORDER',
+    'asc' => 'Ascending',
+    'desc' => 'Descending',
+    'alphOrder' => 'ALPHABETICAL ORDER',
+    'date' => 'DATE OF ENTRY',
+    'new' => 'New',
+    'old' => 'Older',
 ];
