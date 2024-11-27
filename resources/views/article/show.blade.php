@@ -70,8 +70,11 @@
                 <div class="row justify-content-evenly align-items-center">
 
                     @foreach ($article->user->articles as $userArticle)
+                    @if ($userArticle->is_accepted)
                         <div class="col-12 col-md-3 m-3">
                             <div class="cardRichiamo sfumatura" style="width: 18rem;">
+                                
+                                
                                 @if ($userArticle->images->isNotEmpty())
                                     <img src="{{ $userArticle->images->first()->getUrl(1000, 1000) }}" class="card-img-top" alt="{{ $userArticle->title }}">
                                 @else
@@ -92,6 +95,7 @@
                                 </div>
                             </div>
                         </div>
+                        @endif
                     @endforeach
                 </div>
             </div>
