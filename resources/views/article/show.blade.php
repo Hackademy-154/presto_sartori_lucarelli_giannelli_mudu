@@ -66,6 +66,7 @@
 
 
     <div class="container">
+
         <div class="row">
             <hr class="mt-5">
             <div class="col-12 text-start my-4">
@@ -73,7 +74,9 @@
                     </span> Guarda tutti gli articoli di <span>{{ ucfirst($article->user->name) }}</span>
                 </h5>
             </div>
+
             <div class="row justify-content-evenly align-items-center">
+
                 @foreach ($article->user->articles as $userArticle)
                 <div class="col-12 col-md-3 m-3">
                     <div class="cardRichiamo sfumatura" style="width: 18rem;">
@@ -94,12 +97,12 @@
                             <div class="d-flex justify-content-center align-items-center">
                                 <a href="{{ route('article.show', $userArticle->id) }}" class="btn btn-warning">{{ __('ui.btnShow')}}</a>
                             </div>
-                        @endforeach
+
+                        </div>
                     </div>
                 </div>
                 @endforeach
             </div>
-
         </div>
     </div>
     </div>
