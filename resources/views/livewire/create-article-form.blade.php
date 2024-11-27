@@ -45,9 +45,18 @@
         @enderror
     </div>
     <div class="mb-3 custom-file-button d-flex align-items-center">
+        @php
+            $currentLang = session('locale', 'it');
+        @endphp
         <label for="fileButton" class="labelFile me-2">{{ __('ui.file') }}</label>
-        <input name="fileButton" type="file" wire:model.live="temporary_images" multiple class="sp w-100 @error('temporary_images.*') is-invalid @enderror"
-            placeholder="Img/" id="">
+        @if ($currentLang == 'it')
+            <input name="fileButton" type="file" wire:model.live="temporary_images" multiple
+                class="sp  w-100 @error('temporary_images.*') is-invalid @enderror" placeholder="Img/" id="">
+        @else
+            <input name="fileButton" type="file" wire:model.live="temporary_images" multiple
+                class="ps w-100 @error('temporary_images.*') is-invalid @enderror" placeholder="Img/" id="">
+        @endif
+
         @error('temporary_images.*')
             <p class="fst-italic text-danger mb-0">{{ $message }}</p>
         @enderror
@@ -84,3 +93,4 @@
         <button type="submit" class="btn btn-success w-25 mt-1">{{ __('ui.btnAdd') }}</button>
     </div>
 </form>
+

@@ -5,6 +5,7 @@ namespace App\Jobs;
 use App\Models\Image;
 use Spatie\Image\Enums\Fit;
 use Illuminate\Bus\Queueable;
+use Illuminate\Support\Facades\Cache;
 use Spatie\Image\Enums\AlignPosition;
 use Illuminate\Queue\SerializesModels;
 use Spatie\Image\Image as SpatieImage;
@@ -32,6 +33,20 @@ class RemoveFaces implements ShouldQueue
      */
     public function handle()
     {
+        //roba nuovo
+        $key = 'google_vision_rate_limit';
+        $limit = 10;
+        $timeFrame = 60;
+          $tries = 5; // Numero massimo di tentativi
+     $backoff = 60; // Attendi 60 secondi tra i tentativi
+
+        if (Cache::get($key, 0) >= $limit) {
+            $this->release($timeFrame);
+            return;
+        }
+
+        Cache::put($key, Cache::get($key, 0) + 1, $timeFrame);
+/////////////////////////
         $i = Image::find($this->article_image_id);
         if(!$i){
             return;
