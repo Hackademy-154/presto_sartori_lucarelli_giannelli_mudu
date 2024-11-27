@@ -29,18 +29,6 @@ class GoogleVisionLabelImage implements ShouldQueue
      */
     public function handle()
     {
-        // Roba nuova
-        $key = 'google_vision_rate_limit';
-        $limit = 5;
-        $timeFrame = 60;
-
-        if (Cache::get($key, 0) >= $limit) {
-
-        return;
-    }
-
-        Cache::put($key, Cache::get($key, 0) + 1, $timeFrame);
-    ///////////////
         $i = Image::find($this->article_image_id);
         if(!$i){
         return;

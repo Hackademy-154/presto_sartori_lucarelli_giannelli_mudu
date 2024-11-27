@@ -71,9 +71,8 @@
                                 </div>
                                 <hr class="my-1">
                                 <div class="d-flex justify-content-between my-2 ">
-                                    <h6 class="fst-italic d-none d-lg-block mb-0  me-2 lolo">
-                                        <a href="" class="fw-bold categoryBadge"
-                                            id="cardCategory">#{{ ucfirst(__('ui.' . $article_to_check->category->name)) }}</a>
+                                    <h6 class="fst-italic d-none d-lg-block mb-0  me-2 ">
+                                        <p href="" class="fw-bold " id="">#{{ ucfirst(__('ui.' . $article_to_check->category->name)) }}</p>
                                     </h6>
                                     <h6 class="fst-italic  mb-0">{{ __('ui.price') }}: <span class="fw-bold" id="cardPrice">{{ $article_to_check->price }}
                                             €</span> </h6>
