@@ -3,7 +3,7 @@
 namespace App\Jobs;
 
 use App\Models\Image;
-use Illuminate\Foundation\Queue\Queueable;
+use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Google\Cloud\Vision\V1\ImageAnnotatorClient;
 
@@ -24,7 +24,7 @@ class GoogleVisionSafeSearch implements ShouldQueue
     /**
      * Execute the job.
      */
-    public function handle(): void
+    public function handle()
     {
         $i = Image::find($this->article_image_id);
         if(!$i){
